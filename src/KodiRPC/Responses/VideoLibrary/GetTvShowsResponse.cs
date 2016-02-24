@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KodiRPC.RPC.Specifications
+namespace KodiRPC.Responses.VideoLibrary
 {
-    class RpcMethods
+    class GetTvShowsResponse
     {
     }
 }

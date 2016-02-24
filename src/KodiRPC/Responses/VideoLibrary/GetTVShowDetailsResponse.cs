@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KodiRPC.Responses
 {
-    class VideoLibrary
+    class GetTvShowDetailsResponse
     {
     }
 }
