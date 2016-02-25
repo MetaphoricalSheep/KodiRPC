@@ -49,7 +49,6 @@
     <Compile Include="ExceptionHandling\RPC\RpcRequestTimeoutException.cs" />
     <Compile Include="ExceptionHandling\RPC\RpcResponseDeserializationException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Responses\JSONRPC\VersionResponse.cs" />
     <Compile Include="Responses\Types\Item\Details\Base.cs" />
     <Compile Include="Responses\Types\Media\Details\Base.cs" />
     <Compile Include="Responses\Types\Video\Details\Base.cs" />

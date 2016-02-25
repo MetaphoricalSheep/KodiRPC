@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using KodiRPC.Services;
 
 namespace DemoClient
 {
     internal class Program
     {
-        private static KodiService Service = new KodiService {Host="http://stark-industries.local", Port=8080, Username="kodi", Password="kodi"};
+        private const string LocalHost = "http://stark-industries.local";
+        private const string RemoteHost = "http://localhost";
 
-        static void Main(string[] args)
+        private static readonly KodiService Service = new KodiService {Host=RemoteHost, Port=8080, Username="kodi", Password="kodi"};
+
+        private static void Main(string[] args)
         {
             try
             {
@@ -24,9 +23,6 @@ namespace DemoClient
 
                 var ping = Service.Ping();
                 Console.WriteLine(ping);
-
-                var v = Service.Version();
-                Console.WriteLine($"Version {v.Major}.{v.Minor}.{v.Patch}");
 
                 NEKey();
             }
