@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
 
 namespace KodiRPC.Responses.Types.Video.Details
 {
-    class Media
+    public class Media : Base
     {
+        [JsonProperty(PropertyName = "title")]
+        public string Title { get; set; } = "";
     }
 }

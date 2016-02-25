@@ -15,7 +15,7 @@ namespace KodiRPC.RPC.RequestResponse
         public string Method { get; set; }
 
         [JsonProperty("params")]
-        public IList<object> Parameters { get; set; }
+        public object Parameters { get; set; }
 
         public override string ToString()
         {

@@ -19,7 +19,7 @@ namespace KodiRPC.RPC.Connector
             _service = service;
         }
 
-        public T MakeRequest<T>(string rpcMethod, string id = "KodiJSON-RPC", params object[] parameters)
+        public T MakeRequest<T>(string rpcMethod, object parameters, string id = "KodiJSON-RPC")
         {
             var jsonRpcRequest = new JsonRpcRequest
             {
@@ -34,7 +34,7 @@ namespace KodiRPC.RPC.Connector
             webRequest.ContentType = "application/json-rpc";
             webRequest.KeepAlive = false;
             webRequest.Method = "POST";
-            webRequest.Timeout = 5000;
+            webRequest.Timeout = 50000;
             webRequest.Credentials = new NetworkCredential(_service.Username, _service.Password);
 
             try
@@ -152,10 +152,7 @@ namespace KodiRPC.RPC.Connector
             }
             catch (Exception e)
             {
-                var qryParams = jsonRpcRequest.Parameters.Cast<string>()
-                    .Aggregate(string.Empty, (current, parameter) => current + ($"{parameter} "));
-
-                throw new Exception($"A problem was encountered while calling MakeRpcRequest() for: {jsonRpcRequest.Method} with parameters: {qryParams}. \nException: {e.Message}");
+                throw new Exception($"A problem was encountered while calling MakeRpcRequest() for: {jsonRpcRequest.Method}"); // with parameters: {qryParams}. \nException: {e.Message}");
             }
         }
     }

@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using KodiRPC.Responses.Types.Media;
+using Newtonsoft.Json;
 
 namespace KodiRPC.Responses.Types.Video.Details
 {
-    class Base
+    public class Base : Types.Media.Details.Base
     {
+        [JsonProperty(PropertyName = "art")]
+        public Artwork Art { get; set; }
+
+        [JsonProperty(PropertyName = "playcount")]
+        public int Playcount { get; set; } = 0;
     }
 }

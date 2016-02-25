@@ -8,9 +8,10 @@
 
         #endregion
 
-        #region VideLibrary
+        #region VideoLibrary
 
         public static string GetTvShowDetails => "VideoLibrary.GetTVShowDetails";
+        public static string GetMovieDetails => "VideoLibrary.GetMovieDetails";
 
         #endregion
     }

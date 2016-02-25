@@ -49,8 +49,15 @@
     <Compile Include="ExceptionHandling\RPC\RpcRequestTimeoutException.cs" />
     <Compile Include="ExceptionHandling\RPC\RpcResponseDeserializationException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Responses\Types\Video\Details\File.cs" />
+    <Compile Include="Responses\Types\Video\Details\Movie.cs" />
+    <Compile Include="Responses\Types\Video\Resume.cs" />
+    <Compile Include="Responses\Types\Video\Streams.cs" />
+    <Compile Include="Responses\VideoLibrary\GetMovieDetailsResponse.cs" />
     <Compile Include="Responses\Types\Item\Details\Base.cs" />
+    <Compile Include="Responses\Types\Media\Artwork.cs" />
     <Compile Include="Responses\Types\Media\Details\Base.cs" />
+    <Compile Include="Responses\Types\Video\Cast.cs" />
     <Compile Include="Responses\Types\Video\Details\Base.cs" />
     <Compile Include="Responses\Types\Video\Details\Item.cs" />
     <Compile Include="Responses\Types\Video\Details\Media.cs" />
@@ -68,6 +75,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

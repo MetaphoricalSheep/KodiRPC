@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
 
 namespace KodiRPC.Responses.Types.Media.Details
 {
-    class Base
+    public class Base : Item.Details.Base
     {
+        [JsonProperty(PropertyName = "fanart")]
+        public string Fanart { get; set; } = "";
+
+        [JsonProperty(PropertyName = "thumbnail")]
+        public string Thumbnail { get; set; } = "";
     }
 }
