@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KodiRPC.Responses.Types.Video.Details
+﻿namespace KodiRPC.Responses.Types.Video.Details
 {
-    class TvShow
+    public class TvShow : Item
     {
+        public string SortTitle { get; set; }
+        public string MPAA { get; set; }
+        public string Premiered { get; set; }
+
+        public TvShow(string sorttitle, string mpaa, string premiered)
+        {
+            SortTitle = sorttitle;
+            MPAA = mpaa;
+            Premiered = premiered;
+        }
     }
 }

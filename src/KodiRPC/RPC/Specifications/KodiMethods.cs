@@ -7,5 +7,11 @@
         public static string Ping => "JSONRPC.Ping";
 
         #endregion
+
+        #region VideLibrary
+
+        public static string GetTvShowDetails => "VideoLibrary.GetTVShowDetails";
+
+        #endregion
     }
 }

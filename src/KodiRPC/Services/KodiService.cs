@@ -1,4 +1,6 @@
-﻿using KodiRPC.RPC.Connector;
+﻿using KodiRPC.Responses;
+using KodiRPC.Responses.VideoLibrary;
+using KodiRPC.RPC.Connector;
 using KodiRPC.RPC.Specifications;
 
 namespace KodiRPC.Services
@@ -22,6 +24,15 @@ namespace KodiRPC.Services
         public string Ping()
         {
             return _rpcConnector.MakeRequest<string>(KodiMethods.Ping);
+        }
+
+        #endregion
+
+        #region VideoLibrary
+
+        public GetTvShowDetailsResponse GetTvShowDetails()
+        {
+            return _rpcConnector.MakeRequest<GetTvShowDetailsResponse>(KodiMethods.GetTvShowDetails);
         }
 
         #endregion

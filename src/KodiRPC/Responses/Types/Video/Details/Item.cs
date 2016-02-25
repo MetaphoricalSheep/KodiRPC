@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KodiRPC.Responses.Types.Video.Details
 {
-    class Item
+    public class Item
     {
     }
 }

@@ -54,7 +54,7 @@
     <Compile Include="Responses\Types\Video\Details\Base.cs" />
     <Compile Include="Responses\Types\Video\Details\Item.cs" />
     <Compile Include="Responses\Types\Video\Details\Media.cs" />
-    <Compile Include="Responses\Types\Video\Details\TVShow.cs" />
+    <Compile Include="Responses\Types\Video\Details\TvShow.cs" />
     <Compile Include="Responses\VideoLibrary\GetTvShowDetailsResponse.cs" />
     <Compile Include="Responses\VideoLibrary\GetTvShowsResponse.cs" />
     <Compile Include="RPC\Connector\RpcConnector.cs" />

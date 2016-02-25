@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using KodiRPC.Responses.Types.Video.Details;
 
-namespace KodiRPC.Responses
+namespace KodiRPC.Responses.VideoLibrary
 {
-    class GetTvShowDetailsResponse
+    public class GetTvShowDetailsResponse : TvShow
     {
     }
 }
