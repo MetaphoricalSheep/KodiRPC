@@ -64,6 +64,7 @@
     <Compile Include="Responses\Types\Video\Details\TvShow.cs" />
     <Compile Include="Responses\VideoLibrary\GetTvShowDetailsResponse.cs" />
     <Compile Include="Responses\VideoLibrary\GetTvShowsResponse.cs" />
+    <Compile Include="RPC\Connector\IRpcConnector.cs" />
     <Compile Include="RPC\Connector\RpcConnector.cs" />
     <Compile Include="RPC\RequestResponse\JsonRpcError.cs" />
     <Compile Include="RPC\RequestResponse\JsonRpcRequest.cs" />
