@@ -1,7 +1,4 @@
-﻿using System.Threading;
-using KodiRPC.ExceptionHandling.RPC;
-using KodiRPC.Responses;
-using KodiRPC.Responses.VideoLibrary;
+﻿using KodiRPC.Responses.VideoLibrary;
 using KodiRPC.RPC.Connector;
 using KodiRPC.RPC.Specifications;
 

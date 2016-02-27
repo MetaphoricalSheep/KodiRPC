@@ -69,8 +69,16 @@
     <Compile Include="RPC\RequestResponse\JsonRpcError.cs" />
     <Compile Include="RPC\RequestResponse\JsonRpcRequest.cs" />
     <Compile Include="RPC\RequestResponse\JsonRpcResponse.cs" />
+    <Compile Include="RPC\Specifications\Properties\GetMovieDetailsProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\Media\Details\BaseProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\Video\Details\BaseProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\Video\Details\FileProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\Video\Details\ItemProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\Video\Details\MediaProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\Video\Details\MovieProperties.cs" />
     <Compile Include="RPC\Specifications\RpcErrorCode.cs" />
     <Compile Include="RPC\Specifications\KodiMethods.cs" />
+    <Compile Include="Services\IKodiService.cs" />
     <Compile Include="Services\KodiService.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -5,12 +5,12 @@ namespace KodiRPC.Responses.Types.Video
     public class Streams
     {
         [JsonProperty(PropertyName = "video")]
-        public object[] Video { get; set; }
+        public string[] Video { get; set; }
 
         [JsonProperty(PropertyName = "audio")]
-        public object[] Audio { get; set; }
+        public string[] Audio { get; set; }
 
         [JsonProperty(PropertyName = "subtitle")]
-        public object[] Subtitle { get; set; }
+        public string[] Subtitle { get; set; }
     }
 }

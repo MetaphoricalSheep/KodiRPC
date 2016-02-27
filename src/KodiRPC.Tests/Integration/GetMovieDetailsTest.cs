@@ -14,7 +14,7 @@ namespace KodiRPC.Tests.Integration
         [Test]
         public void ValidateMovieObjectReturnedByService()
         {
-            var service = new KodiService {Host=RemoteHost, Port=8080, Username="kodi", Password="kodi"};
+            var service = new KodiService {Host=LocalHost, Port=8080, Username="kodi", Password="kodi"};
 
             var testCase = new Movie
             {

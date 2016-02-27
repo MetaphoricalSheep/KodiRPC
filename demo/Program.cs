@@ -1,4 +1,5 @@
 ﻿using System;
+using KodiRPC.RPC.Specifications.Properties;
 using KodiRPC.Services;
 
 namespace DemoClient
@@ -8,7 +9,7 @@ namespace DemoClient
         private const string LocalHost = "http://stark-industries.local";
         private const string RemoteHost = "http://localhost";
 
-        private static readonly KodiService Service = new KodiService {Host=RemoteHost, Port=8080, Username="kodi", Password="kodi"};
+        private static readonly KodiService Service = new KodiService {Host=LocalHost, Port=8080, Username="kodi", Password="kodi"};
 
         private static void Main(string[] args)
         {
@@ -21,12 +22,12 @@ namespace DemoClient
                 Console.WriteLine();
                 Console.WriteLine("Pinging Kodi.");
 
-                //var ping = Service.Ping();
-                //Console.WriteLine(ping);
+                var ping = Service.Ping();
+                Console.WriteLine(ping);
 
-                var properties = new[] { "title", "runtime" };
+                //var properties = new[] { "title", "runtime" };
+                var properties = GetMovieDetailsProperties.All();
                 var details = Service.GetMovieDetails(12, properties);
-
                 Console.WriteLine(details.Result.Title);
 
                 NEKey();
