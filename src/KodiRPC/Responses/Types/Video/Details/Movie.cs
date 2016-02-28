@@ -50,7 +50,7 @@ namespace KodiRPC.Responses.Types.Video.Details
         public int SetId { get; set; } = -1;
 
         [JsonProperty(PropertyName = "rating")]
-        public int Rating { get; set; } = 0;
+        public double Rating { get; set; } = 0;
 
         [JsonProperty(PropertyName = "tag")]
         public string[] Tag { get; set; }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Text;
 using KodiRPC.ExceptionHandling.RPC;
@@ -10,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace KodiRPC.RPC.Connector
 {
-    public class RpcConnector
+    public class RpcConnector : IRpcConnector
     {
         private readonly KodiService _service;
 
@@ -152,7 +151,7 @@ namespace KodiRPC.RPC.Connector
             }
             catch (Exception e)
             {
-                throw new Exception($"A problem was encountered while calling MakeRpcRequest() for: {jsonRpcRequest.Method}"); // with parameters: {qryParams}. \nException: {e.Message}");
+                throw new Exception($"A problem was encountered while calling MakeRpcRequest() for: {jsonRpcRequest.Method} \nException: {e.Message}"); // with parameters: {qryParams}. \nException: {e.Message}");
             }
         }
     }

@@ -1,6 +1,5 @@
-﻿using System.Threading;
-using KodiRPC.ExceptionHandling.RPC;
-using KodiRPC.Responses;
+﻿using System;
+using System.Configuration;
 using KodiRPC.Responses.VideoLibrary;
 using KodiRPC.RPC.Connector;
 using KodiRPC.RPC.Specifications;
@@ -10,11 +9,11 @@ namespace KodiRPC.Services
     public class KodiService
     {
         private readonly RpcConnector _rpcConnector;
-        public string ApiVersion => "v6";
-        public string Host { get; set; }
-        public int Port { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
+        public readonly string ApiVersion = "v6";
+        public readonly string Host = ConfigurationManager.AppSettings["KodiHost"];
+        public readonly string Port = ConfigurationManager.AppSettings["KodiPort"];
+        public readonly string Username = ConfigurationManager.AppSettings["KodiUsername"];
+        public readonly string Password = ConfigurationManager.AppSettings["KodiPassword"];
 
         public KodiService()
         {

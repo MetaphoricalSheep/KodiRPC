@@ -29,12 +29,22 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Pieter-Uys|AnyCPU'">
+    <OutputPath>bin\Pieter-Uys\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,6 +63,9 @@
     <Compile Include="Responses\Types\Video\Details\Movie.cs" />
     <Compile Include="Responses\Types\Video\Resume.cs" />
     <Compile Include="Responses\Types\Video\Streams.cs" />
+    <Compile Include="Responses\Types\Video\Stream\Audio.cs" />
+    <Compile Include="Responses\Types\Video\Stream\Subtitle.cs" />
+    <Compile Include="Responses\Types\Video\Stream\Video.cs" />
     <Compile Include="Responses\VideoLibrary\GetMovieDetailsResponse.cs" />
     <Compile Include="Responses\Types\Item\Details\Base.cs" />
     <Compile Include="Responses\Types\Media\Artwork.cs" />
@@ -64,12 +77,21 @@
     <Compile Include="Responses\Types\Video\Details\TvShow.cs" />
     <Compile Include="Responses\VideoLibrary\GetTvShowDetailsResponse.cs" />
     <Compile Include="Responses\VideoLibrary\GetTvShowsResponse.cs" />
+    <Compile Include="RPC\Connector\IRpcConnector.cs" />
     <Compile Include="RPC\Connector\RpcConnector.cs" />
     <Compile Include="RPC\RequestResponse\JsonRpcError.cs" />
     <Compile Include="RPC\RequestResponse\JsonRpcRequest.cs" />
     <Compile Include="RPC\RequestResponse\JsonRpcResponse.cs" />
+    <Compile Include="RPC\Specifications\Properties\GetMovieDetailsProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\Media\Details\BaseProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\Video\Details\BaseProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\Video\Details\FileProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\Video\Details\ItemProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\Video\Details\MediaProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\Video\Details\MovieProperties.cs" />
     <Compile Include="RPC\Specifications\RpcErrorCode.cs" />
     <Compile Include="RPC\Specifications\KodiMethods.cs" />
+    <Compile Include="Services\IKodiService.cs" />
     <Compile Include="Services\KodiService.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -4,14 +4,14 @@
     {
         #region JSONRPC
 
-        public static string Ping => "JSONRPC.Ping";
+        public const string Ping = "JSONRPC.Ping";
 
         #endregion
 
         #region VideoLibrary
 
-        public static string GetTvShowDetails => "VideoLibrary.GetTVShowDetails";
-        public static string GetMovieDetails => "VideoLibrary.GetMovieDetails";
+        public const string GetTvShowDetails = "VideoLibrary.GetTVShowDetails";
+        public const string GetMovieDetails = "VideoLibrary.GetMovieDetails";
 
         #endregion
     }
