@@ -1,8 +1,6 @@
-﻿using KodiRPC.Responses.Types.Video.Details;
-
-namespace KodiRPC.RPC.Specifications.Properties.Video.Details
+﻿namespace KodiRPC.RPC.Specifications.Properties.Video.Details
 {
-    public class EpisodeProperties : File
+    public class EpisodeProperties : FileProperties
     {
         public const string Cast = "cast";
         public const string ProductionCode = "productioncode";
@@ -10,7 +8,6 @@ namespace KodiRPC.RPC.Specifications.Properties.Video.Details
         public const string Votes = "votes";
         public const string EpisodeNumber = "episodenumber";
         public const string ShowTitle = "showtitle";
-        public const string EpisodeId = "episodeid";
         public const string TvshowId = "tvshowid";
         public const string Season = "season";
         public const string FirstAired = "firstaired";

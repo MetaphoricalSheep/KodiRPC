@@ -45,13 +45,13 @@ namespace KodiRPC.Services
             return _rpcConnector.MakeRequest<GetTvShowDetailsResponse>(KodiMethods.GetTvShowDetails, parameters, requestId);
         }
 
-        public GetTvShowDetailsResponse GetEpisodeDetails(int episodeId, string[] properties = null, string requestId="GetTvShowDetailsResponse")
+        public GetEpisodeDetailsResponse GetEpisodeDetails(int episodeId, string[] properties = null, string requestId="GetTvShowDetailsResponse")
         {
             properties = properties ?? new string[] {};
 
             var parameters = new 
             {
-                tvshowid = episodeId,
+                episodeid = episodeId,
                 properties
             };
 
