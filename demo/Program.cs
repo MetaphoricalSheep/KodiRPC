@@ -6,10 +6,7 @@ namespace DemoClient
 {
     internal class Program
     {
-        private const string LocalHost = "http://stark-industries.local";
-        private const string RemoteHost = "http://localhost";
-
-        private static readonly KodiService Service = new KodiService {Host=LocalHost, Port=8080, Username="kodi", Password="kodi"};
+        private static readonly KodiService Service = new KodiService();
 
         private static void Main(string[] args)
         {
