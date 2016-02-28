@@ -26,7 +26,7 @@ namespace KodiRPC.Responses.Types.Video.Details
         public string Votes { get; set; } = "";
 
         [JsonProperty(PropertyName = "rating")]
-        public int Rating { get; set; } = 0;
+        public double Rating { get; set; } = 0;
 
         [JsonProperty(PropertyName = "tvshowid")]
         public int TvShowId { get; set; }
