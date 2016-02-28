@@ -1,4 +1,5 @@
 ﻿using System;
+using KodiRPC.ExceptionHandling.RPC;
 using KodiRPC.Responses.VideoLibrary;
 using KodiRPC.RPC.RequestResponse;
 using KodiRPC.Services;
@@ -16,10 +17,30 @@ namespace KodiRPC.Tests.Unit
             mock.Setup(s => s.GetMovieDetails(movieId, null, null)).Returns(
                 (int id, object properties, string requestId)  =>
                 {
-                    var json = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"/../../App_Data/movie." + movieId + ".json");
+                    string json;
+
+                    try
+                    {
+                        json = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"/../../App_Data/movie." + movieId + ".json");
+                    }
+                    catch (Exception)
+                    {
+                        json = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"/../../App_Data/movie.error.json");
+                    }
+
                     var response = JsonConvert.DeserializeObject<JsonRpcResponse<GetMovieDetailsResponse>>(json);
 
-                    return response.Result;
+                    if (response.Error == null)
+                    {
+                        return response.Result;
+                    }
+
+                    var internalServerErrorException = new RpcInternalServerErrorException(response.Error.Message)
+                    {
+                        RpcErrorCode = response.Error.Code
+                    };
+
+                    throw internalServerErrorException;
                 }
             );
 

@@ -14,7 +14,8 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
         {
             BigHero6 = 12,
             WolfOfWallStreet = 100,
-            Spy = 77
+            Spy = 77,
+            InvalidId = int.MaxValue
         }
 
         public static List<GetMovieDetailsResponse> GetMovies()
