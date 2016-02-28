@@ -2,6 +2,7 @@
 using System.Reflection;
 using KodiRPC.Responses.Types.Media;
 using KodiRPC.Responses.Types.Video;
+using Stream = KodiRPC.Responses.Types.Video.Stream;
 using NUnit.Framework;
 
 namespace KodiRPC.Tests.Unit.Common
@@ -43,7 +44,7 @@ namespace KodiRPC.Tests.Unit.Common
 
             for (var i = 0; i < actualList?.Count; i++)
             {
-                if (actualList[i] is Cast)
+                if (actualList[i] is Cast || actualList[i] is Stream.Video || actualList[i] is Stream.Audio || actualList[i] is Stream.Subtitle)
                 {
                     AssertThatPropertyValuesAreEquals(actualList[i], expectedList[i]);
                 }
@@ -55,6 +56,5 @@ namespace KodiRPC.Tests.Unit.Common
                 }
             }
         }
-         
     }
 }

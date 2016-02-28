@@ -53,6 +53,9 @@
     <Compile Include="Responses\Types\Video\Details\Movie.cs" />
     <Compile Include="Responses\Types\Video\Resume.cs" />
     <Compile Include="Responses\Types\Video\Streams.cs" />
+    <Compile Include="Responses\Types\Video\Stream\Audio.cs" />
+    <Compile Include="Responses\Types\Video\Stream\Subtitle.cs" />
+    <Compile Include="Responses\Types\Video\Stream\Video.cs" />
     <Compile Include="Responses\VideoLibrary\GetMovieDetailsResponse.cs" />
     <Compile Include="Responses\Types\Item\Details\Base.cs" />
     <Compile Include="Responses\Types\Media\Artwork.cs" />
