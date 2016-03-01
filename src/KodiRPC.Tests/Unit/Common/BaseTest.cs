@@ -1,7 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Reflection;
+using KodiRPC.ExceptionHandling.RPC;
 using KodiRPC.Responses.Types.Media;
 using KodiRPC.Responses.Types.Video;
+using KodiRPC.RPC.RequestResponse;
+using Newtonsoft.Json;
 using Stream = KodiRPC.Responses.Types.Video.Stream;
 using NUnit.Framework;
 
@@ -9,6 +13,34 @@ namespace KodiRPC.Tests.Unit.Common
 {
     public class BaseTest
     {
+        public T MakeFauxRequest<T>(string file)
+        {
+            string json;
+
+            try
+            {
+                json = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"/../../App_Data/" + file);
+            }
+            catch (Exception)
+            {
+                json = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"/../../App_Data/error.json");
+            }
+
+            var response = JsonConvert.DeserializeObject<JsonRpcResponse<T>>(json);
+
+            if (response.Error == null)
+            {
+                return response.Result;
+            }
+
+            var internalServerErrorException = new RpcInternalServerErrorException(response.Error.Message)
+            {
+                RpcErrorCode = response.Error.Code
+            };
+
+            throw internalServerErrorException;
+        }
+
         public static void AssertThatPropertyValuesAreEquals(object actual, object expected)
         {
             var properties = expected.GetType().GetProperties();
@@ -22,7 +54,7 @@ namespace KodiRPC.Tests.Unit.Common
                 {
                     AssertThatListsAreEquals(property, (IList)actualValue, (IList)expectedValue, expected.GetType().ToString());
                 }
-                else if (actualValue is Streams || actualValue is Resume || actualValue is Artwork)
+                else if (actualValue is Streams || actualValue is Resume || actualValue is Artwork || actualValue is UniqueId)
                 {
                     AssertThatPropertyValuesAreEquals(actualValue, expectedValue);
                 }
