@@ -6,7 +6,7 @@
         public const string ProductionCode = "productioncode";
         public const string Rating = "rating";
         public const string Votes = "votes";
-        public const string EpisodeNumber = "episodenumber";
+        public const string EpisodeNumber = "episode";
         public const string ShowTitle = "showtitle";
         public const string TvshowId = "tvshowid";
         public const string Season = "season";

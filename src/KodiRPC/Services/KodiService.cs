@@ -1,5 +1,4 @@
-﻿using System;
-using System.Configuration;
+﻿using System.Configuration;
 using KodiRPC.Responses.VideoLibrary;
 using KodiRPC.RPC.Connector;
 using KodiRPC.RPC.Specifications;
