@@ -3,6 +3,6 @@
         "code": -32602,
         "message": "Invalid params."
     },
-    "id": "GetMovieDetailsResponse",
+    "id": "UnitTests",
     "jsonrpc": "2.0"
 }

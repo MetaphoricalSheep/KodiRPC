@@ -1,125 +1,125 @@
 {
-    "id": "GetMovieDetailsResponse",
-    "jsonrpc": "2.0",
-    "result": {
-        "moviedetails": {
-            "art": {
-                "fanart": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fAoYGqtWxcNmQjQIpRCMtzpFfL1T.jpg/",
-                "poster": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fgCBw0AQDhlo0bNetkjsSRWzrxpW.jpg/"
-            },
-            "cast": [
-                {
-                    "name": "Melissa McCarthy",
-                    "order": 0,
-                    "role": "Susan Cooper",
-                    "thumbnail": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fjSLdOktZHZOPEE4DzSShxuEeXPy.jpg/"
-                },
-                {
-                    "name": "Jude Law",
-                    "order": 1,
-                    "role": "Bradley Fine",
-                    "thumbnail": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2f4077Cyuo1mw53u1gNjLyQkqeZN0.jpg/"
-                },
-                {
-                    "name": "Jason Statham",
-                    "order": 2,
-                    "role": "Rick Ford",
-                    "thumbnail": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fPhWiWgasncGWD9LdbsGcmxkV4r.jpg/"
-                }
-            ],
-            "country": [
-                "United States of America"
-            ],
-            "dateadded": "2015-09-05 10:51:35",
-            "director": [
-                "Paul Feig"
-            ],
-            "fanart": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fAoYGqtWxcNmQjQIpRCMtzpFfL1T.jpg/",
-            "file": "/media/gotham/movies/Spy (2015)/Spy.mkv",
-            "genre": [
-                "Crime",
-                "Action",
-                "Comedy"
-            ],
-            "imdbnumber": "tt3079380",
-            "label": "Spy",
-            "lastplayed": "",
-            "movieid": 77,
-            "mpaa": "Rated R",
-            "originaltitle": "Spy",
-            "playcount": 0,
-            "plot": "A desk-bound CIA analyst volunteers to go undercover to infiltrate the world of a deadly arms dealer, and prevent diabolical global disaster.",
-            "plotoutline": "",
-            "rating": 7.099999904632568,
-            "resume": {
-                "position": 0.0,
-                "total": 0.0
-            },
-            "runtime": 7850,
-            "set": "",
-            "setid": 0,
-            "showlink": [],
-            "sorttitle": "",
-            "streamdetails": {
-                "audio": [
-                    {
-                        "channels": 6,
-                        "codec": "ac3",
-                        "language": "rus"
-                    },
-                    {
-                        "channels": 2,
-                        "codec": "aac",
-                        "language": "ukr"
-                    },
-                    {
-                        "channels": 2,
-                        "codec": "aac",
-                        "language": "eng"
-                    }
-                ],
-                "subtitle": [
-                    {
-                        "language": "rus"
-                    },
-                    {
-                        "language": "rus"
-                    },
-                    {
-                        "language": "ukr"
-                    },
-                    {
-                        "language": "eng"
-                    },
-                    {
-                        "language": "eng"
-                    }
-                ],
-                "video": [
-                    {
-                        "aspect": 2.3970038890838623,
-                        "codec": "h264",
-                        "duration": 7850,
-                        "height": 534,
-                        "stereomode": "",
-                        "width": 1280
-                    }
-                ]
-            },
-            "studio": [
-                "Chernin Entertainment"
-            ],
-            "tag": [],
-            "tagline": "One of the guys. One of the Spies.",
-            "thumbnail": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fgCBw0AQDhlo0bNetkjsSRWzrxpW.jpg/",
-            "title": "Spy",
-            "top250": 0,
-            "trailer": "plugin://plugin.video.youtube/?action=play_video&videoid=YrY3v1eDmQY",
-            "votes": "866",
-            "writer": [
-                "Paul Feig"
-            ],
-            "year": 2015
+  "id": "UnitTest",
+  "jsonrpc": "2.0",
+  "result": {
+    "moviedetails": {
+      "art": {
+        "fanart": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fAoYGqtWxcNmQjQIpRCMtzpFfL1T.jpg/",
+        "poster": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fgCBw0AQDhlo0bNetkjsSRWzrxpW.jpg/"
+      },
+      "cast": [
+        {
+          "name": "Melissa McCarthy",
+          "order": 0,
+          "role": "Susan Cooper",
+          "thumbnail": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fjSLdOktZHZOPEE4DzSShxuEeXPy.jpg/"
+        },
+        {
+          "name": "Jude Law",
+          "order": 1,
+          "role": "Bradley Fine",
+          "thumbnail": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2f4077Cyuo1mw53u1gNjLyQkqeZN0.jpg/"
+        },
+        {
+          "name": "Jason Statham",
+          "order": 2,
+          "role": "Rick Ford",
+          "thumbnail": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fPhWiWgasncGWD9LdbsGcmxkV4r.jpg/"
         }
+      ],
+      "country": [
+        "United States of America"
+      ],
+      "dateadded": "2015-09-05 10:51:35",
+      "director": [
+        "Paul Feig"
+      ],
+      "fanart": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fAoYGqtWxcNmQjQIpRCMtzpFfL1T.jpg/",
+      "file": "/media/gotham/movies/Spy (2015)/Spy.mkv",
+      "genre": [
+        "Crime",
+        "Action",
+        "Comedy"
+      ],
+      "imdbnumber": "tt3079380",
+      "label": "Spy",
+      "lastplayed": "",
+      "movieid": 77,
+      "mpaa": "Rated R",
+      "originaltitle": "Spy",
+      "playcount": 0,
+      "plot": "A desk-bound CIA analyst volunteers to go undercover to infiltrate the world of a deadly arms dealer, and prevent diabolical global disaster.",
+      "plotoutline": "",
+      "rating": 7.099999904632568,
+      "resume": {
+        "position": 0.0,
+        "total": 0.0
+      },
+      "runtime": 7850,
+      "set": "",
+      "setid": 0,
+      "showlink": [ ],
+      "sorttitle": "",
+      "streamdetails": {
+        "audio": [
+          {
+            "channels": 6,
+            "codec": "ac3",
+            "language": "rus"
+          },
+          {
+            "channels": 2,
+            "codec": "aac",
+            "language": "ukr"
+          },
+          {
+            "channels": 2,
+            "codec": "aac",
+            "language": "eng"
+          }
+        ],
+        "subtitle": [
+          {
+            "language": "rus"
+          },
+          {
+            "language": "rus"
+          },
+          {
+            "language": "ukr"
+          },
+          {
+            "language": "eng"
+          },
+          {
+            "language": "eng"
+          }
+        ],
+        "video": [
+          {
+            "aspect": 2.3970038890838623,
+            "codec": "h264",
+            "duration": 7850,
+            "height": 534,
+            "stereomode": "",
+            "width": 1280
+          }
+        ]
+      },
+      "studio": [
+        "Chernin Entertainment"
+      ],
+      "tag": [ ],
+      "tagline": "One of the guys. One of the Spies.",
+      "thumbnail": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fgCBw0AQDhlo0bNetkjsSRWzrxpW.jpg/",
+      "title": "Spy",
+      "top250": 0,
+      "trailer": "plugin://plugin.video.youtube/?action=play_video&videoid=YrY3v1eDmQY",
+      "votes": "866",
+      "writer": [
+        "Paul Feig"
+      ],
+      "year": 2015
     }
+  }
 }

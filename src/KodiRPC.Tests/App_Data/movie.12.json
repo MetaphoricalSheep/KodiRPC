@@ -1,89 +1,89 @@
 {
-    "id": "GetMovieDetailsResponse",
-    "jsonrpc": "2.0",
-    "result": {
-        "moviedetails": {
-            "art": {
-                "fanart": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2f2BXd0t9JdVqCp9sKf6kzMkr7QjB.jpg/",
-                "poster": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fhGRfWcy1HRGbsjK6jF7NILmqmFT.jpg/"
-            },
-            "cast": [
-                {
-                    "name": "Scott Adsit",
-                    "order": 0,
-                    "role": "Baymax (voice)",
-                    "thumbnail": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2f8VTCE0c8RSLYsgRqA8UDPRbBvYm.jpg/"
-                },
-                {
-                    "name": "Ryan Potter",
-                    "order": 1,
-                    "role": "Hiro Hamada (voice)",
-                    "thumbnail": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2flKC6fdpcLaYJpDEQxitByUJQQZq.jpg/"
-                },
-                {
-                    "name": "Daniel Henney",
-                    "order": 2,
-                    "role": "Tadashi Hamada (voice)",
-                    "thumbnail": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fkR4h7S7ny30HaqJpe5rv88RrKYA.jpg/"
-                }
-            ],
-            "country": [
-                "United States of America"
-            ],
-            "dateadded": "2015-02-10 13:42:44",
-            "director": [
-                "Don Hall",
-                "Chris Williams"
-            ],
-            "fanart": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2f2BXd0t9JdVqCp9sKf6kzMkr7QjB.jpg/",
-            "file": "/media/gotham/movies/Big Hero 6 (2014)/Big Hero 6.mkv",
-            "genre": [
-                "Adventure",
-                "Family",
-                "Animation",
-                "Action",
-                "Comedy"
-            ],
-            "imdbnumber": "tt2245084",
-            "label": "Big Hero 6",
-            "lastplayed": "",
-            "movieid": 12,
-            "mpaa": "Rated PG",
-            "originaltitle": "Big Hero 6",
-            "playcount": 0,
-            "plot": "The special bond that develops between plus-sized inflatable robot Baymax, and prodigy Hiro Hamada, who team up with a group of friends to form a band of high-tech heroes.",
-            "plotoutline": "",
-            "rating": 7.900000095367432,
-            "resume": {
-                "position": 0.0,
-                "total": 0.0
-            },
-            "runtime": 6120,
-            "set": "",
-            "setid": 0,
-            "showlink": [],
-            "sorttitle": "",
-            "streamdetails": {
-                "audio": [],
-                "subtitle": [],
-                "video": []
-            },
-            "studio": [
-                "Walt Disney Pictures"
-            ],
-            "tag": [],
-            "tagline": "Balalalala",
-            "thumbnail": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fhGRfWcy1HRGbsjK6jF7NILmqmFT.jpg/",
-            "title": "Big Hero 6",
-            "top250": 0,
-            "trailer": "plugin://plugin.video.youtube/?action=play_video&videoid=z3biFxZIJOQ",
-            "votes": "2490",
-            "writer": [
-                "Dan Gerson",
-                "Jordan Roberts",
-                "Robert L. Baird"
-            ],
-            "year": 2014
+  "id": "UnitTests",
+  "jsonrpc": "2.0",
+  "result": {
+    "moviedetails": {
+      "art": {
+        "fanart": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2f2BXd0t9JdVqCp9sKf6kzMkr7QjB.jpg/",
+        "poster": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fhGRfWcy1HRGbsjK6jF7NILmqmFT.jpg/"
+      },
+      "cast": [
+        {
+          "name": "Scott Adsit",
+          "order": 0,
+          "role": "Baymax (voice)",
+          "thumbnail": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2f8VTCE0c8RSLYsgRqA8UDPRbBvYm.jpg/"
+        },
+        {
+          "name": "Ryan Potter",
+          "order": 1,
+          "role": "Hiro Hamada (voice)",
+          "thumbnail": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2flKC6fdpcLaYJpDEQxitByUJQQZq.jpg/"
+        },
+        {
+          "name": "Daniel Henney",
+          "order": 2,
+          "role": "Tadashi Hamada (voice)",
+          "thumbnail": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fkR4h7S7ny30HaqJpe5rv88RrKYA.jpg/"
         }
+      ],
+      "country": [
+        "United States of America"
+      ],
+      "dateadded": "2015-02-10 13:42:44",
+      "director": [
+        "Don Hall",
+        "Chris Williams"
+      ],
+      "fanart": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2f2BXd0t9JdVqCp9sKf6kzMkr7QjB.jpg/",
+      "file": "/media/gotham/movies/Big Hero 6 (2014)/Big Hero 6.mkv",
+      "genre": [
+        "Adventure",
+        "Family",
+        "Animation",
+        "Action",
+        "Comedy"
+      ],
+      "imdbnumber": "tt2245084",
+      "label": "Big Hero 6",
+      "lastplayed": "",
+      "movieid": 12,
+      "mpaa": "Rated PG",
+      "originaltitle": "Big Hero 6",
+      "playcount": 0,
+      "plot": "The special bond that develops between plus-sized inflatable robot Baymax, and prodigy Hiro Hamada, who team up with a group of friends to form a band of high-tech heroes.",
+      "plotoutline": "",
+      "rating": 7.900000095367432,
+      "resume": {
+        "position": 0.0,
+        "total": 0.0
+      },
+      "runtime": 6120,
+      "set": "",
+      "setid": 0,
+      "showlink": [ ],
+      "sorttitle": "",
+      "streamdetails": {
+        "audio": [ ],
+        "subtitle": [ ],
+        "video": [ ]
+      },
+      "studio": [
+        "Walt Disney Pictures"
+      ],
+      "tag": [ ],
+      "tagline": "Balalalala",
+      "thumbnail": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fhGRfWcy1HRGbsjK6jF7NILmqmFT.jpg/",
+      "title": "Big Hero 6",
+      "top250": 0,
+      "trailer": "plugin://plugin.video.youtube/?action=play_video&videoid=z3biFxZIJOQ",
+      "votes": "2490",
+      "writer": [
+        "Dan Gerson",
+        "Jordan Roberts",
+        "Robert L. Baird"
+      ],
+      "year": 2014
     }
+  }
 }
