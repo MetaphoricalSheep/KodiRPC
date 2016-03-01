@@ -1,5 +1,4 @@
-﻿using System;
-using KodiRPC.ExceptionHandling.RPC;
+﻿using KodiRPC.ExceptionHandling.RPC;
 using KodiRPC.Responses.VideoLibrary;
 using KodiRPC.Tests.Unit.Common;
 using KodiRPC.Tests.Unit.Common.ExpectedResults;

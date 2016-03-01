@@ -1,0 +1,70 @@
+{
+  "id": "UnitTests",
+  "jsonrpc": "2.0",
+  "result": {
+    "episodedetails": {
+      "art": {
+        "thumb": "image://http%3a%2f%2fthetvdb.com%2fbanners%2fepisodes%2f79349%2f2755231.jpg/",
+        "tvshow.banner": "image://http%3a%2f%2fthetvdb.com%2fbanners%2fgraphical%2f79349-g28.jpg/",
+        "tvshow.fanart": "image://http%3a%2f%2fthetvdb.com%2fbanners%2ffanart%2foriginal%2f79349-63.jpg/",
+        "tvshow.poster": "image://http%3a%2f%2fthetvdb.com%2fbanners%2fposters%2f79349-24.jpg/"
+      },
+      "cast": [
+        {
+          "name": "Peter Weller",
+          "order": 0,
+          "role": ""
+        },
+        {
+          "name": "Maria Doyle Kennedy",
+          "order": 1,
+          "role": "",
+          "thumbnail": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2ft7wdC2MGTXEmvJ2LL42j6u6EIcG.jpg/"
+        },
+        {
+          "name": "April L. Hernandez",
+          "order": 2,
+          "role": ""
+        }
+      ],
+      "dateadded": "2015-03-03 03:40:10",
+      "director": [
+        "Steve Shill"
+      ],
+      "episode": 6,
+      "episodeid": 864,
+      "fanart": "image://http%3a%2f%2fthetvdb.com%2fbanners%2ffanart%2foriginal%2f79349-63.jpg/",
+      "file": "/media/gotham/series/Dexter/Season 05/Dexter - S05E06 - Everything Is Illumenated.mkv",
+      "firstaired": "2010-10-31",
+      "label": "Everything Is Illumenated",
+      "lastplayed": "",
+      "originaltitle": "",
+      "playcount": 0,
+      "plot": "Dexter is drawn into a precarious situation; Batista discovers an interesting lead; Quinn gets information about Dexter from a questionable source.",
+      "productioncode": "",
+      "rating": 8.0,
+      "resume": {
+        "position": 0.0,
+        "total": 0.0
+      },
+      "runtime": 3600,
+      "season": 5,
+      "showtitle": "Dexter",
+      "streamdetails": {
+        "audio": [ ],
+        "subtitle": [ ],
+        "video": [ ]
+      },
+      "thumbnail": "image://http%3a%2f%2fthetvdb.com%2fbanners%2fepisodes%2f79349%2f2755231.jpg/",
+      "title": "Everything Is Illumenated",
+      "tvshowid": 30,
+      "uniqueid": {
+        "unknown": "2755231"
+      },
+      "votes": "290",
+      "writer": [
+        "Wendy West"
+      ]
+    }
+  }
+}
