@@ -1,0 +1,72 @@
+{
+  "id": "UnitTests",
+  "jsonrpc": "2.0",
+  "result": {
+    "episodedetails": {
+      "art": {
+        "thumb": "image://http%3a%2f%2fthetvdb.com%2fbanners%2fepisodes%2f260315%2f5147778.jpg/",
+        "tvshow.banner": "image://%2fmedia%2fgotham%2fseries%2fOrphan%20Black%2fbanner.jpg/",
+        "tvshow.fanart": "image://%2fmedia%2fgotham%2fseries%2fOrphan%20Black%2ffanart.jpg/",
+        "tvshow.poster": "image://%2fmedia%2fgotham%2fseries%2fOrphan%20Black%2fposter.jpg/"
+      },
+      "cast": [
+        {
+          "name": "Tatiana Maslany",
+          "order": 0,
+          "role": "Sarah Manning/Alison Hendrix/Cosima Niehaus/Helena/Rachel Duncan",
+          "thumbnail": "image://http%3a%2f%2fthetvdb.com%2fbanners%2factors%2f310607.jpg/"
+        },
+        {
+          "name": "Jordan Gavaris",
+          "order": 1,
+          "role": "Felix",
+          "thumbnail": "image://http%3a%2f%2fthetvdb.com%2fbanners%2factors%2f308820.jpg/"
+        },
+        {
+          "name": "Dylan Bruce",
+          "order": 2,
+          "role": "Paul Dierden",
+          "thumbnail": "image://http%3a%2f%2fthetvdb.com%2fbanners%2factors%2f310600.jpg/"
+        }
+      ],
+      "dateadded": "2015-04-26 14:56:37",
+      "director": [
+        "John Fawcett"
+      ],
+      "episode": 2,
+      "episodeid": 486,
+      "fanart": "image://%2fmedia%2fgotham%2fseries%2fOrphan%20Black%2ffanart.jpg/",
+      "file": "/media/gotham/series/Orphan Black/Season 03/Orphan Black - S03E02 - Transitory Sacrifices of Crisis.mkv",
+      "firstaired": "2015-04-25",
+      "label": "Transitory Sacrifices of Crisis",
+      "lastplayed": "",
+      "originaltitle": "",
+      "playcount": 0,
+      "plot": "Castor pursues the Leda clones for original tissue samples. Helena, who is pregnant and imprisoned, is examined by a mysterious new villain. The Castor boys are also out to play, toying with a frightened young woman, Patty, in a sexy switcheroo that ultimately sets Sarah \u2013 and Art \u2013 hot on the Castor trail. But it\u2019s not all fun and games for the Castor boys, as Sarah gleans they may have a mysterious defect that puts their lives in peril.",
+      "productioncode": "",
+      "rating": 7.400000095367432,
+      "resume": {
+        "position": 0.0,
+        "total": 0.0
+      },
+      "runtime": 2700,
+      "season": 3,
+      "showtitle": "Orphan Black",
+      "streamdetails": {
+        "audio": [ ],
+        "subtitle": [ ],
+        "video": [ ]
+      },
+      "thumbnail": "image://http%3a%2f%2fthetvdb.com%2fbanners%2fepisodes%2f260315%2f5147778.jpg/",
+      "title": "Transitory Sacrifices of Crisis",
+      "tvshowid": 17,
+      "uniqueid": {
+        "unknown": "5147778"
+      },
+      "votes": "14",
+      "writer": [
+        "Aubrey Nealon"
+      ]
+    }
+  }
+}
