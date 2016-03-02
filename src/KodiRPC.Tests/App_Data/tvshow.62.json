@@ -1,0 +1,64 @@
+{
+  "id": "GetTvShowDetailsResponse",
+  "jsonrpc": "2.0",
+  "result": {
+    "tvshowdetails": {
+      "art": {
+        "banner": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fbanner.jpg/",
+        "fanart": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2ffanart.jpg/",
+        "poster": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fposter.jpg/"
+      },
+      "cast": [
+        {
+          "name": "Matthew Rhys",
+          "order": 0,
+          "role": "Phillip Jennings",
+          "thumbnail": "image://http%3a%2f%2fthetvdb.com%2fbanners%2factors%2f305162.jpg/"
+        },
+        {
+          "name": "Keri Russell",
+          "order": 1,
+          "role": "Elizabeth Jennings",
+          "thumbnail": "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fx6TpFaS6p1v4o2gN2KWW24Osl9m.jpg/"
+        },
+        {
+          "name": "Holly Taylor",
+          "order": 2,
+          "role": "Paige Jennings",
+          "thumbnail": "image://http%3a%2f%2fthetvdb.com%2fbanners%2factors%2f307203.jpg/"
+        }
+      ],
+      "dateadded": "2015-04-23 05:12:07",
+      "episode": 39,
+      "episodeguide": "<episodeguide><url>http://thetvdb.com/api/9DAF49C96CBF8DAC/series/261690/all/en.zip</url></episodeguide>",
+      "fanart": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2ffanart.jpg/",
+      "file": "/media/gotham/series/The Americans (2013)/",
+      "genre": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "imdbnumber": "261690",
+      "label": "The Americans (2013)",
+      "lastplayed": "",
+      "mpaa": "TV-MA",
+      "originaltitle": "",
+      "playcount": 0,
+      "plot": "The Americans is a period drama about the complex marriage of two KGB spies posing as Americans in suburban Washington D.C. shortly after Ronald Reagan is elected President. The arranged marriage of Philip and Elizabeth Jennings, who have two children - 13-year-old Paige and 10-year-old Henry, who know nothing about their parents' true identity - grows more passionate and genuine by the day, but is constantly tested by the escalation of the Cold War and the intimate, dangerous and darkly funny relationships they must maintain with a network of spies and informants under their control.",
+      "premiered": "2013-01-30",
+      "rating": 8.300000190734863,
+      "season": 3,
+      "sorttitle": "",
+      "studio": [
+        "FX"
+      ],
+      "tag": [ ],
+      "thumbnail": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fposter.jpg/",
+      "title": "The Americans (2013)",
+      "tvshowid": 62,
+      "votes": "",
+      "watchedepisodes": 0,
+      "year": 2013
+    }
+  }
+}
