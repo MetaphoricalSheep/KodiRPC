@@ -6,18 +6,18 @@ using NUnit.Framework;
 namespace KodiRPC.Tests.Integration
 {
     [ExcludeFromCodeCoverage]
-    public class GetMovieDetailsTest
+    public class GetTvShowDetailsTest
     {
         [Test]
-        public void ValidateMovieObjectReturnedByService()
+        public void ValidateTvShowObjectReturnedByService()
         {
             var service = new KodiService();
-            var properties = new[] { MovieProperties.Title, MovieProperties.Runtime, MovieProperties.Year, MovieProperties.Plot };
-            var details = service.GetMovieDetails(1, properties);
+            var properties = new[] { TvShowProperties.Title, TvShowProperties.ImdbNumber, TvShowProperties.Year };
+            var details = service.GetTvShowDetails(1, properties);
 
             Assert.IsNotNull(details);
             Assert.IsNotNull(details.Result);
-            Assert.AreEqual(1, details.Result.MovieId);
+            Assert.AreEqual(1, details.Result.TvShowId);
         }
     }
 }
