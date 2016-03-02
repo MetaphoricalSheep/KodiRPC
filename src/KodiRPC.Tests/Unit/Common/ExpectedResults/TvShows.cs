@@ -3,7 +3,6 @@ using System.Linq;
 using KodiRPC.Responses.Types.Media;
 using KodiRPC.Responses.Types.Video;
 using KodiRPC.Responses.Types.Video.Details;
-using KodiRPC.Responses.Types.Video.Stream;
 using KodiRPC.Responses.VideoLibrary;
 
 namespace KodiRPC.Tests.Unit.Common.ExpectedResults
