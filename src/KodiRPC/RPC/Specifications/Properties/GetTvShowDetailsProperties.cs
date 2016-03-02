@@ -4,7 +4,7 @@ using KodiRPC.RPC.Specifications.Properties.Video.Details;
 
 namespace KodiRPC.RPC.Specifications.Properties
 {
-    public class GetTvShowDetailsProperties : TvShow
+    public class GetTvShowDetailsProperties : TvShowProperties
     {
         public static string[] All()
         {

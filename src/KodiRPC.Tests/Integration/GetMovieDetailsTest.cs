@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using KodiRPC.RPC.Specifications.Properties.Video.Details;
 using KodiRPC.Services;
 using NUnit.Framework;
 
@@ -11,7 +12,7 @@ namespace KodiRPC.Tests.Integration
         public void ValidateMovieObjectReturnedByService()
         {
             var service = new KodiService();
-            var properties = new[] { "title", "runtime", "year", "plot" };
+            var properties = new[] { MovieProperties.Title, MovieProperties.Runtime, MovieProperties.Year, MovieProperties.Plot };
             var details = service.GetMovieDetails(1, properties);
 
             Assert.IsNotNull(details);
