@@ -85,9 +85,12 @@
     <Compile Include="RPC\RequestResponse\JsonRpcError.cs" />
     <Compile Include="RPC\RequestResponse\JsonRpcRequest.cs" />
     <Compile Include="RPC\RequestResponse\JsonRpcResponse.cs" />
+    <Compile Include="RPC\Specifications\Properties\GetEpisodesProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\GetMoviesProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\GetTvShowDetailsProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\GetEpisodeDetailsProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\GetMovieDetailsProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\GetTvShowsProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\Media\Details\BaseProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\Video\Details\BaseProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\Video\Details\EpisodeProperties.cs" />
