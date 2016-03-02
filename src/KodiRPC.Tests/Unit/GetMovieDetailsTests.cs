@@ -11,25 +11,25 @@ namespace KodiRPC.Tests.Unit
         [Test]
         public void GivenAJsonString_WhenGettingAMovieByMovieId_WithAValidMovieId_ItShouldReturnAMovie()
         {
-            const Movies.TestSet movieId = Movies.TestSet.Spy;
-            var mock = GetKodiServiceMock((int)movieId);
+            const Movies.TestSet id = Movies.TestSet.Spy;
+            var mock = GetKodiServiceMock((int)id);
             var service = mock.Object;
-            var movie = service.GetMovieDetails((int)movieId, null, null);
-            var testCase = Movies.GetMovie(movieId);
+            var actual = service.GetMovieDetails((int)id, null, null);
+            var expected = Movies.GetMovie(id);
 
-            Assert.IsInstanceOf<GetMovieDetailsResponse>(movie);
-            Assert.That(movie.Result.MovieId, Is.EqualTo(testCase.Result.MovieId));
-            AssertThatPropertyValuesAreEquals(movie.Result, testCase.Result);
+            Assert.IsInstanceOf<GetMovieDetailsResponse>(actual);
+            Assert.That(actual.Result.MovieId, Is.EqualTo(expected.Result.MovieId));
+            AssertThatPropertyValuesAreEquals(actual.Result, expected.Result);
         }
 
         [Test]
         public void GivenAJsonString_WhenGettingAMovieByMovieId_WithAnInvalidMovieId_ItShouldThrowRpcInternalServerErrorException()
         {
-            const Movies.TestSet movieId = Movies.TestSet.InvalidId;
-            var mock = GetKodiServiceMock((int)movieId);
+            const Movies.TestSet id = Movies.TestSet.InvalidId;
+            var mock = GetKodiServiceMock((int)id);
             var service = mock.Object;
 
-            Assert.That(() => service.GetMovieDetails((int) movieId, null, null), Throws.Exception.TypeOf<RpcInternalServerErrorException>());
+            Assert.That(() => service.GetMovieDetails((int) id, null, null), Throws.Exception.TypeOf<RpcInternalServerErrorException>());
         }
     }
 }

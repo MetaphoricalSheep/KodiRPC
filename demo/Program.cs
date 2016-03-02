@@ -22,9 +22,8 @@ namespace DemoClient
                 var ping = Service.Ping();
                 Console.WriteLine(ping);
 
-                //var properties = new[] { "title", "runtime" };
-                var properties = GetMovieDetailsProperties.All();
-                var details = Service.GetMovieDetails(12, properties);
+                var properties = GetTvShowDetailsProperties.All();
+                var details = Service.GetTvShowDetails(12, properties);
                 Console.WriteLine(details.Result.Title);
 
                 NEKey();

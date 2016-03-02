@@ -1,0 +1,64 @@
+{
+  "id": "GetTvShowDetailsResponse",
+  "jsonrpc": "2.0",
+  "result": {
+    "tvshowdetails": {
+      "art": {
+        "banner": "image://%2fmedia%2fgotham%2fseries%2fRick%20and%20Morty%2fbanner.jpg/",
+        "fanart": "image://%2fmedia%2fgotham%2fseries%2fRick%20and%20Morty%2ffanart.jpg/",
+        "poster": "image://%2fmedia%2fgotham%2fseries%2fRick%20and%20Morty%2fposter.jpg/"
+      },
+      "cast": [
+        {
+          "name": "Justin Roiland",
+          "order": 0,
+          "role": "Rick|Morty",
+          "thumbnail": "image://http%3a%2f%2fthetvdb.com%2fbanners%2factors%2f325163.jpg/"
+        },
+        {
+          "name": "Chris Parnell",
+          "order": 1,
+          "role": "Jerry",
+          "thumbnail": "image://http%3a%2f%2fthetvdb.com%2fbanners%2factors%2f325164.jpg/"
+        },
+        {
+          "name": "Spencer Grammer",
+          "order": 2,
+          "role": "Summer",
+          "thumbnail": "image://http%3a%2f%2fthetvdb.com%2fbanners%2factors%2f325165.jpg/"
+        }
+      ],
+      "dateadded": "2015-10-23 00:48:00",
+      "episode": 21,
+      "episodeguide": "<episodeguide><url>http://thetvdb.com/api/9DAF49C96CBF8DAC/series/275274/all/en.zip</url></episodeguide>",
+      "fanart": "image://%2fmedia%2fgotham%2fseries%2fRick%20and%20Morty%2ffanart.jpg/",
+      "file": "/media/gotham/series/Rick and Morty/",
+      "genre": [
+        "Animation",
+        "Comedy",
+        "Science-Fiction"
+      ],
+      "imdbnumber": "275274",
+      "label": "Rick and Morty",
+      "lastplayed": "",
+      "mpaa": "TV-14",
+      "originaltitle": "",
+      "playcount": 0,
+      "plot": "A sociopathic scientist drags his unintelligent grandson on insanely dangerous adventures across the universe.",
+      "premiered": "2013-12-02",
+      "rating": 8.899999618530273,
+      "season": 2,
+      "sorttitle": "",
+      "studio": [
+        "Adult Swim"
+      ],
+      "tag": [ ],
+      "thumbnail": "image://%2fmedia%2fgotham%2fseries%2fRick%20and%20Morty%2fposter.jpg/",
+      "title": "Rick and Morty",
+      "tvshowid": 40,
+      "votes": "",
+      "watchedepisodes": 0,
+      "year": 2013
+    }
+  }
+}

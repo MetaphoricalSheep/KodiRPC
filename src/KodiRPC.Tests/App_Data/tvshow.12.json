@@ -1,0 +1,64 @@
+{
+  "id": "GetTvShowDetailsResponse",
+  "jsonrpc": "2.0",
+  "result": {
+    "tvshowdetails": {
+      "art": {
+        "banner": "image://http%3a%2f%2fthetvdb.com%2fbanners%2fgraphical%2f289590-g7.jpg/",
+        "fanart": "image://http%3a%2f%2fthetvdb.com%2fbanners%2ffanart%2foriginal%2f289590-2.jpg/",
+        "poster": "image://http%3a%2f%2fthetvdb.com%2fbanners%2fposters%2f289590-3.jpg/"
+      },
+      "cast": [
+        {
+          "name": "Rami Malek",
+          "order": 0,
+          "role": "Elliot Alderson",
+          "thumbnail": "image://http%3a%2f%2fthetvdb.com%2fbanners%2factors%2f341347.jpg/"
+        },
+        {
+          "name": "Christian Slater",
+          "order": 1,
+          "role": "Mr. Robot",
+          "thumbnail": "image://http%3a%2f%2fthetvdb.com%2fbanners%2factors%2f341348.jpg/"
+        },
+        {
+          "name": "Portia Doubleday",
+          "order": 2,
+          "role": "Angela Moss",
+          "thumbnail": "image://http%3a%2f%2fthetvdb.com%2fbanners%2factors%2f341349.jpg/"
+        }
+      ],
+      "dateadded": "2015-09-03 05:15:41",
+      "episode": 10,
+      "episodeguide": "<episodeguide><url cache=\"289590-en.xml\">http://thetvdb.com/api/1D62F2F90030C444/series/289590/all/en.zip</url></episodeguide>",
+      "fanart": "image://http%3a%2f%2fthetvdb.com%2fbanners%2ffanart%2foriginal%2f289590-2.jpg/",
+      "file": "/media/gotham/series/Mr. Robot/",
+      "genre": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "imdbnumber": "289590",
+      "label": "Mr. Robot",
+      "lastplayed": "",
+      "mpaa": "TV-14",
+      "originaltitle": "",
+      "playcount": 0,
+      "plot": "The show follows Elliot, who is a cyber-security tech by day and vigilante hacker by night. He has used his hacking skills for justice and to protect those he cares about, but has problems connecting to people in the real world due to social anxiety. He strongly believes that the world is being ruled by the 1% of the 1% and, that using money and debt, they have enslaved mankind and he wishes desperately to change this. He is recruited by the head of a highly secret hacking group to take down the corporation he is being paid to protect with the hope of erasing 70% of all the debt in the world. He has had delusions in the past and sees a therapist who tries to help him and takes medication for it, but in the end he is unsure what is real and what is not, and so are we as we experience everything from his perspective.",
+      "premiered": "2015-06-24",
+      "rating": 8.800000190734863,
+      "season": 1,
+      "sorttitle": "",
+      "studio": [
+        "USA Network"
+      ],
+      "tag": [ ],
+      "thumbnail": "image://http%3a%2f%2fthetvdb.com%2fbanners%2fposters%2f289590-3.jpg/",
+      "title": "Mr. Robot",
+      "tvshowid": 12,
+      "votes": "64",
+      "watchedepisodes": 0,
+      "year": 2015
+    }
+  }
+}
