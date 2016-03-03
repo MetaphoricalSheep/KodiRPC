@@ -102,12 +102,9 @@
     <Compile Include="RPC\RequestResponse\Params\VideoLibrary\GetMoviesParams.cs" />
     <Compile Include="RPC\RequestResponse\Params\VideoLibrary\GetTvShowDetailsParams.cs" />
     <Compile Include="RPC\RequestResponse\Params\VideoLibrary\GetTvShowsParams.cs" />
-    <Compile Include="RPC\Specifications\Properties\GetEpisodesProperties.cs" />
-    <Compile Include="RPC\Specifications\Properties\GetMoviesProperties.cs" />
-    <Compile Include="RPC\Specifications\Properties\GetTvShowDetailsProperties.cs" />
-    <Compile Include="RPC\Specifications\Properties\GetEpisodeDetailsProperties.cs" />
-    <Compile Include="RPC\Specifications\Properties\GetMovieDetailsProperties.cs" />
-    <Compile Include="RPC\Specifications\Properties\GetTvShowsProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\EpisodeProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\MovieProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\TvShowProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\Media\Details\BaseProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\Video\Details\BaseProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\Video\Details\EpisodeProperties.cs" />

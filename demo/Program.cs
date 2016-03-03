@@ -28,7 +28,7 @@ namespace DemoClient
 
                 var parameters = new GetEpisodesParams
                 {
-                    Properties = GetEpisodesProperties.All()
+                    Properties = EpisodeProperties.All()
                 };
 
                 Console.WriteLine("Running VideoLibrary.GetEpisodes");

@@ -1,10 +1,9 @@
 ﻿using System.Linq;
 using System.Reflection;
-using KodiRPC.RPC.Specifications.Properties.Video.Details;
 
 namespace KodiRPC.RPC.Specifications.Properties
 {
-    public class GetTvShowDetailsProperties : Video.Details.TvShowProperties
+    public class TvShowProperties : Video.Details.TvShowProperties
     {
         public static string[] All()
         {

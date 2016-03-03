@@ -27,6 +27,8 @@ namespace KodiRPC.RPC.Connector
                 Parameters = parameters
             };
 
+            Console.WriteLine(jsonRpcRequest.ToString());
+
             var uri = $"{_service.Host}:{_service.Port}/jsonrpc";
 
             var webRequest = (HttpWebRequest)WebRequest.Create(uri);
