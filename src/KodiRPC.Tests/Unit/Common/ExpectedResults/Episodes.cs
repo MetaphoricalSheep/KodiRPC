@@ -87,7 +87,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                         },
                         Thumbnail = "image://http%3a%2f%2fthetvdb.com%2fbanners%2fepisodes%2f79349%2f2755231.jpg/",
                         Title = "Everything Is Illumenated",
-                        TvshowId = 30,
+                        TvShowId = 30,
                         UniqueId = new UniqueId
                         {
                             Unknown = "2755231"
@@ -163,7 +163,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                         },
                         Thumbnail = "image://http%3a%2f%2fthetvdb.com%2fbanners%2fepisodes%2f260315%2f5147778.jpg/",
                         Title = "Transitory Sacrifices of Crisis",
-                        TvshowId = 17,
+                        TvShowId = 17,
                         UniqueId = new UniqueId
                         {
                             Unknown = "5147778"
@@ -238,7 +238,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                         },
                         Thumbnail = "image://http%3a%2f%2fthetvdb.com%2fbanners%2fepisodes%2f258171%2f4307624.jpg/",
                         Title = "Playtime",
-                        TvshowId = 35,
+                        TvShowId = 35,
                         UniqueId = new UniqueId
                         {
                             Unknown = "4307624"
@@ -257,6 +257,94 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
             var episodes = GetEpisodes();
 
             return episodes.First(e => e.Result.EpisodeId == (int)episodeId);
+        }
+
+        public static GetEpisodesResponse GetList()
+        {
+            return new GetEpisodesResponse
+            {
+                Result = new List<Episode>
+                {
+                    new Episode
+                    {
+                        EpisodeId = 683,
+                        Label = "1x01. Into the Ring",
+                        Title = "Into the Ring"
+                    },
+                    new Episode
+                    {
+                        EpisodeId = 684,
+                        Label = "1x02. Cut Man",
+                        Title = "Cut Man"
+                    },
+                    new Episode
+                    {
+                        EpisodeId = 685,
+                        Label = "1x03. Rabbit in a Snow Storm",
+                        Title = "Rabbit in a Snow Storm"
+                    },
+                    new Episode
+                    {
+                        EpisodeId = 686,
+                        Label = "1x04. In the Blood",
+                        Title = "In the Blood"
+                    },
+                    new Episode
+                    {
+                        EpisodeId = 687,
+                        Label = "1x05. World on Fire",
+                        Title = "World on Fire"
+                    },
+                    new Episode
+                    {
+                        EpisodeId = 688,
+                        Label = "1x06. Condemned",
+                        Title = "Condemned"
+                    },
+                    new Episode
+                    {
+                        EpisodeId = 689,
+                        Label = "1x07. Stick",
+                        Title = "Stick"
+                    },
+                    new Episode
+                    {
+                        EpisodeId = 690,
+                        Label = "1x08. Shadows in the Glass",
+                        Title = "Shadows in the Glass"
+                    },
+                    new Episode
+                    {
+                        EpisodeId = 691,
+                        Label = "1x09. Speak of the Devil",
+                        Title = "Speak of the Devil"
+                    },
+                    new Episode
+                    {
+                        EpisodeId = 692,
+                        Label = "1x10. Nelson v. Murdock",
+                        Title = "Nelson v. Murdock"
+                    },
+                    new Episode
+                    {
+                        EpisodeId = 693,
+                        Label = "1x11. The Path of the Righteous",
+                        Title = "The Path of the Righteous"
+                    },
+                    new Episode
+                    {
+                        EpisodeId = 694,
+                        Label = "1x12. The Ones We Leave Behind",
+                        Title = "The Ones We Leave Behind"
+                    },
+                    new Episode
+                    {
+                        EpisodeId = 695,
+                        Label = "1x13. Daredevil",
+                        Title = "Daredevil"
+                    }
+                }
+            };
         }
     }
 }

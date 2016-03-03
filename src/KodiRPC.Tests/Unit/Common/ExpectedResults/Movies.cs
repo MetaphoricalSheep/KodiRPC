@@ -342,5 +342,36 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
 
             return movies.First(m => m.Result.MovieId == (int)movieId);
         }
+
+        public static GetMoviesResponse GetList()
+        {
+            return new GetMoviesResponse
+            {
+                Result = new List<Movie>
+                {
+                    new Movie
+                    {
+                        Label = "The Machinist",
+                        MovieId = 46,
+                        Title = "The Machinist",
+                        Year = 2004
+                    },
+                    new Movie
+                    {
+                        Label = "Man of Steel",
+                        MovieId = 47,
+                        Title = "Man of Steel",
+                        Year = 2013
+                    },
+                    new Movie
+                    {
+                        Label = "Man of Tai Chi",
+                        MovieId = 48,
+                        Title = "Man of Tai Chi",
+                        Year = 2013
+                    }
+                }
+            };
+        }
     }
 }

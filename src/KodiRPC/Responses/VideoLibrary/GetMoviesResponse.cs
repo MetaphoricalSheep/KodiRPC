@@ -4,9 +4,9 @@ using Newtonsoft.Json;
 
 namespace KodiRPC.Responses.VideoLibrary
 {
-    public class GetTvShowsResponse
+    public class GetMoviesResponse
     {
-        [JsonProperty(PropertyName = "tvshows")]
-        public List<TvShow> Result { get; set; }
+        [JsonProperty(PropertyName = "movies")]
+        public List<Movie> Result { get; set; }
     }
 }
