@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Linq;
+using KodiRPC.RPC.RequestResponse;
+using KodiRPC.RPC.RequestResponse.Params;
+using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
 using KodiRPC.RPC.Specifications.Properties;
 using KodiRPC.Services;
 
@@ -17,14 +21,22 @@ namespace DemoClient
                 Console.WriteLine("\tUsername.......{0}", Service.Username);
                 Console.WriteLine("\tPassword.......{0}", Service.Password);
                 Console.WriteLine();
-                Console.WriteLine("Pinging Kodi.");
+                Console.Write("Pinging Kodi....");
 
                 var ping = Service.Ping();
                 Console.WriteLine(ping);
 
-                var properties = GetTvShowDetailsProperties.All();
-                var details = Service.GetTvShowDetails(12, properties);
-                Console.WriteLine(details.Result.Title);
+                var parameters = new GetEpisodesParams
+                {
+                    Properties = EpisodeProperties.All()
+                };
+
+                Console.WriteLine("Running VideoLibrary.GetEpisodes");
+
+                var details = Service.GetEpisodes(parameters);
+
+                Console.WriteLine("First.Title....{0}", details.Result.First().Title);
+                Console.WriteLine("Count..........{0}", details.Result.Count);
 
                 NEKey();
             }

@@ -1,4 +1,7 @@
 ﻿using KodiRPC.Responses.VideoLibrary;
+using KodiRPC.RPC.RequestResponse;
+using KodiRPC.RPC.RequestResponse.Params;
+using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
 
 namespace KodiRPC.Services
 {
@@ -13,16 +16,15 @@ namespace KodiRPC.Services
         #region VideoLibrary
 
         #region Shows
-        GetTvShowDetailsResponse GetTvShowDetails(int tvShowId, string[] properties = null,
-            string requestId = "GetTvShowDetailsResponse");
-
-        GetEpisodeDetailsResponse GetEpisodeDetails(int epidodeId, string[] properties = null,
-            string requestId = "GetEpisodeDetailsResponse");
+        GetTvShowsResponse GetTvShows(GetTvShowsParams parameters = null, string requestId = "GetTvShowsResponse");
+        GetTvShowDetailsResponse GetTvShowDetails(GetTvShowDetailsParams parameters, string requestId = "GetTvShowDetailsResponse");
+        GetEpisodesResponse GetEpisodes(GetEpisodesParams parameters = null, string requestId = "GetEpisodesResponse");
+        GetEpisodeDetailsResponse GetEpisodeDetails(GetEpisodeDetailsParams parameters, string requestId = "GetEpisodeDetailsResponse");
         #endregion
 
         #region Movies
-        GetMovieDetailsResponse GetMovieDetails(int movieId, string[] properties = null,
-            string requestId = "GetMovieDetailsResponse");
+        GetMoviesResponse GetMovies(GetMoviesParams parameters = null, string requestId = "GetMovieDetailsResponse");
+        GetMovieDetailsResponse GetMovieDetails(GetMovieDetailsParams parameters, string requestId = "GetMovieDetailsResponse");
         #endregion
 
         #endregion
