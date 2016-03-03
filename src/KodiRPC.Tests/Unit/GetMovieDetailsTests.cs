@@ -1,6 +1,7 @@
 ﻿using KodiRPC.ExceptionHandling.RPC;
 using KodiRPC.Responses.VideoLibrary;
 using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
+using KodiRPC.RPC.Specifications.Properties;
 using KodiRPC.Tests.Unit.Common;
 using KodiRPC.Tests.Unit.Common.ExpectedResults;
 using NUnit.Framework;
@@ -16,7 +17,8 @@ namespace KodiRPC.Tests.Unit
 
             var parameters = new GetMovieDetailsParams
             {
-                MovieId = (int) id
+                MovieId = (int) id,
+                Properties = MovieProperties.All()
             };
 
             var mock = GetKodiServiceMock(parameters);

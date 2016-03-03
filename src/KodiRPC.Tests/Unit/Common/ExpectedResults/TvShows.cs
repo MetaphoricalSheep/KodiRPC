@@ -215,5 +215,36 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
 
             return tvShows.First(s => s.Result.TvShowId == (int)tvShowId);
         }
+
+        public static GetTvShowsResponse GetList()
+        {
+            return new GetTvShowsResponse
+            {
+                Result = new List<TvShow>
+                {
+                    new TvShow
+                    {
+                        Label = "Better Call Saul",
+                        Title = "Better Call Saul",
+                        TvShowId = 48,
+                        Year = 2014
+                    },
+                    new TvShow
+                    {
+                        Label = "Doctor Who (2005)",
+                        Title = "Doctor Who (2005)",
+                        TvShowId = 49,
+                        Year = 2005
+                    },
+                    new TvShow
+                    {
+                        Label = "DC's Legends of Tomorrow",
+                        Title = "DC's Legends of Tomorrow",
+                        TvShowId = 50,
+                        Year = 0
+                    }
+                }
+            };
+        }
     }
 }

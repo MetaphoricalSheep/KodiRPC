@@ -8,6 +8,9 @@ using KodiRPC.RPC.RequestResponse;
 using Newtonsoft.Json;
 using Stream = KodiRPC.Responses.Types.Video.Stream;
 using NUnit.Framework;
+using System.Collections.Generic;
+using KodiRPC.Responses.Types.Video.Details;
+using KodiRPC.Responses.VideoLibrary;
 
 namespace KodiRPC.Tests.Unit.Common
 {
@@ -76,7 +79,8 @@ namespace KodiRPC.Tests.Unit.Common
 
             for (var i = 0; i < actualList?.Count; i++)
             {
-                if (actualList[i] is Cast || actualList[i] is Stream.Video || actualList[i] is Stream.Audio || actualList[i] is Stream.Subtitle)
+                if (actualList[i] is Cast || actualList[i] is Stream.Video || actualList[i] is Stream.Audio || actualList[i] is Stream.Subtitle || 
+                    actualList[i] is Episode || actualList[i] is TvShow || actualList[i] is Movie)
                 {
                     AssertThatPropertyValuesAreEquals(actualList[i], expectedList[i]);
                 }
