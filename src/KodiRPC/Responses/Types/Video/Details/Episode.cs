@@ -26,7 +26,7 @@ namespace KodiRPC.Responses.Types.Video.Details
         public int EpisodeId { get; set; }
 
         [JsonProperty(PropertyName = "tvshowid")]
-        public int TvshowId { get; set; } = -1;
+        public int TvShowId { get; set; } = -1;
 
         [JsonProperty(PropertyName = "season")]
         public int Season { get; set; } = 0;

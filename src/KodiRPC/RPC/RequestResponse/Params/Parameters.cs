@@ -1,16 +1,9 @@
-﻿using KodiRPC.RPC.RequestResponse.Params;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
-namespace KodiRPC.RPC.RequestResponse
+namespace KodiRPC.RPC.RequestResponse.Params
 {
     public class Parameters
     {
-        [JsonProperty("filter")]
-        public Filter Filter { get; set; }
-
-        [JsonProperty("limits")]
-        public Limits Limits { get; set; }
-
         [JsonProperty("properties")]
         public string[] Properties { get; set; }
 

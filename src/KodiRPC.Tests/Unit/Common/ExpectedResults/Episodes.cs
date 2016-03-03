@@ -87,7 +87,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                         },
                         Thumbnail = "image://http%3a%2f%2fthetvdb.com%2fbanners%2fepisodes%2f79349%2f2755231.jpg/",
                         Title = "Everything Is Illumenated",
-                        TvshowId = 30,
+                        TvShowId = 30,
                         UniqueId = new UniqueId
                         {
                             Unknown = "2755231"
@@ -163,7 +163,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                         },
                         Thumbnail = "image://http%3a%2f%2fthetvdb.com%2fbanners%2fepisodes%2f260315%2f5147778.jpg/",
                         Title = "Transitory Sacrifices of Crisis",
-                        TvshowId = 17,
+                        TvShowId = 17,
                         UniqueId = new UniqueId
                         {
                             Unknown = "5147778"
@@ -238,7 +238,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                         },
                         Thumbnail = "image://http%3a%2f%2fthetvdb.com%2fbanners%2fepisodes%2f258171%2f4307624.jpg/",
                         Title = "Playtime",
-                        TvshowId = 35,
+                        TvShowId = 35,
                         UniqueId = new UniqueId
                         {
                             Unknown = "4307624"
