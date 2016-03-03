@@ -87,6 +87,8 @@
     <Compile Include="RPC\RequestResponse\JsonRpcError.cs" />
     <Compile Include="RPC\RequestResponse\JsonRpcRequest.cs" />
     <Compile Include="RPC\RequestResponse\JsonRpcResponse.cs" />
+    <Compile Include="RPC\RequestResponse\Params\Filters\Fields\Movies.cs" />
+    <Compile Include="RPC\RequestResponse\Params\Filters\Fields\TvShows.cs" />
     <Compile Include="RPC\RequestResponse\Params\Parameters.cs" />
     <Compile Include="RPC\RequestResponse\Params\Filters\Fields\Episodes.cs" />
     <Compile Include="RPC\RequestResponse\Params\Filter.cs" />
