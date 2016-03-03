@@ -17,7 +17,7 @@ namespace DemoClient
                 Console.WriteLine("\tUsername.......{0}", Service.Username);
                 Console.WriteLine("\tPassword.......{0}", Service.Password);
                 Console.WriteLine();
-                Console.WriteLine("Pinging Kodi.");
+                Console.Write("Pinging Kodi....");
 
                 var ping = Service.Ping();
                 Console.WriteLine(ping);

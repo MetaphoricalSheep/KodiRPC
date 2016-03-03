@@ -1,6 +1,7 @@
 ﻿using System.Configuration;
 using KodiRPC.Responses.VideoLibrary;
 using KodiRPC.RPC.Connector;
+using KodiRPC.RPC.RequestResponse;
 using KodiRPC.RPC.Specifications;
 
 namespace KodiRPC.Services
@@ -31,44 +32,20 @@ namespace KodiRPC.Services
         #region VideoLibrary
 
         #region Shows
-        public GetTvShowDetailsResponse GetTvShowDetails(int tvShowId, string[] properties = null, string requestId="GetTvShowDetailsResponse")
+        public GetTvShowDetailsResponse GetTvShowDetails(Parameters parameters = null, string requestId="GetTvShowDetailsResponse")
         {
-            properties = properties ?? new string[] {};
-
-            var parameters = new 
-            {
-                tvshowid = tvShowId,
-                properties
-            };
-
             return _rpcConnector.MakeRequest<GetTvShowDetailsResponse>(KodiMethods.GetTvShowDetails, parameters, requestId);
         }
 
-        public GetEpisodeDetailsResponse GetEpisodeDetails(int episodeId, string[] properties = null, string requestId="GetTvShowDetailsResponse")
+        public GetEpisodeDetailsResponse GetEpisodeDetails(Parameters parameters = null, string requestId="GetTvShowDetailsResponse")
         {
-            properties = properties ?? new string[] {};
-
-            var parameters = new 
-            {
-                episodeid = episodeId,
-                properties
-            };
-
             return _rpcConnector.MakeRequest<GetEpisodeDetailsResponse>(KodiMethods.GetEpisodeDetails, parameters, requestId);
         }
         #endregion
 
         #region Movies
-        public GetMovieDetailsResponse GetMovieDetails(int movieId, string[] properties = null, string requestId="GetMovieDetailsResponse")
+        public GetMovieDetailsResponse GetMovieDetails(Parameters parameters = null, string requestId="GetMovieDetailsResponse")
         {
-            properties = properties ?? new string[] {};
-
-            var parameters = new 
-            {
-                movieid = movieId,
-                properties
-            };
-
             return _rpcConnector.MakeRequest<GetMovieDetailsResponse>(KodiMethods.GetMovieDetails, parameters, requestId);
         }
         #endregion
