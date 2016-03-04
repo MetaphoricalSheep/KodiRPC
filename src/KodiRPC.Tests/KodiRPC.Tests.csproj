@@ -79,15 +79,19 @@
     <Compile Include="Integration\GetMovieDetailsTests.cs" />
     <Compile Include="Integration\GetMoviesTests.cs" />
     <Compile Include="Integration\GetTvShowDetailsTests.cs" />
+    <Compile Include="Integration\GetSeasonsTests.cs" />
     <Compile Include="Integration\GetTvShowsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Unit\Common\BaseTest.cs" />
+    <Compile Include="Unit\Common\ExpectedResults\Seasons.cs" />
     <Compile Include="Unit\Common\ExpectedResults\TvShows.cs" />
     <Compile Include="Unit\Common\ExpectedResults\Episodes.cs" />
     <Compile Include="Unit\Common\ExpectedResults\Movies.cs" />
     <Compile Include="Unit\GetMoviesTests.cs" />
+    <Compile Include="Unit\GetSeasonsTests.cs" />
     <Compile Include="Unit\GetTvShowsTests.cs" />
     <Compile Include="Unit\GetMoviesTests.Setup.cs" />
+    <Compile Include="Unit\GetSeasonsTests.Setup.cs" />
     <Compile Include="Unit\GetTvShowsTests.Setup.cs" />
     <Compile Include="Unit\GetEpisodesTests.Setup.cs" />
     <Compile Include="Unit\GetEpisodesTests.cs" />
@@ -114,6 +118,7 @@
     <None Include="App_Data\movie.77.json" />
     <None Include="App_Data\error.json" />
     <None Include="App_Data\movies.json" />
+    <None Include="App_Data\seasons.json" />
     <None Include="App_Data\tvshow.12.json" />
     <None Include="App_Data\tvshow.40.json" />
     <None Include="App_Data\tvshow.62.json" />

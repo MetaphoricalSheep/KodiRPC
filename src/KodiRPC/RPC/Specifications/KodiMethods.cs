@@ -13,6 +13,7 @@
         #region Shows
         public const string GetTvShows = "VideoLibrary.GetTVShows";
         public const string GetTvShowDetails = "VideoLibrary.GetTVShowDetails";
+        public const string GetSeasons = "VideoLibrary.GetSeasons";
         public const string GetEpisodes = "VideoLibrary.GetEpisodes";
         public const string GetEpisodeDetails = "VideoLibrary.GetEpisodeDetails";
         #endregion

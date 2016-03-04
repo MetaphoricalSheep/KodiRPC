@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Linq;
-using KodiRPC.RPC.RequestResponse;
-using KodiRPC.RPC.RequestResponse.Params;
 using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
 using KodiRPC.RPC.Specifications.Properties;
 using KodiRPC.Services;
@@ -26,17 +24,18 @@ namespace DemoClient
                 var ping = Service.Ping();
                 Console.WriteLine(ping);
 
-                var parameters = new GetEpisodesParams
+                var parameters = new GetSeasonsParams
                 {
-                    Properties = EpisodeProperties.All()
+                    TvShowId = 3,
+                    Properties = SeasonProperties.All()
                 };
 
                 Console.WriteLine("Running VideoLibrary.GetEpisodes");
 
-                var details = Service.GetEpisodes(parameters);
+                var details = Service.GetSeasons(parameters);
 
-                Console.WriteLine("First.Title....{0}", details.Result.First().Title);
-                Console.WriteLine("Count..........{0}", details.Result.Count);
+                Console.WriteLine("First.ShowTitle....{0}", details.Result.First().ShowTitle);
+                Console.WriteLine("First.SeasonNumber....{0}", details.Result.First().SeasonNumber);
 
                 NEKey();
             }

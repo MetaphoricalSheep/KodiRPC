@@ -7,22 +7,23 @@ using NUnit.Framework;
 
 namespace KodiRPC.Tests.Unit
 {
-    public partial class GetTvShowsTests : BaseTest
+    public partial class GetSeasonsTests : BaseTest
     {
         [Test]
-        public void GivenAJsonString_WhenGettingAllTvShows_ItShouldReturnAListOfShows()
+        public void GivenAJsonString_WhenGettingAllSeasons_ItShouldReturnAListOfSeasons()
         {
-            var parameters = new GetTvShowsParams
+            var parameters = new GetSeasonsParams
             {
-                Properties = new [] { TvShowProperties.Title }
+                TvShowId = 1,
+                Properties = new [] { SeasonProperties.ShowTitle }
             };
 
             var mock = GetKodiServiceMock(parameters);
             var service = mock.Object;
-            var actual = service.GetTvShows(parameters, "UnitTests");
-            var expected = TvShows.GetList();
+            var actual = service.GetSeasons(parameters, "UnitTests");
+            var expected = Seasons.GetList();
 
-            Assert.IsInstanceOf<GetTvShowsResponse>(actual);
+            Assert.IsInstanceOf<GetSeasonsResponse>(actual);
             Assert.That(actual.Result.Count, Is.EqualTo(expected.Result.Count));
             AssertThatPropertyValuesAreEquals(actual, expected);
         }

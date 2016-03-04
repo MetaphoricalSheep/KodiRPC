@@ -18,7 +18,7 @@
         public static string Year = "year";
         public static string Director = "director";
         public static string Actor = "actor";
-        public static string MPAArating = "mpaarating";
+        public static string MPAARating = "mpaarating";
         public static string Top250 = "top250";
         public static string Studio = "studio";
         public static string HasTrailer = "hastrailer";
