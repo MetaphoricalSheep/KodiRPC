@@ -19,13 +19,13 @@ namespace KodiRPC.Services
         GetSeasonsResponse GetSeasons(GetSeasonsParams parameters = null, string requestId = "GetSeasonsResponse");
         GetEpisodesResponse GetEpisodes(GetEpisodesParams parameters = null, string requestId = "GetEpisodesResponse");
         GetEpisodeDetailsResponse GetEpisodeDetails(GetEpisodeDetailsParams parameters, string requestId = "GetEpisodeDetailsResponse");
-        GetRecentlyAddedEpisodesResponse GetRecentlyAddedEpisodes(GetEpisodesParams parameters = null, string requestId = "GetRecentlyAddedEpisodesResponse");
+        GetRecentlyAddedEpisodesResponse GetRecentlyAddedEpisodes(GetRecentlyAddedEpisodesParams parameters = null, string requestId = "GetRecentlyAddedEpisodesResponse");
         #endregion
 
         #region Movies
         GetMoviesResponse GetMovies(GetMoviesParams parameters = null, string requestId = "GetMovieDetailsResponse");
         GetMovieDetailsResponse GetMovieDetails(GetMovieDetailsParams parameters, string requestId = "GetMovieDetailsResponse");
-        GetRecentlyAddedMoviesResponse GetRecentlyAddedMovies(GetMoviesParams parameters = null, string requestId = "GetRecentlyAddedMoviesResponse");
+        GetRecentlyAddedMoviesResponse GetRecentlyAddedMovies(GetRecentlyAddedMoviesParams parameters = null, string requestId = "GetRecentlyAddedMoviesResponse");
         #endregion
 
         #endregion

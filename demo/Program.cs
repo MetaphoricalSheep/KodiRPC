@@ -24,18 +24,17 @@ namespace DemoClient
                 var ping = Service.Ping();
                 Console.WriteLine(ping);
 
-                var parameters = new GetSeasonsParams
+                var parameters = new GetRecentlyAddedMoviesParams()
                 {
-                    TvShowId = 3,
-                    Properties = SeasonProperties.All()
+                    Properties = MovieProperties.All()
                 };
 
                 Console.WriteLine("Running VideoLibrary.GetEpisodes");
 
-                var details = Service.GetSeasons(parameters);
+                var details = Service.GetRecentlyAddedMovies(parameters);
 
-                Console.WriteLine("First.ShowTitle....{0}", details.Result.First().ShowTitle);
-                Console.WriteLine("First.SeasonNumber....{0}", details.Result.First().SeasonNumber);
+                Console.WriteLine("First.ShowTitle....{0}", details.Result.First().Title);
+                Console.WriteLine("First.Studio.......{0}", details.Result.First().Studio.First());
 
                 NEKey();
             }
