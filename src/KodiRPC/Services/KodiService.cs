@@ -59,6 +59,12 @@ namespace KodiRPC.Services
         {
             return _rpcConnector.MakeRequest<GetEpisodeDetailsResponse>(KodiMethods.GetEpisodeDetails, parameters, requestId);
         }
+
+        public GetRecentlyAddedEpisodesResponse GetRecentlyAddedEpisodes(GetRecentlyAddedEpisodesParams parameters = null,
+            string requestId = "GetRecentlyAddedEpisodesResponse")
+        {
+            return _rpcConnector.MakeRequest<GetRecentlyAddedEpisodesResponse>(KodiMethods.GetRecentlyAddedEpisodes, parameters, requestId);
+        }
         #endregion
 
         #region Movies
@@ -70,6 +76,12 @@ namespace KodiRPC.Services
         public GetMovieDetailsResponse GetMovieDetails(GetMovieDetailsParams parameters, string requestId="GetMovieDetailsResponse")
         {
             return _rpcConnector.MakeRequest<GetMovieDetailsResponse>(KodiMethods.GetMovieDetails, parameters, requestId);
+        }
+
+        public GetRecentlyAddedMoviesResponse GetRecentlyAddedMovies(GetRecentlyAddedMoviesParams parameters = null,
+            string requestId = "GetRecentlyAddedMoviesResponse")
+        {
+            return _rpcConnector.MakeRequest<GetRecentlyAddedMoviesResponse>(KodiMethods.GetRecentlyAddedMovies, parameters, requestId);
         }
         #endregion
 
