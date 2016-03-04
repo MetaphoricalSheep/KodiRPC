@@ -62,6 +62,7 @@
     <Compile Include="Responses\Types\Video\Details\Episode.cs" />
     <Compile Include="Responses\Types\Video\Details\File.cs" />
     <Compile Include="Responses\Types\Video\Details\Movie.cs" />
+    <Compile Include="Responses\Types\Video\Details\Season.cs" />
     <Compile Include="Responses\Types\Video\Resume.cs" />
     <Compile Include="Responses\Types\Video\Streams.cs" />
     <Compile Include="Responses\Types\Video\Stream\Audio.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Responses\Types\Video\Details\Media.cs" />
     <Compile Include="Responses\Types\Video\Details\TvShow.cs" />
     <Compile Include="Responses\VideoLibrary\GetMoviesResponse.cs" />
+    <Compile Include="Responses\VideoLibrary\GetSeasonsResponse.cs" />
     <Compile Include="Responses\VideoLibrary\GetTvShowDetailsResponse.cs" />
     <Compile Include="Responses\VideoLibrary\GetTvShowsResponse.cs" />
     <Compile Include="RPC\Connector\IRpcConnector.cs" />
@@ -102,10 +104,12 @@
     <Compile Include="RPC\RequestResponse\Params\VideoLibrary\GetEpisodesParams.cs" />
     <Compile Include="RPC\RequestResponse\Params\VideoLibrary\GetMovieDetailsParams.cs" />
     <Compile Include="RPC\RequestResponse\Params\VideoLibrary\GetMoviesParams.cs" />
+    <Compile Include="RPC\RequestResponse\Params\VideoLibrary\GetSeasonsParams.cs" />
     <Compile Include="RPC\RequestResponse\Params\VideoLibrary\GetTvShowDetailsParams.cs" />
     <Compile Include="RPC\RequestResponse\Params\VideoLibrary\GetTvShowsParams.cs" />
     <Compile Include="RPC\Specifications\Properties\EpisodeProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\MovieProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\SeasonProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\TvShowProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\Media\Details\BaseProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\Video\Details\BaseProperties.cs" />
@@ -114,6 +118,7 @@
     <Compile Include="RPC\Specifications\Properties\Video\Details\ItemProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\Video\Details\MediaProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\Video\Details\MovieProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\Video\Details\SeasonProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\Video\Details\TvShowProperties.cs" />
     <Compile Include="RPC\Specifications\RpcErrorCode.cs" />
     <Compile Include="RPC\Specifications\KodiMethods.cs" />

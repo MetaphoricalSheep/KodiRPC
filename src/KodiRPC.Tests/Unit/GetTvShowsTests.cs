@@ -10,7 +10,7 @@ namespace KodiRPC.Tests.Unit
     public partial class GetTvShowsTests : BaseTest
     {
         [Test]
-        public void GivenAJsonString_WhenGettingAllMovies_ItShouldReturnAListOfMovies()
+        public void GivenAJsonString_WhenGettingAllTvShows_ItShouldReturnAListOfShows()
         {
             var parameters = new GetTvShowsParams
             {
