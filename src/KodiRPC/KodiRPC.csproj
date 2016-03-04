@@ -81,6 +81,8 @@
     <Compile Include="Responses\Types\Video\Details\Media.cs" />
     <Compile Include="Responses\Types\Video\Details\TvShow.cs" />
     <Compile Include="Responses\VideoLibrary\GetMoviesResponse.cs" />
+    <Compile Include="Responses\VideoLibrary\GetRecentlyAddedEpisodesResponse.cs" />
+    <Compile Include="Responses\VideoLibrary\GetRecentlyAddedMoviesResponse.cs" />
     <Compile Include="Responses\VideoLibrary\GetSeasonsResponse.cs" />
     <Compile Include="Responses\VideoLibrary\GetTvShowDetailsResponse.cs" />
     <Compile Include="Responses\VideoLibrary\GetTvShowsResponse.cs" />
