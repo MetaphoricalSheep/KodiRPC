@@ -1,0 +1,67 @@
+{
+  "id": "GetSeasonsResponse",
+  "jsonrpc": "2.0",
+  "result": {
+    "limits": {
+      "end": 3,
+      "start": 0,
+      "total": 3
+    },
+    "seasons": [
+      {
+        "art": {
+          "poster": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fseason01-poster.jpg/",
+          "tvshow.banner": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fbanner.jpg/",
+          "tvshow.fanart": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2ffanart.jpg/",
+          "tvshow.poster": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fposter.jpg/"
+        },
+        "episode": 13,
+        "fanart": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2ffanart.jpg/",
+        "label": "Season 1",
+        "playcount": 0,
+        "season": 1,
+        "seasonid": 380,
+        "showtitle": "The Americans (2013)",
+        "thumbnail": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fseason01-poster.jpg/",
+        "tvshowid": 62,
+        "watchedepisodes": 0
+      },
+      {
+        "art": {
+          "poster": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fseason02-poster.jpg/",
+          "tvshow.banner": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fbanner.jpg/",
+          "tvshow.fanart": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2ffanart.jpg/",
+          "tvshow.poster": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fposter.jpg/"
+        },
+        "episode": 13,
+        "fanart": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2ffanart.jpg/",
+        "label": "Season 2",
+        "playcount": 0,
+        "season": 2,
+        "seasonid": 381,
+        "showtitle": "The Americans (2013)",
+        "thumbnail": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fseason02-poster.jpg/",
+        "tvshowid": 62,
+        "watchedepisodes": 0
+      },
+      {
+        "art": {
+          "poster": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fseason03-poster.jpg/",
+          "tvshow.banner": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fbanner.jpg/",
+          "tvshow.fanart": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2ffanart.jpg/",
+          "tvshow.poster": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fposter.jpg/"
+        },
+        "episode": 13,
+        "fanart": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2ffanart.jpg/",
+        "label": "Season 3",
+        "playcount": 0,
+        "season": 3,
+        "seasonid": 382,
+        "showtitle": "The Americans (2013)",
+        "thumbnail": "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fseason03-poster.jpg/",
+        "tvshowid": 62,
+        "watchedepisodes": 0
+      }
+    ]
+  }
+}
