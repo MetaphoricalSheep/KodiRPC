@@ -1,6 +1,4 @@
 ﻿using KodiRPC.Responses.VideoLibrary;
-using KodiRPC.RPC.RequestResponse;
-using KodiRPC.RPC.RequestResponse.Params;
 using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
 
 namespace KodiRPC.Services
@@ -18,6 +16,7 @@ namespace KodiRPC.Services
         #region Shows
         GetTvShowsResponse GetTvShows(GetTvShowsParams parameters = null, string requestId = "GetTvShowsResponse");
         GetTvShowDetailsResponse GetTvShowDetails(GetTvShowDetailsParams parameters, string requestId = "GetTvShowDetailsResponse");
+        GetSeasonsResponse GetSeasons(GetSeasonsParams parameters = null, string requestId = "GetSeasonsResponse");
         GetEpisodesResponse GetEpisodes(GetEpisodesParams parameters = null, string requestId = "GetEpisodesResponse");
         GetEpisodeDetailsResponse GetEpisodeDetails(GetEpisodeDetailsParams parameters, string requestId = "GetEpisodeDetailsResponse");
         #endregion
