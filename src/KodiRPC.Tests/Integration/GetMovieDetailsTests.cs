@@ -26,7 +26,7 @@ namespace KodiRPC.Tests.Integration
 
             Assert.IsNotNull(details);
             Assert.IsNotNull(details.Result);
-            Assert.AreEqual(1, details.Result.MovieId);
+            Assert.AreEqual(1, details.Result.MovieDetails.MovieId);
         }
 
         [Test]

@@ -24,7 +24,7 @@ namespace KodiRPC.Tests.Unit
             var expected = Seasons.GetList();
 
             Assert.IsInstanceOf<GetSeasonsResponse>(actual);
-            Assert.That(actual.Result.Count, Is.EqualTo(expected.Result.Count));
+            Assert.That(actual.Result.Seasons.Count, Is.EqualTo(expected.Seasons.Count));
             AssertThatPropertyValuesAreEquals(actual, expected);
         }
     }

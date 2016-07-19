@@ -22,7 +22,7 @@ namespace DemoClient
                 Console.Write("Pinging Kodi....");
 
                 var ping = Service.Ping();
-                Console.WriteLine(ping);
+                Console.WriteLine(ping.Result);
 
                 var parameters = new GetRecentlyAddedMoviesParams()
                 {
@@ -33,8 +33,14 @@ namespace DemoClient
 
                 var details = Service.GetRecentlyAddedMovies(parameters);
 
-                Console.WriteLine("First.ShowTitle....{0}", details.Result.First().Title);
-                Console.WriteLine("First.Studio.......{0}", details.Result.First().Studio.First());
+                Console.WriteLine("ID.................{0}", details.Id);
+                Console.WriteLine("JsonRPC............{0}", details.JsonRpc);
+                Console.WriteLine("Limits.............");
+                Console.WriteLine("....End............{0}", details.Result.Limits.End);
+                Console.WriteLine("....Start..........{0}", details.Result.Limits.Start);
+                Console.WriteLine("....Total..........{0}", details.Result.Limits.Total);
+                Console.WriteLine("First.ShowTitle....{0}", details.Result.Movies.First().Title);
+                Console.WriteLine("First.Studio.......{0}", details.Result.Movies.First().Studio.First());
 
                 NEKey();
             }

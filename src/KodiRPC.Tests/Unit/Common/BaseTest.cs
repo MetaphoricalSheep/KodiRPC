@@ -14,7 +14,7 @@ namespace KodiRPC.Tests.Unit.Common
 {
     public class BaseTest
     {
-        public T MakeFauxRequest<T>(string file)
+        public JsonRpcResponse<T> MakeFauxRequest<T>(string file)
         {
             string json;
 
@@ -31,7 +31,7 @@ namespace KodiRPC.Tests.Unit.Common
 
             if (response.Error == null)
             {
-                return response.Result;
+                return response;
             }
 
             var internalServerErrorException = new RpcInternalServerErrorException(response.Error.Message)

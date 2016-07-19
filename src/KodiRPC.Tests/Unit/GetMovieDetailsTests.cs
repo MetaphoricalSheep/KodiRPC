@@ -28,8 +28,8 @@ namespace KodiRPC.Tests.Unit
             var expected = Movies.GetMovie(id);
 
             Assert.IsInstanceOf<GetMovieDetailsResponse>(actual);
-            Assert.That(actual.Result.MovieId, Is.EqualTo(expected.Result.MovieId));
-            AssertThatPropertyValuesAreEquals(actual.Result, expected.Result);
+            Assert.That(actual.Result.MovieDetails.MovieId, Is.EqualTo(expected.MovieDetails.MovieId));
+            AssertThatPropertyValuesAreEquals(actual.Result, expected.MovieDetails);
         }
 
         [Test]

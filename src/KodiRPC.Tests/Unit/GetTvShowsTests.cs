@@ -1,4 +1,5 @@
 ﻿using KodiRPC.Responses.VideoLibrary;
+using KodiRPC.RPC.RequestResponse;
 using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
 using KodiRPC.RPC.Specifications.Properties;
 using KodiRPC.Tests.Unit.Common;
@@ -22,8 +23,8 @@ namespace KodiRPC.Tests.Unit
             var actual = service.GetTvShows(parameters, "UnitTests");
             var expected = TvShows.GetList();
 
-            Assert.IsInstanceOf<GetTvShowsResponse>(actual);
-            Assert.That(actual.Result.Count, Is.EqualTo(expected.Result.Count));
+            Assert.IsInstanceOf<JsonRpcResponse<GetTvShowsResponse>>(actual);
+            Assert.That(actual.Result.TvShows.Count, Is.EqualTo(expected.TvShows.Count));
             AssertThatPropertyValuesAreEquals(actual, expected);
         }
     }

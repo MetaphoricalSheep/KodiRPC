@@ -24,7 +24,7 @@ namespace KodiRPC.Tests.Unit
             var expected = Episodes.GetList();
 
             Assert.IsInstanceOf<GetEpisodesResponse>(actual);
-            Assert.That(actual.Result.Count, Is.EqualTo(expected.Result.Count));
+            Assert.That(actual.Result.Episodes.Count, Is.EqualTo(expected.Episodes.Count));
             AssertThatPropertyValuesAreEquals(actual, expected);
         }
     }

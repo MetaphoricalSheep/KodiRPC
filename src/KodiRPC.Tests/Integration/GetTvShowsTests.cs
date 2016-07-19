@@ -26,8 +26,8 @@ namespace KodiRPC.Tests.Integration
 
             Assert.IsNotNull(details);
             Assert.IsNotNull(details.Result);
-            Assert.Greater(details.Result.Count, 0);
-            Assert.IsInstanceOf<List<TvShow>>(details.Result);
+            Assert.Greater(details.Result.TvShows.Count, 0);
+            Assert.IsInstanceOf<List<TvShow>>(details.Result.TvShows);
         }
 
         [Test]
@@ -49,8 +49,8 @@ namespace KodiRPC.Tests.Integration
 
             Assert.IsNotNull(details);
             Assert.IsNotNull(details.Result);
-            Assert.That(details.Result.Count, Is.EqualTo(1));
-            Assert.IsInstanceOf<List<TvShow>>(details.Result);
+            Assert.That(details.Result.TvShows.Count, Is.EqualTo(1));
+            Assert.IsInstanceOf<List<TvShow>>(details.Result.TvShows);
         }
     }
 }
