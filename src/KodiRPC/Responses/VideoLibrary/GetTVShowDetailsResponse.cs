@@ -6,6 +6,6 @@ namespace KodiRPC.Responses.VideoLibrary
     public class GetTvShowDetailsResponse
     {
         [JsonProperty(PropertyName = "tvshowdetails")]
-        public TvShow Result { get; set; }
+        public TvShow TvShowDetails { get; set; }
     }
 }
