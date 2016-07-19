@@ -18,7 +18,7 @@ namespace KodiRPC.RPC.Connector
             _service = service;
         }
 
-        public T MakeRequest<T>(string rpcMethod, object parameters, string id = "KodiJSON-RPC")
+        public JsonRpcResponse<T> MakeRequest<T>(string rpcMethod, object parameters, string id = "KodiJSON-RPC")
         {
             var jsonRpcRequest = new JsonRpcRequest
             {
@@ -26,6 +26,8 @@ namespace KodiRPC.RPC.Connector
                 Method = rpcMethod,
                 Parameters = parameters
             };
+
+            Console.WriteLine(jsonRpcRequest.ToString());
 
             var uri = $"{_service.Host}:{_service.Port}/jsonrpc";
 
@@ -77,7 +79,7 @@ namespace KodiRPC.RPC.Connector
 
                 if (rpcResponse.Error == null)
                 {
-                    return rpcResponse.Result;
+                    return rpcResponse;
                 }
 
                 var internalServerErrorException = new RpcInternalServerErrorException(rpcResponse.Error.Message)

@@ -1,4 +1,5 @@
 ﻿using KodiRPC.Responses.VideoLibrary;
+using KodiRPC.RPC.RequestResponse;
 using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
 
 namespace KodiRPC.Services
@@ -7,25 +8,25 @@ namespace KodiRPC.Services
     {
         #region JSONRPC
 
-        string Ping();
+        JsonRpcResponse<string> Ping();
 
         #endregion
 
         #region VideoLibrary
 
         #region Shows
-        GetTvShowsResponse GetTvShows(GetTvShowsParams parameters = null, string requestId = "GetTvShowsResponse");
-        GetTvShowDetailsResponse GetTvShowDetails(GetTvShowDetailsParams parameters, string requestId = "GetTvShowDetailsResponse");
-        GetSeasonsResponse GetSeasons(GetSeasonsParams parameters = null, string requestId = "GetSeasonsResponse");
-        GetEpisodesResponse GetEpisodes(GetEpisodesParams parameters = null, string requestId = "GetEpisodesResponse");
-        GetEpisodeDetailsResponse GetEpisodeDetails(GetEpisodeDetailsParams parameters, string requestId = "GetEpisodeDetailsResponse");
-        GetRecentlyAddedEpisodesResponse GetRecentlyAddedEpisodes(GetRecentlyAddedEpisodesParams parameters = null, string requestId = "GetRecentlyAddedEpisodesResponse");
+        JsonRpcResponse<GetTvShowsResponse> GetTvShows(GetTvShowsParams parameters = null, string requestId = "GetTvShowsResponse");
+        JsonRpcResponse<GetTvShowDetailsResponse> GetTvShowDetails(GetTvShowDetailsParams parameters, string requestId = "GetTvShowDetailsResponse");
+        JsonRpcResponse<GetSeasonsResponse> GetSeasons(GetSeasonsParams parameters = null, string requestId = "GetSeasonsResponse");
+        JsonRpcResponse<GetEpisodesResponse> GetEpisodes(GetEpisodesParams parameters = null, string requestId = "GetEpisodesResponse");
+        JsonRpcResponse<GetEpisodeDetailsResponse> GetEpisodeDetails(GetEpisodeDetailsParams parameters, string requestId = "GetEpisodeDetailsResponse");
+        JsonRpcResponse<GetRecentlyAddedEpisodesResponse> GetRecentlyAddedEpisodes(GetRecentlyAddedEpisodesParams parameters = null, string requestId = "GetRecentlyAddedEpisodesResponse");
         #endregion
 
         #region Movies
-        GetMoviesResponse GetMovies(GetMoviesParams parameters = null, string requestId = "GetMovieDetailsResponse");
-        GetMovieDetailsResponse GetMovieDetails(GetMovieDetailsParams parameters, string requestId = "GetMovieDetailsResponse");
-        GetRecentlyAddedMoviesResponse GetRecentlyAddedMovies(GetRecentlyAddedMoviesParams parameters = null, string requestId = "GetRecentlyAddedMoviesResponse");
+        JsonRpcResponse<GetMoviesResponse> GetMovies(GetMoviesParams parameters = null, string requestId = "GetMovieDetailsResponse");
+        JsonRpcResponse<GetMovieDetailsResponse> GetMovieDetails(GetMovieDetailsParams parameters, string requestId = "GetMovieDetailsResponse");
+        JsonRpcResponse<GetRecentlyAddedMoviesResponse> GetRecentlyAddedMovies(GetRecentlyAddedMoviesParams parameters = null, string requestId = "GetRecentlyAddedMoviesResponse");
         #endregion
 
         #endregion
