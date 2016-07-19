@@ -28,8 +28,8 @@ namespace KodiRPC.Tests.Unit
             var expected = TvShows.GetTvShow(id);
 
             Assert.IsInstanceOf<GetTvShowDetailsResponse>(actual);
-            Assert.That(actual.Result.TvShowId, Is.EqualTo(expected.Result.TvShowId));
-            AssertThatPropertyValuesAreEquals(actual.Result, expected.Result);
+            Assert.That(actual.Result.TvShowDetails.TvShowId, Is.EqualTo(expected.TvShowDetails.TvShowId));
+            AssertThatPropertyValuesAreEquals(actual.Result, expected.TvShowDetails);
         }
 
         [Test]

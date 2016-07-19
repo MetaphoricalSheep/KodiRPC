@@ -27,8 +27,8 @@ namespace KodiRPC.Tests.Integration
 
             Assert.IsNotNull(details);
             Assert.IsNotNull(details.Result);
-            Assert.That(details.Result.Count, Is.GreaterThan(0));
-            Assert.IsInstanceOf<List<Episode>>(details.Result);
+            Assert.That(details.Result.Episodes.Count, Is.GreaterThan(0));
+            Assert.IsInstanceOf<List<Episode>>(details.Result.Episodes);
         }
 
         [Test]
@@ -50,8 +50,8 @@ namespace KodiRPC.Tests.Integration
 
             Assert.IsNotNull(details);
             Assert.IsNotNull(details.Result);
-            Assert.That(details.Result.Count, Is.EqualTo(1));
-            Assert.IsInstanceOf<List<Episode>>(details.Result);
+            Assert.That(details.Result.Episodes.Count, Is.EqualTo(1));
+            Assert.IsInstanceOf<List<Episode>>(details.Result.Episodes);
         }
 
         [Test]
@@ -69,8 +69,8 @@ namespace KodiRPC.Tests.Integration
 
             Assert.IsNotNull(details);
             Assert.IsNotNull(details.Result);
-            Assert.IsInstanceOf<List<Episode>>(details.Result);
-            Assert.That(details.Result.Find(s => s.TvShowId != 1), Is.Null);
+            Assert.IsInstanceOf<List<Episode>>(details.Result.Episodes);
+            Assert.That(details.Result.Episodes.Find(s => s.TvShowId != 1), Is.Null);
         }
 
         [Test]
@@ -89,10 +89,10 @@ namespace KodiRPC.Tests.Integration
 
             Assert.IsNotNull(details);
             Assert.IsNotNull(details.Result);
-            Assert.IsInstanceOf<List<Episode>>(details.Result);
-            Console.WriteLine(details.Result.Find(s => s.TvShowId != 1).Title);
-            Console.WriteLine(details.Result.Find(s => s.TvShowId != 1).TvShowId);
-            Assert.That(details.Result.Find(s => s.Season != 1), Is.Null);
+            Assert.IsInstanceOf<List<Episode>>(details.Result.Episodes);
+            Console.WriteLine(details.Result.Episodes.Find(s => s.TvShowId != 1).Title);
+            Console.WriteLine(details.Result.Episodes.Find(s => s.TvShowId != 1).TvShowId);
+            Assert.That(details.Result.Episodes.Find(s => s.Season != 1), Is.Null);
         }
     }
 }

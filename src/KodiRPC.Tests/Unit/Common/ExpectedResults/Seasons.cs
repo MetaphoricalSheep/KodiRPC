@@ -11,7 +11,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
         {
             return new GetSeasonsResponse
             {
-                Result = new List<Season>
+                Seasons = new List<Season>
                 {
                     new Season
                     {

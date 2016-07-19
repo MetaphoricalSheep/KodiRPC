@@ -23,7 +23,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
             {
                 new GetTvShowDetailsResponse
                 {
-                    Result = new TvShow
+                    TvShowDetails = new TvShow
                     {
                         Art = new Artwork
                         {
@@ -84,7 +84,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                 },
                 new GetTvShowDetailsResponse
                 {
-                    Result = new TvShow
+                    TvShowDetails = new TvShow
                     {
                         Art = new Artwork
                         {
@@ -145,7 +145,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                 },
                 new GetTvShowDetailsResponse
                 {
-                    Result = new TvShow
+                    TvShowDetails = new TvShow
                     {
                         Art = new Artwork
                         {
@@ -213,14 +213,14 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
         {
             var tvShows = GetTvShows();
 
-            return tvShows.First(s => s.Result.TvShowId == (int)tvShowId);
+            return tvShows.First(s => s.TvShowDetails.TvShowId == (int)tvShowId);
         }
 
         public static GetTvShowsResponse GetList()
         {
             return new GetTvShowsResponse
             {
-                Result = new List<TvShow>
+                TvShows = new List<TvShow>
                 {
                     new TvShow
                     {

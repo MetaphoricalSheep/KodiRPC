@@ -28,8 +28,8 @@ namespace KodiRPC.Tests.Integration
 
             Assert.IsNotNull(details);
             Assert.IsNotNull(details.Result);
-            Assert.Greater(details.Result.Count, 0);
-            Assert.IsInstanceOf<List<Season>>(details.Result);
+            Assert.Greater(details.Result.Seasons.Count, 0);
+            Assert.IsInstanceOf<List<Season>>(details.Result.Seasons);
         }
 
         [Test]
@@ -52,8 +52,8 @@ namespace KodiRPC.Tests.Integration
 
             Assert.IsNotNull(details);
             Assert.IsNotNull(details.Result);
-            Assert.That(details.Result.Count, Is.EqualTo(1));
-            Assert.IsInstanceOf<List<Season>>(details.Result);
+            Assert.That(details.Result.Seasons.Count, Is.EqualTo(1));
+            Assert.IsInstanceOf<List<Season>>(details.Result.Seasons);
         }
     }
 }

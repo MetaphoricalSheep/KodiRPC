@@ -25,8 +25,8 @@ namespace KodiRPC.Tests.Integration
 
             Assert.IsNotNull(details);
             Assert.IsNotNull(details.Result);
-            Assert.Greater(details.Result.Count, 0);
-            Assert.IsInstanceOf<List<Episode>>(details.Result);
+            Assert.Greater(details.Result.Episodes.Count, 0);
+            Assert.IsInstanceOf<List<Episode>>(details.Result.Episodes);
         }
     }
 }

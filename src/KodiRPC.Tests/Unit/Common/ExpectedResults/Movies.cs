@@ -24,7 +24,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
             {
                 new GetMovieDetailsResponse
                 {
-                    Result = new Movie
+                    MovieDetails = new Movie
                     {
                         ImdbNumber = "tt2245084",
                         MovieId = 12,
@@ -109,7 +109,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                 },
                 new GetMovieDetailsResponse
                 {
-                    Result = new Movie
+                    MovieDetails = new Movie
                     {
                         Art = new Artwork
                         {
@@ -218,7 +218,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                 },
                 new GetMovieDetailsResponse
                 {
-                    Result = new Movie
+                    MovieDetails = new Movie
                     {
                         Art = new Artwork
                         {
@@ -340,14 +340,14 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
         {
             var movies = GetMovies();
 
-            return movies.First(m => m.Result.MovieId == (int)movieId);
+            return movies.First(m => m.MovieDetails.MovieId == (int)movieId);
         }
 
         public static GetMoviesResponse GetList()
         {
             return new GetMoviesResponse
             {
-                Result = new List<Movie>
+                Movies = new List<Movie>
                 {
                     new Movie
                     {

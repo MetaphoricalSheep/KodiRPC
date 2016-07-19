@@ -23,7 +23,7 @@ namespace KodiRPC.Tests.Unit
             var expected = Movies.GetList();
 
             Assert.IsInstanceOf<GetMoviesResponse>(actual);
-            Assert.That(actual.Result.Count, Is.EqualTo(expected.Result.Count));
+            Assert.That(actual.Result.Movies.Count, Is.EqualTo(expected.Movies.Count));
             AssertThatPropertyValuesAreEquals(actual, expected);
         }
     }
