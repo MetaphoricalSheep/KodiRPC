@@ -14,8 +14,8 @@ git clone git@github.com:PieterUysFourie/KodiRPC.git
 The App.config file is created by transforming the Base.config file with the settings in the selected Configuration. Never edit the App.config file directly as all changes will be lost when you build. To customize your settings you can either change the Base.config file directly or you can set up a new configuration by following the steps below:
 
 1. Open the ```Configuration Manager``` and create a new configuration.
-2. Create a copy the Base.config file in KodiRPC/demo and name it to the same name you used for the new configuration.
-3. Open up the config file in an editor. Add ```xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform"``` to the configuration     element and ``` xdt:Transform="SetAttributes" xdt:Locator="Match(key)"``` to all the appSettings children:
+2. Create a copy of the Base.config file in KodiRPC/demo and name it to the same name you used for the new configuration.
+3. Open up the config file in an editor and add ```xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform"``` to the configuration element and ``` xdt:Transform="SetAttributes" xdt:Locator="Match(key)"``` to all the appSettings children:
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
@@ -34,7 +34,7 @@ The App.config file is created by transforming the Base.config file with the set
 6. Add the new config file to .gitignore
 
 ## Usage
-All the KodiRPC methods are exposed through the KodiService class. Instanciate an instance of the class to get started.
+All the KodiRPC methods are exposed through the KodiService class. Instantiate an instance of the class to get started.
 ```c#
 using KodiRPC.Services;
 var service = new KodiService();
@@ -58,7 +58,7 @@ var shows = Service.GetTvShows(parameters);
 Console.WriteLine("First Show Title: {0}", shows.Result.First().Title)
 ```
 
-The ```parameters``` variable is used to specify the payload for the method you are calling. You can set Filter, Limit, Properties and Sort depending on the method. Some methods like GetTvShowDetails require an id as well.
+The ```parameters``` variable is used to specify the payload for the method you are calling. You can set Filter, Limit, Properties and Sort depending on the method. Some methods, like Get Details methods,` require an id as well.
 
 
 ## Methods
