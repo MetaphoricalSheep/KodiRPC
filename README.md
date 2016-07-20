@@ -58,7 +58,7 @@ var shows = Service.GetTvShows(parameters);
 Console.WriteLine("First Show Title: {0}", shows.Result.First().Title)
 ```
 
-The ```parameters``` variable is used to specify the payload for the method you are calling. You can set Filter, Limit, Properties and Sort depending on the method. Some methods, like Get Details methods,` require an id as well.
+The ```parameters``` variable is used to specify the payload for the method you are calling. You can set Filter, Limit, Properties and Sort depending on the method. Some methods, like the Details methods, require an id as well.
 
 
 ## Methods
@@ -83,8 +83,8 @@ The ```parameters``` variable is used to specify the payload for the method you 
     2. [Files.GetDirectory](http://kodi.wiki/view/JSON-RPC_API/v6#Files.GetDirectory)
     3. [Files.PrepareDownload](http://kodi.wiki/view/JSON-RPC_API/v6#Files.PrepareDownload)
 3. [VideoLibrary](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary)
-    * [VideoLibrary.Clean](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.Clean)
-    * [VideoLibrary.Scan](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.Scan)
+ 1. [VideoLibrary.Clean](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.Clean)
+ 2. [VideoLibrary.Scan](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.Scan)
 
 
 ### Planned Methods (v1.1)
