@@ -5,6 +5,7 @@ using KodiRPC.Responses.Types.Video;
 using KodiRPC.Responses.Types.Video.Details;
 using KodiRPC.Responses.Types.Video.Stream;
 using KodiRPC.Responses.VideoLibrary;
+using KodiRPC.RPC.RequestResponse.Params;
 
 namespace KodiRPC.Tests.Unit.Common.ExpectedResults
 {
@@ -263,6 +264,12 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
         {
             return new GetEpisodesResponse
             {
+                Limits = new Limits
+                {
+                    Start = 0,
+                    End = 13,
+                    Total = 13
+                },
                 Episodes = new List<Episode>
                 {
                     new Episode

@@ -5,6 +5,7 @@ using KodiRPC.Responses.Types.Video;
 using Stream = KodiRPC.Responses.Types.Video.Stream;
 using KodiRPC.Responses.Types.Video.Details;
 using KodiRPC.Responses.VideoLibrary;
+using KodiRPC.RPC.RequestResponse.Params;
 
 namespace KodiRPC.Tests.Unit.Common.ExpectedResults
 {
@@ -347,6 +348,12 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
         {
             return new GetMoviesResponse
             {
+                Limits = new Limits
+                {
+                    Start = 45,
+                    End = 48,
+                    Total = 111 
+                },
                 Movies = new List<Movie>
                 {
                     new Movie

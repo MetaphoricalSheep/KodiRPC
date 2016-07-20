@@ -4,6 +4,7 @@ using KodiRPC.Responses.Types.Media;
 using KodiRPC.Responses.Types.Video;
 using KodiRPC.Responses.Types.Video.Details;
 using KodiRPC.Responses.VideoLibrary;
+using KodiRPC.RPC.RequestResponse.Params;
 
 namespace KodiRPC.Tests.Unit.Common.ExpectedResults
 {
@@ -220,6 +221,12 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
         {
             return new GetTvShowsResponse
             {
+                Limits = new Limits
+                {
+                    Start = 45,
+                    End = 48,
+                    Total = 104 
+                },
                 TvShows = new List<TvShow>
                 {
                     new TvShow

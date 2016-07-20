@@ -2,6 +2,7 @@
 using KodiRPC.Responses.Types.Media;
 using KodiRPC.Responses.Types.Video.Details;
 using KodiRPC.Responses.VideoLibrary;
+using KodiRPC.RPC.RequestResponse.Params;
 
 namespace KodiRPC.Tests.Unit.Common.ExpectedResults
 {
@@ -11,6 +12,12 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
         {
             return new GetSeasonsResponse
             {
+                Limits = new Limits
+                {
+                    Start = 0,
+                    End = 3,
+                    Total = 3
+                },
                 Seasons = new List<Season>
                 {
                     new Season

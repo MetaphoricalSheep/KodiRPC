@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using Stream = KodiRPC.Responses.Types.Video.Stream;
 using NUnit.Framework;
 using KodiRPC.Responses.Types.Video.Details;
+using KodiRPC.RPC.RequestResponse.Params;
 
 namespace KodiRPC.Tests.Unit.Common
 {
@@ -55,7 +56,8 @@ namespace KodiRPC.Tests.Unit.Common
                 {
                     AssertThatListsAreEquals(property, (IList)actualValue, (IList)expectedValue, expected.GetType().ToString());
                 }
-                else if (actualValue is Streams || actualValue is Resume || actualValue is Artwork || actualValue is UniqueId)
+                else if (actualValue is Streams || actualValue is Resume || actualValue is Artwork || actualValue is UniqueId || 
+                    actualValue is Limits)
                 {
                     AssertThatPropertyValuesAreEquals(actualValue, expectedValue);
                 }
