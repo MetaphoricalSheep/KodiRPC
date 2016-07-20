@@ -27,7 +27,7 @@ namespace KodiRPC.RPC.Connector
                 Parameters = parameters
             };
 
-            Console.WriteLine(jsonRpcRequest.ToString());
+            //Console.WriteLine(jsonRpcRequest.ToString());
 
             var uri = $"{_service.Host}:{_service.Port}/jsonrpc";
 
@@ -82,7 +82,7 @@ namespace KodiRPC.RPC.Connector
                     return rpcResponse;
                 }
 
-                var internalServerErrorException = new RpcInternalServerErrorException(rpcResponse.Error.Message)
+                var internalServerErrorException = new RpcInternalServerErrorException(rpcResponse.Error)
                 {
                     RpcErrorCode = rpcResponse.Error.Code
                 };

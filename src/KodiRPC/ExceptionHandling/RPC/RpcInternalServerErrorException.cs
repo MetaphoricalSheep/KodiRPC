@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.Serialization;
+using KodiRPC.RPC.RequestResponse;
 using KodiRPC.RPC.Specifications;
 
 namespace KodiRPC.ExceptionHandling.RPC
@@ -18,6 +19,10 @@ namespace KodiRPC.ExceptionHandling.RPC
         }
 
         public RpcInternalServerErrorException(string message, Exception e) : base(message, e)
+        {
+        }
+
+        public RpcInternalServerErrorException(JsonRpcError error) : base(error.ToString())
         {
         }
 

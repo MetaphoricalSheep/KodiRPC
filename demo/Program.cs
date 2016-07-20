@@ -24,23 +24,22 @@ namespace DemoClient
                 var ping = Service.Ping();
                 Console.WriteLine(ping.Result);
 
-                var parameters = new GetRecentlyAddedMoviesParams()
+                var parameters = new GetTvShowDetailsParams()
                 {
-                    Properties = MovieProperties.All()
+                    TvShowId = 1,
+                    Properties = TvShowProperties.All()
                 };
 
-                Console.WriteLine("Running VideoLibrary.GetEpisodes");
+                Console.WriteLine("Running VideoLibrary.GetTvShowDetails");
 
-                var details = Service.GetRecentlyAddedMovies(parameters);
+                var details = Service.GetTvShowDetails(parameters);
 
                 Console.WriteLine("ID.................{0}", details.Id);
                 Console.WriteLine("JsonRPC............{0}", details.JsonRpc);
-                Console.WriteLine("Limits.............");
-                Console.WriteLine("....End............{0}", details.Result.Limits.End);
-                Console.WriteLine("....Start..........{0}", details.Result.Limits.Start);
-                Console.WriteLine("....Total..........{0}", details.Result.Limits.Total);
-                Console.WriteLine("First.ShowTitle....{0}", details.Result.Movies.First().Title);
-                Console.WriteLine("First.Studio.......{0}", details.Result.Movies.First().Studio.First());
+                Console.WriteLine("First.ShowTitle....{0}", details.Result.TvShowDetails.Title);
+                Console.WriteLine("First.Studio.......{0}", details.Result.TvShowDetails.Studio.First());
+                Console.WriteLine("First.Premiered....{0}", details.Result.TvShowDetails.Premiered);
+                Console.WriteLine("First.Premiered....{0}", details.Result.TvShowDetails.Year);
 
                 NEKey();
             }
