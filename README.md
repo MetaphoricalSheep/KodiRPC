@@ -34,9 +34,36 @@ The App.config file is created by transforming the Base.config file with the set
 6. Add the new config file to .gitignore
 
 ## Usage
+All the KodiRPC methods are exposed through the KodiService class. Instanciate an instance of the class to get started.
+```c#
+using KodiRPC.Services;
+var service = new KodiService();
+```
+
+You can use the ```Ping()``` method to ping Kodi:
+```c#
+var ping = Service.Ping();
+Console.WriteLine(ping.Result);
+```
+
+You can use the ```GetTvShows()``` method to get all tv shows:
+```c#
+var parameters = new GetTvShowsParams()
+{
+    Properties = TvShowProperties.All()
+};
+
+var shows = Service.GetTvShows(parameters);
+
+Console.WriteLine("First Show Title: {0}", shows.Result.First().Title)
+```
+
+The ```parameters``` variable is used to specify the payload for the method you are calling. You can set Filter, Limit, Properties and Sort depending on the method. Some methods like GetTvShowDetails require an id as well.
 
 
-## Implemented Methods
+## Methods
+
+### Implemented Methods
 1. [JSONRPC](http://kodi.wiki/view/JSON-RPC_API/v6#JSONRPC)
     1. [JSONRPC.Ping](http://kodi.wiki/view/JSON-RPC_API/v6#JSONRPC.Ping)
 2. [VideoLibrary](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary)
@@ -50,8 +77,51 @@ The App.config file is created by transforming the Base.config file with the set
     8. [VideoLibrary.GetTvShowDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetTvShowDetails)
     9. [VideoLibrary.GetTvShows](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetTvShows)
 
+### Planned Methods (v1.0)
+1. [Files](http://kodi.wiki/view/JSON-RPC_API/v6#Files)
+    1. [Files.Download](http://kodi.wiki/view/JSON-RPC_API/v6#Files.Download)
+    2. [Files.GetDirectory](http://kodi.wiki/view/JSON-RPC_API/v6#Files.GetDirectory)
+    3. [Files.PrepareDownload](http://kodi.wiki/view/JSON-RPC_API/v6#Files.PrepareDownload)
+3. [VideoLibrary](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary)
+    * [VideoLibrary.Clean](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.Clean)
+    * [VideoLibrary.Scan](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.Scan)
 
-## Outstanding Methods
+
+### Planned Methods (v1.1)
+1. [Input](http://kodi.wiki/view/JSON-RPC_API/v6#Input)
+    1. [Input.Back](http://kodi.wiki/view/JSON-RPC_API/v6#Input.Back)
+    2. [Input.ContextMenu](http://kodi.wiki/view/JSON-RPC_API/v6#Input.ContextMenu)
+    3. [Input.Down](http://kodi.wiki/view/JSON-RPC_API/v6#Input.Down)
+    4. [Input.ExecuteAction](http://kodi.wiki/view/JSON-RPC_API/v6#Input.ExecuteAction)
+    5. [Input.Home](http://kodi.wiki/view/JSON-RPC_API/v6#Input.Home)
+    6. [Input.Info](http://kodi.wiki/view/JSON-RPC_API/v6#Input.Info)
+    7. [Input.Left](http://kodi.wiki/view/JSON-RPC_API/v6#Input.Left)
+    8. [Input.Right](http://kodi.wiki/view/JSON-RPC_API/v6#Input.Right)
+    9. [Input.Select](http://kodi.wiki/view/JSON-RPC_API/v6#Input.Select)
+    10. [Input.SendText](http://kodi.wiki/view/JSON-RPC_API/v6#Input.SendText)
+    11. [Input.ShowCodec](http://kodi.wiki/view/JSON-RPC_API/v6#Input.ShowCodec)
+    12. [Input.ShowOSD](http://kodi.wiki/view/JSON-RPC_API/v6#Input.ShowOSD)
+    13. [Input.Up](http://kodi.wiki/view/JSON-RPC_API/v6#Input.Up)
+2. [JSONRPC](http://kodi.wiki/view/JSON-RPC_API/v6#JSONRPC)
+    1. [JSONRPC.GetConfiguration](http://kodi.wiki/view/JSON-RPC_API/v6#JSONRPC.GetConfiguration)
+    2. [JSONRPC.Introspect](http://kodi.wiki/view/JSON-RPC_API/v6#JSONRPC.Introspect)
+    3. [JSONRPC.NotifyAll](http://kodi.wiki/view/JSON-RPC_API/v6#JSONRPC.NotifyAll)
+    4. [JSONRPC.Permission](http://kodi.wiki/view/JSON-RPC_API/v6#JSONRPC.Permission)
+    5. [JSONRPC.SetConfiguration](http://kodi.wiki/view/JSON-RPC_API/v6#JSONRPC.SetConfiguration)
+    6. [JSONRPC.Version](http://kodi.wiki/view/JSON-RPC_API/v6#JSONRPC.Version)
+3. [VideoLibrary](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary)
+    1. [VideoLibrary.Export](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.Export)
+    2. [VideoLibrary.GetGenres](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetGenres)
+    3. [VideoLibrary.GetMusicVideoDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetMusicVideoDetails)
+    4. [VideoLibrary.GetMusicVideos](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetMusicVideos)
+    5. [VideoLibrary.GetRecentlyAddedMusicVideos](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetRecentlyAddedMusicVideos)
+    6. [VideoLibrary.RemoveEpisode](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.RemoveEpisode)
+    7. [VideoLibrary.RemoveMovie](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.RemoveMovie)
+    8. [VideoLibrary.RemoveMusicVideo](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.RemoveMusicVideo)
+    9. [VideoLibrary.RemoveTVShow](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.RemoveTVShow)
+
+
+### Unplanned Methods
 1. [Addons](http://kodi.wiki/view/JSON-RPC_API/v6#Addons)
     1. [Addons.ExecuteAddon](http://kodi.wiki/view/JSON-RPC_API/v6#Addons.ExecuteAddon)
     2. [Addons.GetAddonDetails](http://kodi.wiki/view/JSON-RPC_API/v6#Addons.GetAddondDetails)
@@ -81,38 +151,14 @@ The App.config file is created by transforming the Base.config file with the set
     16. [AudioLibrary.SetArtistDetails](http://kodi.wiki/view/JSON-RPC_API/v6#AudioLibrary.SetArtistDetails)
     17. [AudioLibrary.SetSongDetails](http://kodi.wiki/view/JSON-RPC_API/v6#AudioLibrary.SetSongDetails)
 4. [Files](http://kodi.wiki/view/JSON-RPC_API/v6#Files)
-    1. [Files.Download](http://kodi.wiki/view/JSON-RPC_API/v6#Files.Download)
-    2. [Files.GetDirectory](http://kodi.wiki/view/JSON-RPC_API/v6#Files.GetDirectory)
-    3. [Files.GetFileDetails](http://kodi.wiki/view/JSON-RPC_API/v6#Files.GetFileDetails)
-    4. [Files.GetSources](http://kodi.wiki/view/JSON-RPC_API/v6#Files.GetSources)
-    5. [Files.PrepareDownload](http://kodi.wiki/view/JSON-RPC_API/v6#Files.PrepareDownload)
+    1. [Files.GetFileDetails](http://kodi.wiki/view/JSON-RPC_API/v6#Files.GetFileDetails)
+    2. [Files.GetSources](http://kodi.wiki/view/JSON-RPC_API/v6#Files.GetSources)
 5. [GUI](http://kodi.wiki/view/JSON-RPC_API/v6#GUI)
     1. [GUI.ActivateWindow](http://kodi.wiki/view/JSON-RPC_API/v6#GUI.ActivateWindows)
     2. [GUI.GetProperties](http://kodi.wiki/view/JSON-RPC_API/v6#GUI.GetProperties)
     3. [GUI.SetFullscreen](http://kodi.wiki/view/JSON-RPC_API/v6#GUI.SetFullscreen)
     4. [GUI.ShowNotification](http://kodi.wiki/view/JSON-RPC_API/v6#GUI.ShowNotification)
-6. [Input](http://kodi.wiki/view/JSON-RPC_API/v6#Input)
-    1. [Input.Back](http://kodi.wiki/view/JSON-RPC_API/v6#Input.Back)
-    2. [Input.ContextMenu](http://kodi.wiki/view/JSON-RPC_API/v6#Input.ContextMenu)
-    3. [Input.Down](http://kodi.wiki/view/JSON-RPC_API/v6#Input.Down)
-    4. [Input.ExecuteAction](http://kodi.wiki/view/JSON-RPC_API/v6#Input.ExecuteAction)
-    5. [Input.Home](http://kodi.wiki/view/JSON-RPC_API/v6#Input.Home)
-    6. [Input.Info](http://kodi.wiki/view/JSON-RPC_API/v6#Input.Info)
-    7. [Input.Left](http://kodi.wiki/view/JSON-RPC_API/v6#Input.Left)
-    8. [Input.Right](http://kodi.wiki/view/JSON-RPC_API/v6#Input.Right)
-    9. [Input.Select](http://kodi.wiki/view/JSON-RPC_API/v6#Input.Select)
-    10. [Input.SendText](http://kodi.wiki/view/JSON-RPC_API/v6#Input.SendText)
-    11. [Input.ShowCodec](http://kodi.wiki/view/JSON-RPC_API/v6#Input.ShowCodec)
-    12. [Input.ShowOSD](http://kodi.wiki/view/JSON-RPC_API/v6#Input.ShowOSD)
-    13. [Input.Up](http://kodi.wiki/view/JSON-RPC_API/v6#Input.Up)
-7. [JSONRPC](http://kodi.wiki/view/JSON-RPC_API/v6#JSONRPC)
-    1. [JSONRPC.GetConfiguration](http://kodi.wiki/view/JSON-RPC_API/v6#JSONRPC.GetConfiguration)
-    2. [JSONRPC.Introspect](http://kodi.wiki/view/JSON-RPC_API/v6#JSONRPC.Introspect)
-    3. [JSONRPC.NotifyAll](http://kodi.wiki/view/JSON-RPC_API/v6#JSONRPC.NotifyAll)
-    4. [JSONRPC.Permission](http://kodi.wiki/view/JSON-RPC_API/v6#JSONRPC.Permission)
-    5. [JSONRPC.SetConfiguration](http://kodi.wiki/view/JSON-RPC_API/v6#JSONRPC.SetConfiguration)
-    6. [JSONRPC.Version](http://kodi.wiki/view/JSON-RPC_API/v6#JSONRPC.Version)
-8. [PVR](http://kodi.wiki/view/JSON-RPC_API/v6#PVR)
+6. [PVR](http://kodi.wiki/view/JSON-RPC_API/v6#PVR)
     1. [PVR.GetChannelDetails](http://kodi.wiki/view/JSON-RPC_API/v6#PVR.GetChannelDetails)
     2. [PVR.GetChannelGroupDetails](http://kodi.wiki/view/JSON-RPC_API/v6#PVR.GetChannelGroupDetails)
     3. [PVR.GetChannelGroups](http://kodi.wiki/view/JSON-RPC_API/v6#PVR.GetChannelGroups)
@@ -120,7 +166,7 @@ The App.config file is created by transforming the Base.config file with the set
     5. [PVR.GetProperties](http://kodi.wiki/view/JSON-RPC_API/v6#PVR.GetProperties)
     6. [PVR.Record](http://kodi.wiki/view/JSON-RPC_API/v6#PVR.Record)
     7. [PVR.Scan](http://kodi.wiki/view/JSON-RPC_API/v6#PVR.Scan)
-9. [Player](http://kodi.wiki/view/JSON-RPC_API/v6#Player)
+7. [Player](http://kodi.wiki/view/JSON-RPC_API/v6#Player)
     1. [Player.GetActivePlayers](http://kodi.wiki/view/JSON-RPC_API/v6#Player.GetActivePlayers)
     2. [Player.GetItem](http://kodi.wiki/view/JSON-RPC_API/v6#Player.GetItem)
     3. [Player.GetProperties](http://kodi.wiki/view/JSON-RPC_API/v6#Player.GetProperties)
@@ -138,7 +184,7 @@ The App.config file is created by transforming the Base.config file with the set
     15. [Player.SetSubtitle](http://kodi.wiki/view/JSON-RPC_API/v6#Player.SetSubtitle)
     16. [Player.Stop](http://kodi.wiki/view/JSON-RPC_API/v6#Player.Stop)
     17. [Player.Zoom](http://kodi.wiki/view/JSON-RPC_API/v6#Player.Zoom)
-10. [Playlist](http://kodi.wiki/view/JSON-RPC_API/v6#Playlist)
+8. [Playlist](http://kodi.wiki/view/JSON-RPC_API/v6#Playlist)
     1. [Playlist.Add](http://kodi.wiki/view/JSON-RPC_API/v6#Playlist.Add)
     2. [Playlist.Clear](http://kodi.wiki/view/JSON-RPC_API/v6#Playlist.Clear)
     3. [Playlist.GetItems](http://kodi.wiki/view/JSON-RPC_API/v6#Playlist.GetItems)
@@ -147,32 +193,21 @@ The App.config file is created by transforming the Base.config file with the set
     6. [Playlist.Insert](http://kodi.wiki/view/JSON-RPC_API/v6#Playlist.Insert)
     7. [Playlist.Remove](http://kodi.wiki/view/JSON-RPC_API/v6#Playlist.Remove)
     8. [Playlist.Swap](http://kodi.wiki/view/JSON-RPC_API/v6#Playlist.Swap)
-11. [System](http://kodi.wiki/view/JSON-RPC_API/v6#System)
+9. [System](http://kodi.wiki/view/JSON-RPC_API/v6#System)
     1. [System.EjectOpticalDrive](http://kodi.wiki/view/JSON-RPC_API/v6#System.EjectOpticalDrive)
     2. [System.GetProperties](http://kodi.wiki/view/JSON-RPC_API/v6#System.GetProperties)
     3. [System.Hibernate](http://kodi.wiki/view/JSON-RPC_API/v6#System.Hibernate)
     4. [System.Reboot](http://kodi.wiki/view/JSON-RPC_API/v6#System.Reboot)
     5. [System.Shutdown](http://kodi.wiki/view/JSON-RPC_API/v6#System.Shutdown)
     6. [System.Suspend](http://kodi.wiki/view/JSON-RPC_API/v6#System.Suspend)
-12. [VideoLibrary](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary)
-    1. [VideoLibrary.Clean](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.Clean)
-    2. [VideoLibrary.Export](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.Export)
-    3. [VideoLibrary.GetGenres](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetGenres)
-    4. [VideoLibrary.GetMovieSetDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetMovieSetDetails)
-    5. [VideoLibrary.GetMovieSets](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetMovieSets)
-    6. [VideoLibrary.GetMusicVideoDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetMusicVideoDetails)
-    7. [VideoLibrary.GetMusicVideos](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetMusicVideos)
-    8. [VideoLibrary.GetRecentlyAddedMusicVideos](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetRecentlyAddedMusicVideos)
-    9. [VideoLibrary.RemoveEpisode](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.RemoveEpisode)
-    10. [VideoLibrary.RemoveMovie](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.RemoveMovie)
-    11. [VideoLibrary.RemoveMusicVideo](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.RemoveMusicVideo)
-    12. [VideoLibrary.RemoveTVShow](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.RemoveTVShow)
-    12. [VideoLibrary.Scan](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.Scan)
-    13. [VideoLibrary.SetEpisodeDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.SetEpisodeDetails)
-    14. [VideoLibrary.SetMovieDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.SetMovieDetails)
-    15. [VideoLibrary.SetMusicVideoDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.SetMusicVideoDetails)
-    16. [VideoLibrary.SetTVShowDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.SetTVShowDetails)
-13. [Kodi](http://kodi.wiki/view/JSON-RPC_API/v6#Kodi)
+10. [VideoLibrary](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary)
+    1. [VideoLibrary.GetMovieSetDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetMovieSetDetails)
+    2. [VideoLibrary.GetMovieSets](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetMovieSets)
+    3. [VideoLibrary.SetEpisodeDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.SetEpisodeDetails)
+    4. [VideoLibrary.SetMovieDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.SetMovieDetails)
+    5. [VideoLibrary.SetMusicVideoDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.SetMusicVideoDetails)
+    6. [VideoLibrary.SetTVShowDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.SetTVShowDetails)
+11. [Kodi](http://kodi.wiki/view/JSON-RPC_API/v6#Kodi)
     1. [XBMC.GetInfoBooleans](http://kodi.wiki/view/JSON-RPC_API/v6#XBMC.GetInfoBooleans)
     2. [XBMC.GetInfoLabels](http://kodi.wiki/view/JSON-RPC_API/v6#XBMC.GetInfoLabels)
 
