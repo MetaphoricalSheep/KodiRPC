@@ -55,10 +55,23 @@ var parameters = new GetTvShowsParams()
 
 var shows = Service.GetTvShows(parameters);
 
-Console.WriteLine("First Show Title: {0}", shows.Result.First().Title)
+Console.WriteLine("First Show Title: {0}", shows.Result.TvShows.First().Title)
 ```
 
 The ```parameters``` variable is used to specify the payload for the method you are calling. You can set Filter, Limit, Properties and Sort depending on the method. Some methods, like the Details methods, require an id as well.
+
+You can use the ```GetTvShowDetails()``` method to get detailed data about a specific show:
+```c#
+var parameters = new GetTvShowDetailsParams()
+{
+    TvShowId = 54,
+    Properties = TvShowProperties.All()
+};
+
+var details = Service.GetTvShowDetails(parameters);
+
+Console.WriteLine("Show Title: {0}", details.Result.TvShow.Title)
+```
 
 
 ## Methods
