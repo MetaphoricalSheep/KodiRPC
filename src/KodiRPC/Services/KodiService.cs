@@ -14,7 +14,6 @@ using System.Configuration;
 using KodiRPC.Responses.VideoLibrary;
 using KodiRPC.RPC.Connector;
 using KodiRPC.RPC.RequestResponse;
-using KodiRPC.RPC.RequestResponse.Params;
 using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
 using KodiRPC.RPC.Specifications;
 

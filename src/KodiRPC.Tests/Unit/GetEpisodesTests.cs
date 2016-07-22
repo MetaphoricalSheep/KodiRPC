@@ -10,7 +10,6 @@
  * http://www.gnu.org/licenses/.
  */
 
-using System;
 using KodiRPC.Responses.VideoLibrary;
 using KodiRPC.RPC.RequestResponse;
 using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;

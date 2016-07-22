@@ -11,9 +11,7 @@
  */
 
 using System;
-using System.Linq;
 using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
-using KodiRPC.RPC.Specifications.Properties;
 using KodiRPC.Services;
 
 namespace DemoClient

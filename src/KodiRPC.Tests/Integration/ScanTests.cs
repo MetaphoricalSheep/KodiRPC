@@ -10,13 +10,9 @@
  * http://www.gnu.org/licenses/.
  */
 
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using KodiRPC.Responses.Types.Video.Details;
 using KodiRPC.RPC.RequestResponse;
-using KodiRPC.RPC.RequestResponse.Params;
 using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
-using KodiRPC.RPC.Specifications.Properties.Video.Details;
 using KodiRPC.Services;
 using NUnit.Framework;
 

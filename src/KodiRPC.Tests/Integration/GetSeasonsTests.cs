@@ -17,7 +17,6 @@ using KodiRPC.RPC.RequestResponse.Params;
 using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
 using KodiRPC.RPC.Specifications.Properties.Video.Details;
 using KodiRPC.Services;
-using KodiRPC.Tests.Unit.Common;
 using NUnit.Framework;
 
 namespace KodiRPC.Tests.Integration
