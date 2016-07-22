@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 
 namespace KodiRPC.RPC.RequestResponse.Params.VideoLibrary
 {
-    public class GetEpisodeDetailsParams : Parameters
+    public class GetEpisodeDetailsParams : KodiProperties
     {
         [JsonProperty("episodeid", Required = Required.Always)]
         public int EpisodeId;

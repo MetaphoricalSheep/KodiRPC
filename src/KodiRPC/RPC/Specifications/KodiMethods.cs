@@ -23,6 +23,8 @@ namespace KodiRPC.RPC.Specifications
         #region VideoLibrary
 
         #region Shows
+        public const string Clean = "VideoLibrary.Clean";
+        public const string Scan = "VideoLibrary.Scan";
         public const string GetTvShows = "VideoLibrary.GetTVShows";
         public const string GetTvShowDetails = "VideoLibrary.GetTVShowDetails";
         public const string GetSeasons = "VideoLibrary.GetSeasons";
