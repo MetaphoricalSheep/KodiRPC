@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 
 namespace KodiRPC.RPC.RequestResponse.Params.VideoLibrary
 {
-    public class GetMoviesParams : Parameters
+    public class GetMoviesParams : KodiProperties
     {
         [JsonProperty("filter", NullValueHandling = NullValueHandling.Ignore)]
         public Filter Filter { get; set; }

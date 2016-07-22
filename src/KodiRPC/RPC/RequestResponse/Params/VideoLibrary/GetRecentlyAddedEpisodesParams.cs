@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 
 namespace KodiRPC.RPC.RequestResponse.Params.VideoLibrary
 {
-    public class GetRecentlyAddedEpisodesParams : Parameters
+    public class GetRecentlyAddedEpisodesParams : KodiProperties
     {
         [JsonProperty("limits", NullValueHandling = NullValueHandling.Ignore)]
         public Limits Limits { get; set; }

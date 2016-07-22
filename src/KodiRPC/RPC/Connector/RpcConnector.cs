@@ -11,6 +11,7 @@
  */
 
 using System;
+using System.Configuration;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -30,7 +31,7 @@ namespace KodiRPC.RPC.Connector
             _service = service;
         }
 
-        public JsonRpcResponse<T> MakeRequest<T>(string rpcMethod, object parameters, string id = "KodiJSON-RPC")
+        public JsonRpcResponse<T> MakeRequest<T>(string rpcMethod, object parameters, string id = "KodiJSON-RPC", int timeout = 50000)
         {
             var jsonRpcRequest = new JsonRpcRequest
             {
@@ -39,7 +40,10 @@ namespace KodiRPC.RPC.Connector
                 Parameters = parameters
             };
 
-            //Console.WriteLine(jsonRpcRequest.ToString());
+            if (Convert.ToBoolean(ConfigurationManager.AppSettings["Debug"]))
+            {
+                Console.WriteLine(jsonRpcRequest.ToString());
+            }
 
             var uri = $"{_service.Host}:{_service.Port}/jsonrpc";
 
@@ -47,7 +51,7 @@ namespace KodiRPC.RPC.Connector
             webRequest.ContentType = "application/json-rpc";
             webRequest.KeepAlive = false;
             webRequest.Method = "POST";
-            webRequest.Timeout = 50000;
+            webRequest.Timeout = timeout;
             webRequest.Credentials = new NetworkCredential(_service.Username, _service.Password);
 
             try

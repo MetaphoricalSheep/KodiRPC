@@ -38,7 +38,7 @@ namespace KodiRPC.Services
 
         public JsonRpcResponse<string> Ping()
         {
-            return _rpcConnector.MakeRequest<string>(KodiMethods.Ping, new object());
+            return _rpcConnector.MakeRequest<string>(KodiMethods.Ping, new object(), timeout:2000);
         }
 
         #endregion
@@ -46,6 +46,15 @@ namespace KodiRPC.Services
         #region VideoLibrary
 
         #region Shows
+        public JsonRpcResponse<string> Clean(CleanParams parameters, string requestId = "VideoLibrary.Clean")
+        {
+            return _rpcConnector.MakeRequest<string>(KodiMethods.Clean, parameters, requestId);
+        }
+
+        public JsonRpcResponse<string> Scan(ScanParams parameters, string requestId = "VideoLibrary.Scan")
+        {
+            return _rpcConnector.MakeRequest<string>(KodiMethods.Scan, parameters, requestId);
+        }
 
         public JsonRpcResponse<GetTvShowsResponse> GetTvShows(GetTvShowsParams parameters, string requestId = "GetTvShowsResponse")
         {

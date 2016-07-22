@@ -14,15 +14,9 @@ using Newtonsoft.Json;
 
 namespace KodiRPC.RPC.RequestResponse.Params
 {
-    public class Properties
+    public class KodiProperties : Parameters
     {
-        [JsonProperty("properties", Required = Required.Always)]
-        public string[] Props { get; set; }
-
-        public override string ToString()
-        {
-            return JsonConvert.SerializeObject(this, Formatting.None);
-        }
-         
+        [JsonProperty("properties", NullValueHandling = NullValueHandling.Ignore)]
+        public string[] Properties { get; set; }
     }
 }

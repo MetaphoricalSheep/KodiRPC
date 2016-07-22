@@ -115,6 +115,8 @@
     <Compile Include="RPC\RequestResponse\Params\VideoLibrary\GetRecentlyAddedEpisodesParams.cs" />
     <Compile Include="RPC\RequestResponse\Params\VideoLibrary\GetSeasonsParams.cs" />
     <Compile Include="RPC\RequestResponse\Params\VideoLibrary\GetTvShowDetailsParams.cs" />
+    <Compile Include="RPC\RequestResponse\Params\VideoLibrary\CleanParams.cs" />
+    <Compile Include="RPC\RequestResponse\Params\VideoLibrary\ScanParams.cs" />
     <Compile Include="RPC\RequestResponse\Params\VideoLibrary\GetTvShowsParams.cs" />
     <Compile Include="RPC\Specifications\Properties\EpisodeProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\MovieProperties.cs" />

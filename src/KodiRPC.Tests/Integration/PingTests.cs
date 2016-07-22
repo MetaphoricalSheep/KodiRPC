@@ -10,15 +10,30 @@
  * http://www.gnu.org/licenses/.
  */
 
-using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using KodiRPC.Responses.Types.Video.Details;
+using KodiRPC.RPC.RequestResponse;
+using KodiRPC.RPC.RequestResponse.Params;
+using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
+using KodiRPC.RPC.Specifications.Properties.Video.Details;
+using KodiRPC.Services;
+using NUnit.Framework;
 
-namespace KodiRPC.RPC.RequestResponse.Params
+namespace KodiRPC.Tests.Integration
 {
-    public class Parameters
+    [ExcludeFromCodeCoverage]
+    public class PingTests
     {
-        public override string ToString()
+        [Test]
+        public void WhenPingingKodi_ItShouldReturnAStringResult()
         {
-            return JsonConvert.SerializeObject(this, Formatting.None);
+            var service = new KodiService();
+            var ping = service.Ping();
+
+            Assert.IsNotNull(ping);
+            StringAssert.IsMatch(ping.Result, "pong");
+            Assert.IsInstanceOf<JsonRpcResponse<string>>(ping);
         }
     }
 }

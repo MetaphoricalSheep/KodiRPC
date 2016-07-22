@@ -12,13 +12,14 @@
 
 using Newtonsoft.Json;
 
-namespace KodiRPC.RPC.RequestResponse.Params
+namespace KodiRPC.RPC.RequestResponse.Params.VideoLibrary
 {
-    public class Parameters
+    public class CleanParams : Parameters
     {
-        public override string ToString()
-        {
-            return JsonConvert.SerializeObject(this, Formatting.None);
-        }
+        /// <summary>
+        /// Whether or not to show the progress bar or any other GUI dialog
+        /// </summary>
+        [JsonProperty("showdialogs")]
+        public bool ShowDialogs = true;
     }
 }

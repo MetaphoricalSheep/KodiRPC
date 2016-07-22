@@ -36,24 +36,29 @@ namespace DemoClient
                 var ping = Service.Ping();
                 Console.WriteLine(ping.Result);
 
-                var parameters = new GetTvShowsParams()
+                var parameters = new GetTvShowDetailsParams()
                 {
-                    Properties = new string[]
-                    {
-                        TvShowProperties.Title,
-                        TvShowProperties.Year
-                    }
+                    TvShowId = 23,
                 };
 
                 Console.WriteLine("Running VideoLibrary.GetTvShowDetails");
 
-                var details = Service.GetTvShows(parameters);
+                var details = Service.GetTvShowDetails(parameters);
 
                 Console.WriteLine("ID.................{0}", details.Id);
                 Console.WriteLine("JsonRPC............{0}", details.JsonRpc);
-                Console.WriteLine("First.ShowTitle....{0}", details.Result.TvShows.First().Title);
-                Console.WriteLine("First.Studio.......{0}", details.Result.TvShows.First().Premiered);
-                Console.WriteLine("First.Premiered....{0}", details.Result.TvShows.First().Year);
+                Console.WriteLine("First.ShowTitle....{0}", details.Result.TvShowDetails.Title);
+                Console.WriteLine("First.Studio.......{0}", details.Result.TvShowDetails.Premiered);
+                Console.WriteLine("First.Premiered....{0}", details.Result.TvShowDetails.Year);
+                Console.WriteLine();
+
+                Console.Write("Scanning for new content...");
+                var scan = Service.Scan(new ScanParams());
+                Console.WriteLine(scan.Result);
+
+                Console.Write("Cleaning...");
+                var clean = Service.Clean(new CleanParams());
+                Console.WriteLine(clean.Result);
 
                 NEKey();
             }

@@ -27,6 +27,8 @@ namespace KodiRPC.Services
         #region VideoLibrary
 
         #region Shows
+        JsonRpcResponse<string> Clean(CleanParams parameters = null, string requestId = "VideoLibrary.Clean");
+        JsonRpcResponse<string> Scan(ScanParams parameters = null, string requestId = "VideoLibrary.Scan");
         JsonRpcResponse<GetTvShowsResponse> GetTvShows(GetTvShowsParams parameters = null, string requestId = "GetTvShowsResponse");
         JsonRpcResponse<GetTvShowDetailsResponse> GetTvShowDetails(GetTvShowDetailsParams parameters, string requestId = "GetTvShowDetailsResponse");
         JsonRpcResponse<GetSeasonsResponse> GetSeasons(GetSeasonsParams parameters = null, string requestId = "GetSeasonsResponse");
