@@ -40,5 +40,9 @@ namespace KodiRPC.RPC.Specifications
         #endregion
 
         #endregion
+
+        #region Files
+        public const string GetFileDetails = "Files.GetFileDetails";
+        #endregion
     }
 }

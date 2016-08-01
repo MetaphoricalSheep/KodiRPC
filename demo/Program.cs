@@ -11,7 +11,8 @@
  */
 
 using System;
-using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
+using Params = KodiRPC.RPC.RequestResponse.Params;
+using KodiRPC.RPC.Specifications.Properties;
 using KodiRPC.Services;
 
 namespace DemoClient
@@ -34,7 +35,7 @@ namespace DemoClient
                 var ping = Service.Ping();
                 Console.WriteLine(ping.Result);
 
-                var parameters = new GetTvShowDetailsParams()
+                var parameters = new Params.VideoLibrary.GetTvShowDetailsParams()
                 {
                     TvShowId = 23,
                 };
@@ -51,12 +52,28 @@ namespace DemoClient
                 Console.WriteLine();
 
                 Console.Write("Scanning for new content...");
-                var scan = Service.Scan(new ScanParams());
+                var scan = Service.Scan(new Params.VideoLibrary.ScanParams());
                 Console.WriteLine(scan.Result);
 
                 Console.Write("Cleaning...");
-                var clean = Service.Clean(new CleanParams());
+                var clean = Service.Clean(new Params.VideoLibrary.CleanParams());
                 Console.WriteLine(clean.Result);
+
+                Console.WriteLine("Getting File details");
+
+                var fileDetailParams = new Params.Files.GetFileDetailsParams()
+                {
+                    File = "/media/gotham/series/Dark Matter/Season 02/Dark Matter - S02E03 - I’ve Seen the Other Side of You.mkv",
+                    Properties = FileProperties.All()
+                };
+
+                var fileDetails = Service.GetFileDetails(fileDetailParams);
+
+                Console.WriteLine("File..............{0}", fileDetails.Result.FileDetails.FilePath);
+                Console.WriteLine("FileName..........{0}", fileDetails.Result.FileDetails.Label);
+                Console.WriteLine("MimeType..........{0}", fileDetails.Result.FileDetails.MimeType);
+                Console.WriteLine("Size..............{0}", fileDetails.Result.FileDetails.Size);
+                
 
                 NEKey();
             }
