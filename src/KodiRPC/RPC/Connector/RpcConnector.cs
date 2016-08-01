@@ -58,7 +58,7 @@ namespace KodiRPC.RPC.Connector
             {
                 using (var requestStream = webRequest.GetRequestStream())
                 {
-                    using (var requestWriter = new StreamWriter(requestStream, Encoding.ASCII))
+                    using (var requestWriter = new StreamWriter(requestStream))
                     {
                         requestWriter.Write(jsonRpcRequest.ToString());
                         requestWriter.Dispose();
@@ -165,11 +165,11 @@ namespace KodiRPC.RPC.Connector
             }
             catch (ProtocolViolationException e)
             {
-                throw new RpcException("Unable to connecto to the server.", e);
+                throw new RpcException("Unable to connect to the server.", e);
             }
             catch (Exception e)
             {
-                throw new Exception($"A problem was encountered while calling MakeRpcRequest() for: {jsonRpcRequest.Method} \nException: {e.Message}"); // with parameters: {qryParams}. \nException: {e.Message}");
+                throw new Exception($"A problem was encountered while calling MakeRpcRequest() for: {jsonRpcRequest.Method} with request object {jsonRpcRequest.ToString()}:  \nException: {e.Message}"); // with parameters: {qryParams}. \nException: {e.Message}");
             }
         }
     }
