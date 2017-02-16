@@ -63,6 +63,7 @@
     <Compile Include="ExceptionHandling\RPC\RpcResponseDeserializationException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Responses\Files\GetFileDetailsResponse.cs" />
+    <Compile Include="Responses\Files\PrepareDownloadsResponse.cs" />
     <Compile Include="Responses\Types\List\Item\File.cs" />
     <Compile Include="Responses\Types\Video\Details\Episode.cs" />
     <Compile Include="Responses\Types\Video\Details\File.cs" />
