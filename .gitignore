@@ -6,9 +6,6 @@
 *.user
 *.userosscache
 *.sln.docstates
-Pieter-Uys.config
-PieterLocal.config
-App.config
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
