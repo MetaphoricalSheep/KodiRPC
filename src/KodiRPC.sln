@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26127.3
+VisualStudioVersion = 15.0.26206.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KodiRPC", "KodiRPC\KodiRPC.csproj", "{ED15C2BF-5DD4-47C1-91E7-6F80E7F0AD7B}"
 EndProject
@@ -12,14 +12,21 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Local-Debug|Any CPU = Local-Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{ED15C2BF-5DD4-47C1-91E7-6F80E7F0AD7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ED15C2BF-5DD4-47C1-91E7-6F80E7F0AD7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED15C2BF-5DD4-47C1-91E7-6F80E7F0AD7B}.Local-Debug|Any CPU.ActiveCfg = Local-Debug|Any CPU
+		{ED15C2BF-5DD4-47C1-91E7-6F80E7F0AD7B}.Local-Debug|Any CPU.Build.0 = Local-Debug|Any CPU
 		{EDA6F4B3-F7BE-4D0B-A8EE-62F0C947C94C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EDA6F4B3-F7BE-4D0B-A8EE-62F0C947C94C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDA6F4B3-F7BE-4D0B-A8EE-62F0C947C94C}.Local-Debug|Any CPU.ActiveCfg = Local-Debug|Any CPU
+		{EDA6F4B3-F7BE-4D0B-A8EE-62F0C947C94C}.Local-Debug|Any CPU.Build.0 = Local-Debug|Any CPU
 		{9E9081D6-2F99-4156-B315-C090E6085FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9E9081D6-2F99-4156-B315-C090E6085FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E9081D6-2F99-4156-B315-C090E6085FE8}.Local-Debug|Any CPU.ActiveCfg = Local-Debug|Any CPU
+		{9E9081D6-2F99-4156-B315-C090E6085FE8}.Local-Debug|Any CPU.Build.0 = Local-Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
