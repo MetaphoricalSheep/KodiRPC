@@ -79,6 +79,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Integration\DownloadTests.cs" />
+    <Compile Include="Integration\PrepareDownloadTests.cs" />
+    <Compile Include="Integration\GetDirectoryTests.cs" />
+    <Compile Include="Integration\GetFileDetailsTests.cs" />
     <Compile Include="Integration\GetEpisodeDetailsTests.cs" />
     <Compile Include="Integration\GetEpisodesTests.cs" />
     <Compile Include="Integration\GetMovieDetailsTests.cs" />
@@ -97,6 +101,13 @@
     <Compile Include="Unit\Common\ExpectedResults\TvShows.cs" />
     <Compile Include="Unit\Common\ExpectedResults\Episodes.cs" />
     <Compile Include="Unit\Common\ExpectedResults\Movies.cs" />
+    <Compile Include="Unit\DownloadTests.cs" />
+    <Compile Include="Unit\PrepareDownloadTests.Setup.cs" />
+    <Compile Include="Unit\GetFileDetailsTests.Setup.cs" />
+    <Compile Include="Unit\GetDirectoryTests.Setup.cs" />
+    <Compile Include="Unit\GetDirectoryTests.cs" />
+    <Compile Include="Unit\DownloadTests.Setup.cs" />
+    <Compile Include="Unit\GetFileDetailsTests.cs" />
     <Compile Include="Unit\GetMoviesTests.cs" />
     <Compile Include="Unit\GetSeasonsTests.cs" />
     <Compile Include="Unit\GetTvShowsTests.cs" />
@@ -109,6 +120,7 @@
     <Compile Include="Unit\GetEpisodeDetailsTests.cs" />
     <Compile Include="Unit\GetTvShowDetailsTests.Setup.cs" />
     <Compile Include="Unit\GetMovieDetailsTests.cs" />
+    <Compile Include="Unit\PrepareDownloadTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KodiRPC\KodiRPC.csproj">
@@ -118,7 +130,25 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <TransformOnBuild>true</TransformOnBuild>
+    </None>
+    <None Include="App.Debug.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.Local-Debug.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.Release.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.VM.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
     <None Include="App_Data\episode.1010.json" />
     <None Include="App_Data\episode.486.json" />
     <None Include="App_Data\episode.864.json" />
@@ -159,12 +189,8 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets. -->
-  <UsingTask TaskName="TransformXml" AssemblyFile="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Web\Microsoft.Web.Publishing.Tasks.dll" />
-  <Target Name="BeforeBuild">
-    <Copy SourceFiles="../../demo/Base.config" DestinationFiles="App.config">
-    </Copy>
-    <TransformXml Source="../../demo/Base.config" Transform="../../demo/$(Configuration).config" Destination="App.config" />
-  </Target>
+  <!--  <Target Name="BeforeBuild">
+  </Target>-->
   <Import Project="..\packages\SlowCheetah.2.5.48\build\SlowCheetah.targets" Condition="Exists('..\packages\SlowCheetah.2.5.48\build\SlowCheetah.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -173,6 +199,5 @@
     <Error Condition="!Exists('..\packages\SlowCheetah.2.5.48\build\SlowCheetah.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SlowCheetah.2.5.48\build\SlowCheetah.targets'))" />
   </Target>
   <!-- <Target Name="AfterBuild">
-    <TransformXml Source="../../demo/Base.config" Transform="../../demo/$(Configuration).config" Destination="App.config" />
   </Target> -->
 </Project>

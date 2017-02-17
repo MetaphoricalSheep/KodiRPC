@@ -49,6 +49,7 @@ namespace KodiRPC.Services
 
         #region Files
         JsonRpcResponse<GetFileDetailsResponse> GetFileDetails(GetFileDetailsParams parameters, string requestId = "GetFileDetails");
+        JsonRpcResponse<GetDirectoryResponse> GetDirectory(GetDirectoryParams parameters, string requestId = "GetDirectory");
         JsonRpcResponse<PrepareDownloadResponse> PrepareDownload(PrepareDownloadParams parameters, string requestId = "PrepareDownload");
         JsonRpcResponse<DownloadResponse> Download(DownloadParams parameters, string requestId = "Download");
         #endregion
