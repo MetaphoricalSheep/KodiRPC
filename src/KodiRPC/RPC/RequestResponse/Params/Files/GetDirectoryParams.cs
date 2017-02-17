@@ -14,12 +14,14 @@ using Newtonsoft.Json;
 
 namespace KodiRPC.RPC.RequestResponse.Params.Files
 {
-    public class GetFileDetailsParams : KodiProperties
+    public class GetDirectoryParams : KodiProperties
     {
-        [JsonProperty("file")]
-        public string File { get; set; }
+        [JsonProperty("directory")]
+        public string Directory { get; set; }
 
         [JsonProperty("media", NullValueHandling = NullValueHandling.Ignore)]
         public string Media { get; set; } = Files.Media.Files;
+        [JsonProperty("properties", NullValueHandling = NullValueHandling.Ignore)]
+        public Sort Sort { get; set; }
     }
 }

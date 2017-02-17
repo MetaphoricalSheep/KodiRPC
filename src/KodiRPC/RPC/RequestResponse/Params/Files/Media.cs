@@ -10,16 +10,14 @@
  * http://www.gnu.org/licenses/.
  */
 
-using Newtonsoft.Json;
-
 namespace KodiRPC.RPC.RequestResponse.Params.Files
 {
-    public class GetFileDetailsParams : KodiProperties
+    public struct Media
     {
-        [JsonProperty("file")]
-        public string File { get; set; }
-
-        [JsonProperty("media", NullValueHandling = NullValueHandling.Ignore)]
-        public string Media { get; set; } = Files.Media.Files;
+        public static string Video = "video";
+        public static string Music = "music";
+        public static string Pictures = "pictures";
+        public static string Files = "files";
+        public static string Programs = "programs";
     }
 }

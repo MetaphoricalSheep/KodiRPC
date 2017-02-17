@@ -10,16 +10,17 @@
  * http://www.gnu.org/licenses/.
  */
 
+using System.Collections.Generic;
+using KodiRPC.Responses.Types.List;
 using Newtonsoft.Json;
 
-namespace KodiRPC.RPC.RequestResponse.Params.Files
+namespace KodiRPC.Responses.Files
 {
-    public class GetFileDetailsParams : KodiProperties
+    public class GetDirectoryResponse
     {
-        [JsonProperty("file")]
-        public string File { get; set; }
-
-        [JsonProperty("media", NullValueHandling = NullValueHandling.Ignore)]
-        public string Media { get; set; } = Files.Media.Files;
+        [JsonProperty(PropertyName = "limits")]
+        public LimitsReturned Limits { get; set; }
+        [JsonProperty(PropertyName = "files")]
+        public List<Types.List.Item.File> Files { get; set; }
     }
 }

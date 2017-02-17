@@ -115,6 +115,11 @@ namespace KodiRPC.Services
             return _rpcConnector.MakeRequest<GetFileDetailsResponse>(KodiMethods.GetFileDetails, parameters, requestId);
         }
 
+        public JsonRpcResponse<GetDirectoryResponse> GetDirectory(GetDirectoryParams parameters, string requestId = "GetDirectory")
+        {
+            return _rpcConnector.MakeRequest<GetDirectoryResponse>(KodiMethods.GetDirectory, parameters, requestId);
+        }
+
         public JsonRpcResponse<PrepareDownloadResponse> PrepareDownload(PrepareDownloadParams parameters, string requestId = "PrepareDownoad")
         {
             return _rpcConnector.MakeRequest<PrepareDownloadResponse>(KodiMethods.PrepareDownload, parameters, requestId);

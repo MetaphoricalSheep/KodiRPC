@@ -12,7 +12,7 @@
 
 using Newtonsoft.Json;
 
-namespace KodiRPC.Responses.Types.List.Item.File
+namespace KodiRPC.Responses.Types.List.Item
 {
     public class File
     {

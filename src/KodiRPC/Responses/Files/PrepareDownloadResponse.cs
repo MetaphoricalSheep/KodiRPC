@@ -10,12 +10,17 @@
  * http://www.gnu.org/licenses/.
  */
 
-using KodiRPC.Responses.Types.List.Item.File;
 using Newtonsoft.Json;
 
 namespace KodiRPC.Responses.Files
 {
     public class PrepareDownloadResponse
     {
+        [JsonProperty(PropertyName = "mode")]
+        public string Mode { get; set; }
+        [JsonProperty(PropertyName = "protocol")]
+        public string Protocol { get; set; }
+        [JsonProperty(PropertyName = "details")]
+        public string Details { get; set; }
     }
 }

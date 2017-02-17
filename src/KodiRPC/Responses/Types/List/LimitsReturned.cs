@@ -12,14 +12,15 @@
 
 using Newtonsoft.Json;
 
-namespace KodiRPC.RPC.RequestResponse.Params.Files
+namespace KodiRPC.Responses.Types.List
 {
-    public class GetFileDetailsParams : KodiProperties
+    public class LimitsReturned
     {
-        [JsonProperty("file")]
-        public string File { get; set; }
-
-        [JsonProperty("media", NullValueHandling = NullValueHandling.Ignore)]
-        public string Media { get; set; } = Files.Media.Files;
+        [JsonProperty(PropertyName = "end")]
+        public int Limits { get; set; } = -1;
+        [JsonProperty(PropertyName = "total")]
+        public int Total { get; set; }
+        [JsonProperty(PropertyName = "start")]
+        public int Start { get; set; } = 0;
     }
 }

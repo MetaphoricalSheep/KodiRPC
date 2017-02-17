@@ -10,7 +10,6 @@
  * http://www.gnu.org/licenses/.
  */
 
-using KodiRPC.Responses.Types.List.Item.File;
 using Newtonsoft.Json;
 
 namespace KodiRPC.Responses.Files
