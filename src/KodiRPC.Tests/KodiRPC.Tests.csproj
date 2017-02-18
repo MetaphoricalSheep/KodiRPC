@@ -79,7 +79,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Integration\DownloadTests.cs" />
     <Compile Include="Integration\PrepareDownloadTests.cs" />
     <Compile Include="Integration\GetDirectoryTests.cs" />
     <Compile Include="Integration\GetFileDetailsTests.cs" />
@@ -101,12 +100,10 @@
     <Compile Include="Unit\Common\ExpectedResults\TvShows.cs" />
     <Compile Include="Unit\Common\ExpectedResults\Episodes.cs" />
     <Compile Include="Unit\Common\ExpectedResults\Movies.cs" />
-    <Compile Include="Unit\DownloadTests.cs" />
     <Compile Include="Unit\PrepareDownloadTests.Setup.cs" />
     <Compile Include="Unit\GetFileDetailsTests.Setup.cs" />
     <Compile Include="Unit\GetDirectoryTests.Setup.cs" />
     <Compile Include="Unit\GetDirectoryTests.cs" />
-    <Compile Include="Unit\DownloadTests.Setup.cs" />
     <Compile Include="Unit\GetFileDetailsTests.cs" />
     <Compile Include="Unit\GetMoviesTests.cs" />
     <Compile Include="Unit\GetSeasonsTests.cs" />

@@ -87,8 +87,8 @@ namespace DemoClient
                 Console.WriteLine("Preparing file for download");
                 var prepareDownloadParam = new Params.Files.PrepareDownloadParams()
                 {
-                    //Path = details.Result.TvShowDetails.Fanart
-                    Path = fileDetails.Result.FileDetails.FilePath
+                    Path = details.Result.TvShowDetails.Fanart
+                    //Path = fileDetails.Result.FileDetails.FilePath
                 };
                 var prepareDownload = Service.PrepareDownload(prepareDownloadParam);
                 Console.WriteLine("Details...........{0}", prepareDownload.Result.Details.Path);

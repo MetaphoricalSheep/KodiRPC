@@ -10,6 +10,7 @@
  * http://www.gnu.org/licenses/.
  */
 
+using System;
 using System.Diagnostics.CodeAnalysis;
 using KodiRPC.Responses.Files;
 using KodiRPC.RPC.RequestResponse;
@@ -27,22 +28,18 @@ namespace KodiRPC.Tests.Integration
         public void WhenPreparingDownload_WithValidPath_ItShouldReturnAString()
         {
             var service = new KodiService();
-            var prepareDownload = service.PrepareDownload(new PrepareDownloadParams(){Path="valid path"});
+            var prepareDownload = service.PrepareDownload(new PrepareDownloadParams(){Path= "image://http%3A%2F%2Fthetvdb.com%2Fbanners%2Ffanart%2Foriginal%2F295647-11.jpg/" });
 
             Assert.IsNotNull(prepareDownload);
-            Assert.IsInstanceOf<JsonRpcResponse<PrepareDownloadResponse>>(prepareDownload.Result);
-            Assert.AreEqual(prepareDownload.Result.Details, "some valid url");
+            Assert.IsInstanceOf<JsonRpcResponse<PrepareDownloadResponse>>(prepareDownload);
+            Assert.AreEqual(prepareDownload.Result.Details.Path, "image/image%3A%2F%2Fhttp%253A%252F%252Fthetvdb.com%252Fbanners%252Ffanart%252Foriginal%252F295647-11.jpg%2F");
         }
 
         [Test]
         public void WhenPreparingDownload_WithInvalidPath_ItShouldReturnAnException()
         {
             var service = new KodiService();
-            var prepareDownload = service.PrepareDownload(new PrepareDownloadParams(){Path="Invalid path"});
-
-            Assert.IsNotNull(prepareDownload);
-            Assert.IsInstanceOf<JsonRpcResponse<PrepareDownloadResponse>>(prepareDownload.Result);
-            Assert.IsNotNull(prepareDownload.Error);
+            Assert.That(() => service.PrepareDownload(new PrepareDownloadParams() {Path="Invalid path"}), Throws.Exception.TypeOf<Exception>());
         }
     }
 }
