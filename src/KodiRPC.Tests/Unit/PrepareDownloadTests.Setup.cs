@@ -11,9 +11,7 @@
  */
 
 using KodiRPC.Responses.Files;
-using KodiRPC.Responses.VideoLibrary;
 using KodiRPC.RPC.RequestResponse.Params.Files;
-using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
 using KodiRPC.Services;
 using Moq;
 

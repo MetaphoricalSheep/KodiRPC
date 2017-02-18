@@ -37,7 +37,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                         Art = new Artwork
                         {
                             Poster =
-                                "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fseason01-poster.jpg/",
+                                "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fseason01-poster.jpg/"
                             //Banner = "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fbanner.jpg/",
                             //Fanart = "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2ffanart.jpg/",
                             //Poster = "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fposter.jpg/"
@@ -59,7 +59,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                         Art = new Artwork
                         {
                             Poster =
-                                "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fseason02-poster.jpg/",
+                                "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fseason02-poster.jpg/"
                             //Banner = "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fbanner.jpg/",
                             //Fanart = "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2ffanart.jpg/",
                             //Poster = "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fposter.jpg/"
@@ -81,7 +81,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                         Art = new Artwork
                         {
                             Poster =
-                                "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fseason03-poster.jpg/",
+                                "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fseason03-poster.jpg/"
                             //Banner = "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fbanner.jpg/",
                             //Fanart = "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2ffanart.jpg/",
                             //Poster = "image://%2fmedia%2fgotham%2fseries%2fThe%20Americans%20(2013)%2fposter.jpg/"

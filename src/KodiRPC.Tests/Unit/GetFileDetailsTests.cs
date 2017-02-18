@@ -20,9 +20,9 @@ namespace KodiRPC.Tests.Unit
     public partial class GetFileDetailsTests : BaseTest
     {
         [Test]
-        public void GivenAString_WhenGettingAFileDetails_ItShouldReturnFileDetails()
+        public void GivenAString_WhenGettingFileDetails_ItShouldReturnFileDetails()
         {
-            var parameters = new GetFileDetailsParams()
+            var parameters = new GetFileDetailsParams
             {
                 File = "/media/gotham/series/Dexter/Season 05/Dexter - S05E06 - Everything Is Illumenated.mkv"
             };

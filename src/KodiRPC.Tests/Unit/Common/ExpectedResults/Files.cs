@@ -10,19 +10,34 @@
  * http://www.gnu.org/licenses/.
  */
 
-using System.Collections.Generic;
-using KodiRPC.Responses.Types.Video.Details;
-using KodiRPC.RPC.RequestResponse.Params;
-using Newtonsoft.Json;
+using KodiRPC.Responses.Files;
+using KodiRPC.Responses.Types.List.Item;
 
-namespace KodiRPC.Responses.VideoLibrary
+namespace KodiRPC.Tests.Unit.Common.ExpectedResults
 {
-    public class GetMoviesResponse
+    public static class Files
     {
-        [JsonProperty(PropertyName = "movies")]
-        public List<Movie> Movies { get; set; }
+        public enum TestSet
+        {
+            BigHero6 = 12,
+            WolfOfWallStreet = 100,
+            Spy = 77,
+            InvalidId = int.MaxValue
+        }
 
-        [JsonProperty(PropertyName = "limits")]
-        public Limits Limits { get; set; }
+        public static GetFileDetailsResponse GetFileDetails()
+        {
+            var file = new GetFileDetailsResponse
+            {
+                FileDetails = new File()
+                {
+                    FilePath = "/series/Dark Matter/Season 01/Dark Matter - S01E01 - Episode One.mkv",
+                    MimeType = "video/x-matroska",
+                    Size = 857542653
+                }
+            };
+
+            return file;
+        }
     }
 }

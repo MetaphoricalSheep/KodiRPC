@@ -11,7 +11,8 @@
  */
 
 using System;
-using Params = KodiRPC.RPC.RequestResponse.Params;
+using KodiRPC.RPC.RequestResponse.Params.Files;
+using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
 using KodiRPC.RPC.Specifications.Properties;
 using KodiRPC.Services;
 
@@ -21,7 +22,7 @@ namespace DemoClient
     {
         private static readonly KodiService Service = new KodiService();
 
-        private static void Main(string[] args)
+        private static void Main()
         {
             try
             {
@@ -35,7 +36,7 @@ namespace DemoClient
                 var ping = Service.Ping();
                 Console.WriteLine(ping.Result);
 
-                var parameters = new Params.VideoLibrary.GetTvShowDetailsParams()
+                var parameters = new GetTvShowDetailsParams
                 {
                     TvShowId = 1,
                     //Properties = new[] {TvShowProperties.Title, TvShowProperties.Premiered, TvShowProperties.Year}
@@ -58,18 +59,18 @@ namespace DemoClient
 
                 Console.WriteLine();
                 Console.Write("Scanning for new content...");
-                var scan = Service.Scan(new Params.VideoLibrary.ScanParams());
+                var scan = Service.Scan(new ScanParams());
                 Console.WriteLine(scan.Result);
 
                 Console.WriteLine();
                 Console.Write("Cleaning...");
-                var clean = Service.Clean(new Params.VideoLibrary.CleanParams());
+                var clean = Service.Clean(new CleanParams());
                 Console.WriteLine(clean.Result);
 
                 Console.WriteLine();
                 Console.WriteLine("Getting File details");
 
-                var fileDetailParams = new Params.Files.GetFileDetailsParams()
+                var fileDetailParams = new GetFileDetailsParams
                 {
                     File = "/media/gotham/series/Dark Matter/Season 02/Dark Matter - S02E03 - I’ve Seen the Other Side of You.mkv",
                     Properties = FileProperties.All()
@@ -85,7 +86,7 @@ namespace DemoClient
 
                 Console.WriteLine();
                 Console.WriteLine("Preparing file for download");
-                var prepareDownloadParam = new Params.Files.PrepareDownloadParams()
+                var prepareDownloadParam = new PrepareDownloadParams
                 {
                     Path = details.Result.TvShowDetails.Fanart
                     //Path = fileDetails.Result.FileDetails.FilePath
@@ -94,16 +95,6 @@ namespace DemoClient
                 Console.WriteLine("Details...........{0}", prepareDownload.Result.Details.Path);
                 Console.WriteLine("Protocol..........{0}", prepareDownload.Result.Protocol);
                 Console.WriteLine("Mode..............{0}", prepareDownload.Result.Mode);
-
-                Console.WriteLine();
-                Console.WriteLine("Download");
-                var downloadParam = new Params.Files.DownloadParams()
-                {
-                    Path = details.Result.TvShowDetails.Fanart
-                    //Path = fileDetails.Result.FileDetails.FilePath
-                };
-                var download = Service.Download(downloadParam);
-                Console.WriteLine("Details...........{0}", download.Result);
 
                 NEKey();
             }

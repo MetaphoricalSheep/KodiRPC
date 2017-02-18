@@ -10,7 +10,6 @@
  * http://www.gnu.org/licenses/.
  */
 
-using KodiRPC.RPC.Specifications;
 using Newtonsoft.Json;
 
 namespace KodiRPC.RPC.RequestResponse.Error

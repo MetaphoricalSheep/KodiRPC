@@ -10,11 +10,11 @@
  * http://www.gnu.org/licenses/.
  */
 
-using KodiRPC.Responses.VideoLibrary;
 using KodiRPC.Responses.Files;
+using KodiRPC.Responses.VideoLibrary;
 using KodiRPC.RPC.RequestResponse;
-using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
 using KodiRPC.RPC.RequestResponse.Params.Files;
+using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
 
 namespace KodiRPC.Services
 {
@@ -51,7 +51,6 @@ namespace KodiRPC.Services
         JsonRpcResponse<GetFileDetailsResponse> GetFileDetails(GetFileDetailsParams parameters, string requestId = "GetFileDetails");
         JsonRpcResponse<GetDirectoryResponse> GetDirectory(GetDirectoryParams parameters, string requestId = "GetDirectory");
         JsonRpcResponse<PrepareDownloadResponse> PrepareDownload(PrepareDownloadParams parameters, string requestId = "PrepareDownload");
-        JsonRpcResponse<DownloadResponse> Download(DownloadParams parameters, string requestId = "Download");
         #endregion
     }
 }

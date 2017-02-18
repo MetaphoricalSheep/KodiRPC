@@ -15,7 +15,6 @@ using System.Diagnostics.CodeAnalysis;
 using KodiRPC.Responses.Files;
 using KodiRPC.RPC.RequestResponse;
 using KodiRPC.RPC.RequestResponse.Params.Files;
-using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
 using KodiRPC.Services;
 using NUnit.Framework;
 
@@ -28,7 +27,7 @@ namespace KodiRPC.Tests.Integration
         public void WhenPreparingDownload_WithValidPath_ItShouldReturnAString()
         {
             var service = new KodiService();
-            var prepareDownload = service.PrepareDownload(new PrepareDownloadParams(){Path= "image://http%3A%2F%2Fthetvdb.com%2Fbanners%2Ffanart%2Foriginal%2F295647-11.jpg/" });
+            var prepareDownload = service.PrepareDownload(new PrepareDownloadParams {Path= "image://http%3A%2F%2Fthetvdb.com%2Fbanners%2Ffanart%2Foriginal%2F295647-11.jpg/" });
 
             Assert.IsNotNull(prepareDownload);
             Assert.IsInstanceOf<JsonRpcResponse<PrepareDownloadResponse>>(prepareDownload);
@@ -39,7 +38,7 @@ namespace KodiRPC.Tests.Integration
         public void WhenPreparingDownload_WithInvalidPath_ItShouldReturnAnException()
         {
             var service = new KodiService();
-            Assert.That(() => service.PrepareDownload(new PrepareDownloadParams() {Path="Invalid path"}), Throws.Exception.TypeOf<Exception>());
+            Assert.That(() => service.PrepareDownload(new PrepareDownloadParams {Path="Invalid path"}), Throws.Exception.TypeOf<Exception>());
         }
     }
 }

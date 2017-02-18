@@ -48,7 +48,7 @@ namespace KodiRPC.Tests.Integration
 
             var parameters = new GetTvShowDetailsParams
             {
-                TvShowId = (int)TvShows.TestSet.InvalidId,
+                TvShowId = (int)TvShows.TestSet.InvalidId
             };
 
             Assert.That(() => service.GetTvShowDetails(parameters, "UnitTests"), Throws.Exception.TypeOf<Exception>());

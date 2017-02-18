@@ -12,6 +12,7 @@
 
 using System.Collections.Generic;
 using KodiRPC.Responses.Types.List;
+using KodiRPC.Responses.Types.List.Item;
 using Newtonsoft.Json;
 
 namespace KodiRPC.Responses.Files
@@ -21,6 +22,6 @@ namespace KodiRPC.Responses.Files
         [JsonProperty(PropertyName = "limits")]
         public LimitsReturned Limits { get; set; }
         [JsonProperty(PropertyName = "files")]
-        public List<Types.List.Item.File> Files { get; set; }
+        public List<File> Files { get; set; }
     }
 }

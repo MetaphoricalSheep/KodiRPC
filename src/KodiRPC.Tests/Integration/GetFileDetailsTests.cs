@@ -10,11 +10,12 @@
  * http://www.gnu.org/licenses/.
  */
 
+using System;
 using System.Diagnostics.CodeAnalysis;
 using KodiRPC.Responses.Files;
 using KodiRPC.RPC.RequestResponse;
 using KodiRPC.RPC.RequestResponse.Params.Files;
-using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
+using KodiRPC.RPC.Specifications.Properties;
 using KodiRPC.Services;
 using NUnit.Framework;
 
@@ -27,22 +28,27 @@ namespace KodiRPC.Tests.Integration
         public void WhenGettingFileDetails_WithValidFile_ItShouldReturnAFileResult()
         {
             var service = new KodiService();
-            var fileDetails = service.GetFileDetails(new GetFileDetailsParams(){ File = "some kodi string path" });
+            var parameters = new GetFileDetailsParams
+            {
+                File = "/media/gotham/series/Dark Matter/Season 02/Dark Matter - S02E03 - I’ve Seen the Other Side of You.mkv",
+                Properties = FileProperties.All()
+            };
+
+            var fileDetails = service.GetFileDetails(parameters);
 
             Assert.IsNotNull(fileDetails);
-            Assert.IsInstanceOf<JsonRpcResponse<GetFileDetailsResponse>>(fileDetails.Result);
-            StringAssert.IsMatch(fileDetails.Result.FileDetails.FilePath, "OK");
+            Assert.IsInstanceOf<JsonRpcResponse<GetFileDetailsResponse>>(fileDetails);
+            StringAssert.IsMatch(fileDetails.Result.FileDetails.FilePath, "/media/gotham/series/Dark Matter/Season 02/Dark Matter - S02E03 - I’ve Seen the Other Side of You.mkv");
+            Assert.AreEqual(fileDetails.Result.FileDetails.MimeType, "video/x-matroska");
+            Assert.AreEqual(fileDetails.Result.FileDetails.Size, 857542653);
         }
 
         [Test]
         public void WhenGettingFileDetails_WithInvalidFile_ItShouldReturnAnException()
         {
             var service = new KodiService();
-            var fileDetails = service.GetFileDetails(new GetFileDetailsParams() {File = "invalid path"});
 
-            Assert.IsNotNull(fileDetails);
-            Assert.IsInstanceOf<JsonRpcResponse<GetFileDetailsResponse>>(fileDetails.Result);
-            Assert.IsNotNull(fileDetails.Error);
+            Assert.That(() => service.GetFileDetails(new GetFileDetailsParams {File = "invalid path"}), Throws.Exception.TypeOf<Exception>());
         }
     }
 }

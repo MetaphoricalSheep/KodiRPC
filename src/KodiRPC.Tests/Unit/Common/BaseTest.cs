@@ -16,12 +16,13 @@ using System.Reflection;
 using KodiRPC.ExceptionHandling.RPC;
 using KodiRPC.Responses.Types.Media;
 using KodiRPC.Responses.Types.Video;
-using KodiRPC.RPC.RequestResponse;
-using Newtonsoft.Json;
-using Stream = KodiRPC.Responses.Types.Video.Stream;
-using NUnit.Framework;
 using KodiRPC.Responses.Types.Video.Details;
+using KodiRPC.Responses.Types.Video.Stream;
+using KodiRPC.RPC.RequestResponse;
 using KodiRPC.RPC.RequestResponse.Params;
+using Newtonsoft.Json;
+using NUnit.Framework;
+using File = System.IO.File;
 
 namespace KodiRPC.Tests.Unit.Common
 {
@@ -33,11 +34,11 @@ namespace KodiRPC.Tests.Unit.Common
 
             try
             {
-                json = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"/../../App_Data/" + file);
+                json = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"/../../App_Data/" + file);
             }
             catch (Exception)
             {
-                json = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"/../../App_Data/error.json");
+                json = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"/../../App_Data/error.json");
             }
 
             var response = JsonConvert.DeserializeObject<JsonRpcResponse<T>>(json);
@@ -91,7 +92,7 @@ namespace KodiRPC.Tests.Unit.Common
 
             for (var i = 0; i < actualList?.Count; i++)
             {
-                if (actualList[i] is Cast || actualList[i] is Stream.Video || actualList[i] is Stream.Audio || actualList[i] is Stream.Subtitle || 
+                if (actualList[i] is Cast || actualList[i] is Video || actualList[i] is Audio || actualList[i] is Subtitle || 
                     actualList[i] is Episode || actualList[i] is TvShow || actualList[i] is Movie || actualList[i] is Season)
                 {
                     AssertThatPropertyValuesAreEquals(actualList[i], expectedList[i]);

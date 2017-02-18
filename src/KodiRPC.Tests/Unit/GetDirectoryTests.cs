@@ -10,12 +10,10 @@
  * http://www.gnu.org/licenses/.
  */
 
-using System.Diagnostics.CodeAnalysis;
 using KodiRPC.ExceptionHandling.RPC;
 using KodiRPC.Responses.Files;
 using KodiRPC.RPC.RequestResponse;
 using KodiRPC.RPC.RequestResponse.Params.Files;
-using KodiRPC.Services;
 using KodiRPC.Tests.Unit.Common;
 using NUnit.Framework;
 
@@ -26,7 +24,7 @@ namespace KodiRPC.Tests.Unit
         [Test]
         public void GivenAString_WhenGettingDirectory_WithAValidPath_ItshouldReturnAListOfFiles()
         {
-            var parameters = new GetDirectoryParams()
+            var parameters = new GetDirectoryParams
             {
                 Directory = "dexter"
             };
@@ -44,7 +42,7 @@ namespace KodiRPC.Tests.Unit
 
         public void GivenAString_WhenGettingDirectory_WithAnInvalidPath_ItShouldThrowRpcInternalServerErrorException()
         {
-            var parameters = new GetDirectoryParams()
+            var parameters = new GetDirectoryParams
             {
                 Directory = "notdexter"
             };

@@ -23,7 +23,7 @@ namespace KodiRPC.Tests.Unit
         [Test]
         public void GivenAString_WhenPreparingDownload_WithAValidPath_ItShouldReturnDownloadMethod()
         {
-            var parameters = new PrepareDownloadParams()
+            var parameters = new PrepareDownloadParams
             {
                 Path = "dexter"
             };
