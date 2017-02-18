@@ -120,7 +120,7 @@ namespace KodiRPC.Services
             return _rpcConnector.MakeRequest<GetDirectoryResponse>(KodiMethods.GetDirectory, parameters, requestId);
         }
 
-        public JsonRpcResponse<PrepareDownloadResponse> PrepareDownload(PrepareDownloadParams parameters, string requestId = "PrepareDownoad")
+        public JsonRpcResponse<PrepareDownloadResponse> PrepareDownload(PrepareDownloadParams parameters, string requestId = "PrepareDownload")
         {
             return _rpcConnector.MakeRequest<PrepareDownloadResponse>(KodiMethods.PrepareDownload, parameters, requestId);
         }

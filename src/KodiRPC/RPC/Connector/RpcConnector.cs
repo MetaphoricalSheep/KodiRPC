@@ -61,7 +61,6 @@ namespace KodiRPC.RPC.Connector
                     using (var requestWriter = new StreamWriter(requestStream))
                     {
                         requestWriter.Write(jsonRpcRequest.ToString());
-                        requestWriter.Dispose();
                     }
                 }
             }
@@ -86,7 +85,6 @@ namespace KodiRPC.RPC.Connector
                         using (var responseReader = new StreamReader(responseStream, Encoding.UTF8))
                         {
                             json = responseReader.ReadToEnd();
-                            responseReader.Dispose();
                         }
                     }
                 }

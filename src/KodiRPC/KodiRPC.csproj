@@ -96,6 +96,7 @@
     <Compile Include="Responses\Files\GetFileDetailsResponse.cs" />
     <Compile Include="Responses\Files\DownloadResponse.cs" />
     <Compile Include="Responses\Files\PrepareDownloadResponse.cs" />
+    <Compile Include="Responses\Files\Details.cs" />
     <Compile Include="RPC\RequestResponse\Params\Files\Media.cs" />
     <Compile Include="Responses\Types\List\Item\File.cs" />
     <Compile Include="Responses\Types\List\LimitsReturned.cs" />

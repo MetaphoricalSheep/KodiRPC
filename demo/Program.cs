@@ -37,28 +37,36 @@ namespace DemoClient
 
                 var parameters = new Params.VideoLibrary.GetTvShowDetailsParams()
                 {
-                    TvShowId = 23,
+                    TvShowId = 1,
+                    //Properties = new[] {TvShowProperties.Title, TvShowProperties.Premiered, TvShowProperties.Year}
+                    Properties = TvShowProperties.All()
                 };
 
+                Console.WriteLine();
                 Console.WriteLine("Running VideoLibrary.GetTvShowDetails");
 
                 var details = Service.GetTvShowDetails(parameters);
 
                 Console.WriteLine("ID.................{0}", details.Id);
                 Console.WriteLine("JsonRPC............{0}", details.JsonRpc);
-                Console.WriteLine("First.ShowTitle....{0}", details.Result.TvShowDetails.Title);
-                Console.WriteLine("First.Studio.......{0}", details.Result.TvShowDetails.Premiered);
-                Console.WriteLine("First.Premiered....{0}", details.Result.TvShowDetails.Year);
+                Console.WriteLine("ShowTitle..........{0}", details.Result.TvShowDetails.Title);
+                Console.WriteLine("Studio.............{0}", details.Result.TvShowDetails.Premiered);
+                Console.WriteLine("Premiered..........{0}", details.Result.TvShowDetails.Year);
+                Console.WriteLine("Fanart.............{0}", details.Result.TvShowDetails.Fanart);
+                Console.WriteLine("File...............{0}", details.Result.TvShowDetails.File);
                 Console.WriteLine();
 
+                Console.WriteLine();
                 Console.Write("Scanning for new content...");
                 var scan = Service.Scan(new Params.VideoLibrary.ScanParams());
                 Console.WriteLine(scan.Result);
 
+                Console.WriteLine();
                 Console.Write("Cleaning...");
                 var clean = Service.Clean(new Params.VideoLibrary.CleanParams());
                 Console.WriteLine(clean.Result);
 
+                Console.WriteLine();
                 Console.WriteLine("Getting File details");
 
                 var fileDetailParams = new Params.Files.GetFileDetailsParams()
@@ -67,13 +75,35 @@ namespace DemoClient
                     Properties = FileProperties.All()
                 };
 
+                Console.WriteLine();
                 var fileDetails = Service.GetFileDetails(fileDetailParams);
 
                 Console.WriteLine("File..............{0}", fileDetails.Result.FileDetails.FilePath);
                 Console.WriteLine("FileName..........{0}", fileDetails.Result.FileDetails.Label);
                 Console.WriteLine("MimeType..........{0}", fileDetails.Result.FileDetails.MimeType);
                 Console.WriteLine("Size..............{0}", fileDetails.Result.FileDetails.Size);
-                
+
+                Console.WriteLine();
+                Console.WriteLine("Preparing file for download");
+                var prepareDownloadParam = new Params.Files.PrepareDownloadParams()
+                {
+                    //Path = details.Result.TvShowDetails.Fanart
+                    Path = fileDetails.Result.FileDetails.FilePath
+                };
+                var prepareDownload = Service.PrepareDownload(prepareDownloadParam);
+                Console.WriteLine("Details...........{0}", prepareDownload.Result.Details.Path);
+                Console.WriteLine("Protocol..........{0}", prepareDownload.Result.Protocol);
+                Console.WriteLine("Mode..............{0}", prepareDownload.Result.Mode);
+
+                Console.WriteLine();
+                Console.WriteLine("Download");
+                var downloadParam = new Params.Files.DownloadParams()
+                {
+                    Path = details.Result.TvShowDetails.Fanart
+                    //Path = fileDetails.Result.FileDetails.FilePath
+                };
+                var download = Service.Download(downloadParam);
+                Console.WriteLine("Details...........{0}", download.Result);
 
                 NEKey();
             }

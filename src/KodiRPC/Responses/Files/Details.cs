@@ -14,13 +14,9 @@ using Newtonsoft.Json;
 
 namespace KodiRPC.Responses.Files
 {
-    public class PrepareDownloadResponse
+    public class Details
     {
-        [JsonProperty(PropertyName = "mode")]
-        public string Mode { get; set; }
-        [JsonProperty(PropertyName = "protocol")]
-        public string Protocol { get; set; }
-        [JsonProperty(PropertyName = "details")]
-        public Details Details { get; set; }
+        [JsonProperty("path")]
+        public string Path { get; set; }
     }
 }
