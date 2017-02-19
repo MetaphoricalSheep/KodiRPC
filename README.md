@@ -7,31 +7,21 @@ The KodiRPC documentation can be viewed on (http://kodi.wiki/view/JSON-RPC_API/v
 ### Installation
 You can clone the KodiRPC repository in any path.
 ```bash
-git clone git@github.com:PieterUysFourie/KodiRPC.git
+git clone https://github.com/MetaphoricalSheep/KodiRPC.git
 ```
 
 ### Configuration
-The App.config file is created by transforming the Base.config file with the settings in the selected Configuration. Never edit the App.config file directly as all changes will be lost when you build. To customize your settings you can either change the Base.config file directly or you can set up a new configuration by following the steps below:
-
-1. Open the ```Configuration Manager``` and create a new configuration.
-2. Create a copy of the Base.config file in KodiRPC/demo and name it to the same name you used for the new configuration.
-3. Open up the config file in an editor and add ```xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform"``` to the configuration element and ``` xdt:Transform="SetAttributes" xdt:Locator="Match(key)"``` to all the appSettings children:
-
+Specify your kodi connection settings in your *.config file
    ```xml
-   <?xml version="1.0" encoding="utf-8" ?>
-   <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-     ...
-     <appSettings>
-       <add key="KodiUsername" value="kodi" xdt:Transform="SetAttributes" xdt:Locator="Match(key)"/>
-       ...
-       <add key="KodiPort" value="80" xdt:Transform="SetAttributes" xdt:Locator="Match(key)"/>
-     </appSettings>
-   </configuration>
+   <appSettings>
+     <add key="Debug" value="false"/>
+     <add key="KodiUsername" value="kodi"/>
+     <add key="KodiPassword" value="kodi"/>
+     <add key="KodiHost" value="http://localhost"/>
+     <add key="KodiPort" value="80"/>
+   </appSettings>
    ```
-   
-4. Change all the values to what you need it to be for the new configuration. You can remove anything that does not have to change.
-5. Select the new configuration from the Configuration Manager and click build. App.config should now transform with the values in the new config file.
-6. Add the new config file to .gitignore
+Setting the debug key to true will output the request info on every request that you make. Useful for debuggin, terrible in production.
 
 ## Usage
 All the KodiRPC methods are exposed through the KodiService class. Instantiate an instance of the class to get started.
@@ -80,24 +70,20 @@ Console.WriteLine("Show Title: {0}", details.Result.TvShow.Title)
 1. [JSONRPC](http://kodi.wiki/view/JSON-RPC_API/v6#JSONRPC)
     1. [JSONRPC.Ping](http://kodi.wiki/view/JSON-RPC_API/v6#JSONRPC.Ping)
 2. [VideoLibrary](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary)
-    1. [VideoLibrary.GetEpisodeDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetEpisodeDetails)
-    2. [VideoLibrary.GetEpisodes](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetEpisodes)
-    3. [VideoLibrary.GetMovieDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetMovieDetails)
-    4. [VideoLibrary.GetMovies](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetMovies)
-    5. [VideoLibrary.GetRecentlyAddedEpisodes](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetRecentlyAddedEpisodes)
-    6. [VideoLibrary.GetRecentlyAddedMovies](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetRecentlyAddedMovies)
-    7. [VideoLibrary.GetSeasons](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetSeasons)
-    8. [VideoLibrary.GetTvShowDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetTvShowDetails)
-    9. [VideoLibrary.GetTvShows](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetTvShows)
-
-### Planned Methods (v1.0)
-1. [Files](http://kodi.wiki/view/JSON-RPC_API/v6#Files)
-    1. [Files.Download](http://kodi.wiki/view/JSON-RPC_API/v6#Files.Download)
-    2. [Files.GetDirectory](http://kodi.wiki/view/JSON-RPC_API/v6#Files.GetDirectory)
-    3. [Files.PrepareDownload](http://kodi.wiki/view/JSON-RPC_API/v6#Files.PrepareDownload)
-3. [VideoLibrary](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary)
- 1. [VideoLibrary.Clean](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.Clean)
- 2. [VideoLibrary.Scan](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.Scan)
+    1. [VideoLibrary.Clean](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.Clean)
+    2. [VideoLibrary.Scan](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.Scan)
+    3. [VideoLibrary.GetEpisodeDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetEpisodeDetails)
+    4. [VideoLibrary.GetEpisodes](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetEpisodes)
+    5. [VideoLibrary.GetMovieDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetMovieDetails)
+    6. [VideoLibrary.GetMovies](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetMovies)
+    7. [VideoLibrary.GetRecentlyAddedEpisodes](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetRecentlyAddedEpisodes)
+    8. [VideoLibrary.GetRecentlyAddedMovies](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetRecentlyAddedMovies)
+    9. [VideoLibrary.GetSeasons](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetSeasons)
+    10. [VideoLibrary.GetTvShowDetails](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetTvShowDetails)
+    11. [VideoLibrary.GetTvShows](http://kodi.wiki/view/JSON-RPC_API/v6#VideoLibrary.GetTvShows)
+3. [Files](http://kodi.wiki/view/JSON-RPC_API/v6#Files)
+    1. [Files.GetDirectory](http://kodi.wiki/view/JSON-RPC_API/v6#Files.GetDirectory)
+    2. [Files.PrepareDownload](http://kodi.wiki/view/JSON-RPC_API/v6#Files.PrepareDownload)
 
 
 ### Planned Methods (v1.1)
@@ -166,6 +152,7 @@ Console.WriteLine("Show Title: {0}", details.Result.TvShow.Title)
 4. [Files](http://kodi.wiki/view/JSON-RPC_API/v6#Files)
     1. [Files.GetFileDetails](http://kodi.wiki/view/JSON-RPC_API/v6#Files.GetFileDetails)
     2. [Files.GetSources](http://kodi.wiki/view/JSON-RPC_API/v6#Files.GetSources)
+    3. [Files.Download](http://kodi.wiki/view/JSON-RPC_API/v6#Files.Download)
 5. [GUI](http://kodi.wiki/view/JSON-RPC_API/v6#GUI)
     1. [GUI.ActivateWindow](http://kodi.wiki/view/JSON-RPC_API/v6#GUI.ActivateWindows)
     2. [GUI.GetProperties](http://kodi.wiki/view/JSON-RPC_API/v6#GUI.GetProperties)
