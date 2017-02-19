@@ -16,7 +16,7 @@ namespace KodiRPC.Responses.Types.List.Item
 {
     public class File
     {
-        [JsonProperty(PropertyName = "filetype")]
+        [JsonProperty(PropertyName = "type")]
         public string FileType { get; set; }
 
         [JsonProperty(PropertyName = "size")]

@@ -70,7 +70,7 @@ namespace KodiRPC.Tests.Unit.Common
                     AssertThatListsAreEquals(property, (IList)actualValue, (IList)expectedValue, expected.GetType().ToString());
                 }
                 else if (actualValue is Streams || actualValue is Resume || actualValue is Artwork || actualValue is UniqueId || 
-                    actualValue is Limits)
+                    actualValue is Limits || actualValue is Responses.Types.List.Item.File)
                 {
                     AssertThatPropertyValuesAreEquals(actualValue, expectedValue);
                 }
