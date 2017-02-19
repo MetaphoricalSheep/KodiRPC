@@ -14,7 +14,9 @@ using KodiRPC.ExceptionHandling.RPC;
 using KodiRPC.Responses.Files;
 using KodiRPC.RPC.RequestResponse;
 using KodiRPC.RPC.RequestResponse.Params.Files;
+using KodiRPC.RPC.Specifications.Properties;
 using KodiRPC.Tests.Unit.Common;
+using KodiRPC.TesTs.Unit.Common.ExpectedResults;
 using NUnit.Framework;
 
 namespace KodiRPC.Tests.Unit
@@ -26,18 +28,18 @@ namespace KodiRPC.Tests.Unit
         {
             var parameters = new GetDirectoryParams
             {
-                Directory = "dexter"
+                Directory = "darkmatter",
+                Properties = FileProperties.All()
             };
 
             var mock = GetKodiServiceMock(parameters);
             var service = mock.Object;
             var actual = service.GetDirectory(parameters, "UnitTests");
-            string expected;
-            expected = "{}";
-            //var expected = Episodes.GetEpisode(id);
+            var expected = Directories.GetDirectory();
 
             Assert.IsInstanceOf<JsonRpcResponse<GetDirectoryResponse>>(actual);
-            Assert.That(actual.Result, Is.EqualTo(expected));
+            Assert.That(actual.Result.Files.Count, Is.EqualTo(expected.Files.Count));
+            AssertThatPropertyValuesAreEquals(actual.Result, expected);
         }
 
         public void GivenAString_WhenGettingDirectory_WithAnInvalidPath_ItShouldThrowRpcInternalServerErrorException()

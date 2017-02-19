@@ -11,6 +11,7 @@
  */
 
 using System;
+using System.Linq;
 using KodiRPC.RPC.RequestResponse.Params.Files;
 using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
 using KodiRPC.RPC.Specifications.Properties;
@@ -96,16 +97,46 @@ namespace DemoClient
                 Console.WriteLine("Protocol..........{0}", prepareDownload.Result.Protocol);
                 Console.WriteLine("Mode..............{0}", prepareDownload.Result.Mode);
 
-                NEKey();
+                Console.WriteLine();
+                Console.WriteLine("Getting directory (directory)");
+                var getDirectoryParams = new GetDirectoryParams
+                {
+                    Directory = "/media/gotham/series/Dark Matter",
+                    Properties = FileProperties.All()
+                };
+                var getDirectory = Service.GetDirectory(getDirectoryParams);
+                foreach (var file in getDirectory.Result.Files)
+                {
+                    Console.WriteLine("....{0}", file.Label);
+                    Console.WriteLine("........Path..............{0}", file.FilePath);
+                    Console.WriteLine("........Type..............{0}", file.FileType);
+                }
+
+                Console.WriteLine();
+                Console.WriteLine("Getting directory (files)");
+                getDirectoryParams.Directory += "/Season 01/";
+                getDirectoryParams.Properties = FileProperties.All();
+                getDirectory = Service.GetDirectory(getDirectoryParams);
+
+                var x = FileProperties.All().Aggregate("", (current, y) => current + (@",""" + y + @""""));
+
+                foreach (var file in getDirectory.Result.Files)
+                {
+                    Console.WriteLine("....{0}", file.Label);
+                    Console.WriteLine("........Path..............{0}", file.FilePath);
+                    Console.WriteLine("........Type..............{0}", file.FileType);
+                }
+
+                PressAnyKey();
             }
             catch (Exception e)
             {
                 Console.WriteLine("An exception has occured: {0}", e.Message);
-                NEKey();
+                PressAnyKey();
             }
         }
 
-        private static void NEKey()
+        private static void PressAnyKey()
         {
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();

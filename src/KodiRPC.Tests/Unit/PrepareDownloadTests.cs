@@ -14,6 +14,7 @@ using KodiRPC.Responses.Files;
 using KodiRPC.RPC.RequestResponse;
 using KodiRPC.RPC.RequestResponse.Params.Files;
 using KodiRPC.Tests.Unit.Common;
+using KodiRPC.Tests.Unit.Common.ExpectedResults;
 using NUnit.Framework;
 
 namespace KodiRPC.Tests.Unit
@@ -25,13 +26,13 @@ namespace KodiRPC.Tests.Unit
         {
             var parameters = new PrepareDownloadParams
             {
-                Path = "dexter"
+                Path = "darkmatter"
             };
 
             var mock = GetKodiServiceMock(parameters);
             var service = mock.Object;
             var actual = service.PrepareDownload(parameters, "UnitTests");
-            var expected = "{}";
+            var expected = Files.PrepareDownload();
 
             Assert.IsInstanceOf<JsonRpcResponse<PrepareDownloadResponse>>(actual);
             AssertThatPropertyValuesAreEquals(actual.Result, expected);

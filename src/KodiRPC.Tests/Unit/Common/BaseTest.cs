@@ -12,12 +12,13 @@
 
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Reflection;
 using KodiRPC.ExceptionHandling.RPC;
+using KodiRPC.Responses.Files;
+using KodiRPC.Responses.Types.List;
 using KodiRPC.Responses.Types.Media;
 using KodiRPC.Responses.Types.Video;
-using KodiRPC.Responses.Types.Video.Details;
-using KodiRPC.Responses.Types.Video.Stream;
 using KodiRPC.RPC.RequestResponse;
 using KodiRPC.RPC.RequestResponse.Params;
 using Newtonsoft.Json;
@@ -28,6 +29,21 @@ namespace KodiRPC.Tests.Unit.Common
 {
     public class BaseTest
     {
+        private static readonly List<string> ResponseTypes = new List<string>
+        {
+            "Cast",
+            "Video",
+            "Audio",
+            "Subtitle",
+            "Episode",
+            "TvShow",
+            "Movie",
+            "Season",
+            "Details",
+            "File",
+            "PrepareDownloadResponse"
+        };
+
         public JsonRpcResponse<T> MakeFauxRequest<T>(string file)
         {
             string json;
@@ -70,7 +86,7 @@ namespace KodiRPC.Tests.Unit.Common
                     AssertThatListsAreEquals(property, (IList)actualValue, (IList)expectedValue, expected.GetType().ToString());
                 }
                 else if (actualValue is Streams || actualValue is Resume || actualValue is Artwork || actualValue is UniqueId || 
-                    actualValue is Limits || actualValue is Responses.Types.List.Item.File)
+                    actualValue is LimitsReturned || actualValue is Limits || actualValue is Responses.Types.List.Item.File || actualValue is Details)
                 {
                     AssertThatPropertyValuesAreEquals(actualValue, expectedValue);
                 }
@@ -92,8 +108,7 @@ namespace KodiRPC.Tests.Unit.Common
 
             for (var i = 0; i < actualList?.Count; i++)
             {
-                if (actualList[i] is Cast || actualList[i] is Video || actualList[i] is Audio || actualList[i] is Subtitle || 
-                    actualList[i] is Episode || actualList[i] is TvShow || actualList[i] is Movie || actualList[i] is Season)
+                if (ResponseTypes.Contains(actualList[i].GetType().Name))
                 {
                     AssertThatPropertyValuesAreEquals(actualList[i], expectedList[i]);
                 }

@@ -19,15 +19,11 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
     {
         public enum TestSet
         {
-            BigHero6 = 12,
-            WolfOfWallStreet = 100,
-            Spy = 77,
-            InvalidId = int.MaxValue
         }
 
         public static GetFileDetailsResponse GetFileDetails()
         {
-            var file = new GetFileDetailsResponse
+            return new GetFileDetailsResponse
             {
                 FileDetails = new File()
                 {
@@ -36,11 +32,23 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                     LastModified = "2015-06-14 17:30:15",
                     MimeType = "video/x-matroska",
                     Size = 1439978796,
-                    FileType = "unknown"
+                    Type = "unknown"
                 }
             };
+        }
 
-            return file;
+        public static PrepareDownloadResponse PrepareDownload()
+        {
+            return new PrepareDownloadResponse
+            {
+                Details = new Details
+                {
+                    Path =
+                        "vfs/%2Fmedia%2Fgotham%2Fseries%2FDark%20Matter%2FSeason%2001%2FDark%20Matter%20-%20S01E01%20-%20Episode%20One.mkv"
+                },
+                Mode = "redirect",
+                Protocol = "http"
+            };
         }
     }
 }

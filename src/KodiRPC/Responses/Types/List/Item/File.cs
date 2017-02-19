@@ -16,7 +16,7 @@ namespace KodiRPC.Responses.Types.List.Item
 {
     public class File
     {
-        [JsonProperty(PropertyName = "type")]
+        [JsonProperty(PropertyName = "filetype")]
         public string FileType { get; set; }
 
         [JsonProperty(PropertyName = "size")]
@@ -33,5 +33,8 @@ namespace KodiRPC.Responses.Types.List.Item
 
         [JsonProperty(PropertyName = "lastmodified")]
         public string LastModified { get; set; }
+
+        [JsonProperty(PropertyName = "type")]
+        public string Type { get; set; }
     }
 }

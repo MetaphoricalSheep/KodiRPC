@@ -93,6 +93,7 @@
     <Compile Include="Integration\GetTvShowsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Unit\Common\BaseTest.cs" />
+    <Compile Include="Unit\Common\ExpectedResults\Directories.cs" />
     <Compile Include="Unit\Common\ExpectedResults\Files.cs" />
     <Compile Include="Unit\Common\ExpectedResults\Seasons.cs" />
     <Compile Include="Unit\Common\ExpectedResults\TvShows.cs" />
@@ -144,11 +145,13 @@
       <DependentUpon>App.config</DependentUpon>
       <IsTransformFile>True</IsTransformFile>
     </None>
+    <None Include="App_Data\directory.darkmatter.json" />
     <None Include="App_Data\files.1.json" />
     <None Include="App_Data\episode.1010.json" />
     <None Include="App_Data\episode.486.json" />
     <None Include="App_Data\episode.864.json" />
     <None Include="App_Data\episodes.json" />
+    <None Include="App_Data\files.darkmatter.json" />
     <None Include="App_Data\movie.100.json" />
     <None Include="App_Data\movie.12.json" />
     <None Include="App_Data\movie.77.json" />

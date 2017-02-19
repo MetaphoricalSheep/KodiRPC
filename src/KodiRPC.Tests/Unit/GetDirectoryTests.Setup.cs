@@ -24,7 +24,7 @@ namespace KodiRPC.Tests.Unit
             var mock = new Mock<IKodiService>();
 
             mock.Setup(s => s.GetDirectory(parameters, "UnitTests"))
-                .Returns(() => MakeFauxRequest<GetDirectoryResponse>($"directories.{parameters.Directory}.json"));
+                .Returns(() => MakeFauxRequest<GetDirectoryResponse>($"directory.{parameters.Directory}.json"));
 
             return mock;
         }
