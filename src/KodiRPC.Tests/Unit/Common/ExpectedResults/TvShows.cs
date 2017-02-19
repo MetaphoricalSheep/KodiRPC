@@ -92,7 +92,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                         TvShowId = 12,
                         Votes = "64",
                         WatchedEpisodes = 0,
-                        Year = 2015,
+                        Year = 2015
                     }
                 },
                 new GetTvShowDetailsResponse

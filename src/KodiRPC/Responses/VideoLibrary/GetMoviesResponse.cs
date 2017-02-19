@@ -12,8 +12,8 @@
 
 using System.Collections.Generic;
 using KodiRPC.Responses.Types.Video.Details;
-using Newtonsoft.Json;
 using KodiRPC.RPC.RequestResponse.Params;
+using Newtonsoft.Json;
 
 namespace KodiRPC.Responses.VideoLibrary
 {

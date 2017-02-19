@@ -48,7 +48,7 @@ namespace KodiRPC.Tests.Integration
 
             var parameters = new GetMovieDetailsParams
             {
-                MovieId = (int)Movies.TestSet.InvalidId,
+                MovieId = (int)Movies.TestSet.InvalidId
             };
 
             Assert.That(() => service.GetMovieDetails(parameters, "UnitTests"), Throws.Exception.TypeOf<Exception>());

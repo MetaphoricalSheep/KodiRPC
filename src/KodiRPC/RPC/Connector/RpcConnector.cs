@@ -61,7 +61,6 @@ namespace KodiRPC.RPC.Connector
                     using (var requestWriter = new StreamWriter(requestStream))
                     {
                         requestWriter.Write(jsonRpcRequest.ToString());
-                        requestWriter.Dispose();
                     }
                 }
             }
@@ -86,7 +85,6 @@ namespace KodiRPC.RPC.Connector
                         using (var responseReader = new StreamReader(responseStream, Encoding.UTF8))
                         {
                             json = responseReader.ReadToEnd();
-                            responseReader.Dispose();
                         }
                     }
                 }
@@ -169,7 +167,7 @@ namespace KodiRPC.RPC.Connector
             }
             catch (Exception e)
             {
-                throw new Exception($"A problem was encountered while calling MakeRpcRequest() for: {jsonRpcRequest.Method} with request object {jsonRpcRequest.ToString()}:  \nException: {e.Message}"); // with parameters: {qryParams}. \nException: {e.Message}");
+                throw new Exception($"A problem was encountered while calling MakeRpcRequest() for: {jsonRpcRequest.Method} with request object {jsonRpcRequest}:  \nException: {e.Message}"); // with parameters: {qryParams}. \nException: {e.Message}");
             }
         }
     }

@@ -12,35 +12,21 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		PieterLocal|Any CPU = PieterLocal|Any CPU
-		Pieter-Uys|Any CPU = Pieter-Uys|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Local-Debug|Any CPU = Local-Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{ED15C2BF-5DD4-47C1-91E7-6F80E7F0AD7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ED15C2BF-5DD4-47C1-91E7-6F80E7F0AD7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED15C2BF-5DD4-47C1-91E7-6F80E7F0AD7B}.PieterLocal|Any CPU.ActiveCfg = PieterLocal|Any CPU
-		{ED15C2BF-5DD4-47C1-91E7-6F80E7F0AD7B}.PieterLocal|Any CPU.Build.0 = PieterLocal|Any CPU
-		{ED15C2BF-5DD4-47C1-91E7-6F80E7F0AD7B}.Pieter-Uys|Any CPU.ActiveCfg = Pieter-Uys|Any CPU
-		{ED15C2BF-5DD4-47C1-91E7-6F80E7F0AD7B}.Pieter-Uys|Any CPU.Build.0 = Pieter-Uys|Any CPU
-		{ED15C2BF-5DD4-47C1-91E7-6F80E7F0AD7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED15C2BF-5DD4-47C1-91E7-6F80E7F0AD7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED15C2BF-5DD4-47C1-91E7-6F80E7F0AD7B}.Local-Debug|Any CPU.ActiveCfg = Local-Debug|Any CPU
+		{ED15C2BF-5DD4-47C1-91E7-6F80E7F0AD7B}.Local-Debug|Any CPU.Build.0 = Local-Debug|Any CPU
 		{EDA6F4B3-F7BE-4D0B-A8EE-62F0C947C94C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EDA6F4B3-F7BE-4D0B-A8EE-62F0C947C94C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EDA6F4B3-F7BE-4D0B-A8EE-62F0C947C94C}.PieterLocal|Any CPU.ActiveCfg = PieterLocal|Any CPU
-		{EDA6F4B3-F7BE-4D0B-A8EE-62F0C947C94C}.PieterLocal|Any CPU.Build.0 = PieterLocal|Any CPU
-		{EDA6F4B3-F7BE-4D0B-A8EE-62F0C947C94C}.Pieter-Uys|Any CPU.ActiveCfg = Pieter-Uys|Any CPU
-		{EDA6F4B3-F7BE-4D0B-A8EE-62F0C947C94C}.Pieter-Uys|Any CPU.Build.0 = Pieter-Uys|Any CPU
-		{EDA6F4B3-F7BE-4D0B-A8EE-62F0C947C94C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EDA6F4B3-F7BE-4D0B-A8EE-62F0C947C94C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDA6F4B3-F7BE-4D0B-A8EE-62F0C947C94C}.Local-Debug|Any CPU.ActiveCfg = Local-Debug|Any CPU
+		{EDA6F4B3-F7BE-4D0B-A8EE-62F0C947C94C}.Local-Debug|Any CPU.Build.0 = Local-Debug|Any CPU
 		{9E9081D6-2F99-4156-B315-C090E6085FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9E9081D6-2F99-4156-B315-C090E6085FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E9081D6-2F99-4156-B315-C090E6085FE8}.PieterLocal|Any CPU.ActiveCfg = PieterLocal|Any CPU
-		{9E9081D6-2F99-4156-B315-C090E6085FE8}.PieterLocal|Any CPU.Build.0 = PieterLocal|Any CPU
-		{9E9081D6-2F99-4156-B315-C090E6085FE8}.Pieter-Uys|Any CPU.ActiveCfg = Pieter-Uys|Any CPU
-		{9E9081D6-2F99-4156-B315-C090E6085FE8}.Pieter-Uys|Any CPU.Build.0 = Pieter-Uys|Any CPU
-		{9E9081D6-2F99-4156-B315-C090E6085FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E9081D6-2F99-4156-B315-C090E6085FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E9081D6-2F99-4156-B315-C090E6085FE8}.Local-Debug|Any CPU.ActiveCfg = Local-Debug|Any CPU
+		{9E9081D6-2F99-4156-B315-C090E6085FE8}.Local-Debug|Any CPU.Build.0 = Local-Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

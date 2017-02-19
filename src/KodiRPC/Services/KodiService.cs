@@ -11,12 +11,12 @@
  */
 
 using System.Configuration;
-using KodiRPC.Responses.VideoLibrary;
 using KodiRPC.Responses.Files;
+using KodiRPC.Responses.VideoLibrary;
 using KodiRPC.RPC.Connector;
 using KodiRPC.RPC.RequestResponse;
-using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
 using KodiRPC.RPC.RequestResponse.Params.Files;
+using KodiRPC.RPC.RequestResponse.Params.VideoLibrary;
 using KodiRPC.RPC.Specifications;
 
 namespace KodiRPC.Services
@@ -113,6 +113,16 @@ namespace KodiRPC.Services
         public JsonRpcResponse<GetFileDetailsResponse> GetFileDetails(GetFileDetailsParams parameters, string requestId = "GetFileDetails")
         {
             return _rpcConnector.MakeRequest<GetFileDetailsResponse>(KodiMethods.GetFileDetails, parameters, requestId);
+        }
+
+        public JsonRpcResponse<GetDirectoryResponse> GetDirectory(GetDirectoryParams parameters, string requestId = "GetDirectory")
+        {
+            return _rpcConnector.MakeRequest<GetDirectoryResponse>(KodiMethods.GetDirectory, parameters, requestId);
+        }
+
+        public JsonRpcResponse<PrepareDownloadResponse> PrepareDownload(PrepareDownloadParams parameters, string requestId = "PrepareDownload")
+        {
+            return _rpcConnector.MakeRequest<PrepareDownloadResponse>(KodiMethods.PrepareDownload, parameters, requestId);
         }
         #endregion
     }

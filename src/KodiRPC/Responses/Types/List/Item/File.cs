@@ -12,7 +12,7 @@
 
 using Newtonsoft.Json;
 
-namespace KodiRPC.Responses.Types.List.Item.File
+namespace KodiRPC.Responses.Types.List.Item
 {
     public class File
     {
@@ -33,5 +33,8 @@ namespace KodiRPC.Responses.Types.List.Item.File
 
         [JsonProperty(PropertyName = "lastmodified")]
         public string LastModified { get; set; }
+
+        [JsonProperty(PropertyName = "type")]
+        public string Type { get; set; }
     }
 }

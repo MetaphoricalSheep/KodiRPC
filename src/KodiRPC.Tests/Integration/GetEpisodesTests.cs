@@ -74,7 +74,7 @@ namespace KodiRPC.Tests.Integration
             var parameters = new GetEpisodesParams
             {
                 TvShowId = 1,
-                Properties = new[] { EpisodeProperties.Title, EpisodeProperties.TvShowId },
+                Properties = new[] { EpisodeProperties.Title, EpisodeProperties.TvShowId }
             };
 
             var details = service.GetEpisodes(parameters);
@@ -94,7 +94,7 @@ namespace KodiRPC.Tests.Integration
             {
                 TvShowId = 1,
                 SeasonNumber = 1,
-                Properties = new[] { EpisodeProperties.Title, EpisodeProperties.Season },
+                Properties = new[] { EpisodeProperties.Title, EpisodeProperties.Season }
             };
 
             var details = service.GetEpisodes(parameters);

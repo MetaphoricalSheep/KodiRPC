@@ -16,6 +16,8 @@
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,17 +36,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Pieter-Uys|AnyCPU'">
-    <OutputPath>bin\Pieter-Uys\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local-Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PieterLocal|AnyCPU'">
-    <OutputPath>bin\PieterLocal\</OutputPath>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Moq, Version=4.2.1510.2205, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
@@ -77,6 +76,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Integration\PrepareDownloadTests.cs" />
+    <Compile Include="Integration\GetDirectoryTests.cs" />
+    <Compile Include="Integration\GetFileDetailsTests.cs" />
     <Compile Include="Integration\GetEpisodeDetailsTests.cs" />
     <Compile Include="Integration\GetEpisodesTests.cs" />
     <Compile Include="Integration\GetMovieDetailsTests.cs" />
@@ -91,10 +93,17 @@
     <Compile Include="Integration\GetTvShowsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Unit\Common\BaseTest.cs" />
+    <Compile Include="Unit\Common\ExpectedResults\Directories.cs" />
+    <Compile Include="Unit\Common\ExpectedResults\Files.cs" />
     <Compile Include="Unit\Common\ExpectedResults\Seasons.cs" />
     <Compile Include="Unit\Common\ExpectedResults\TvShows.cs" />
     <Compile Include="Unit\Common\ExpectedResults\Episodes.cs" />
     <Compile Include="Unit\Common\ExpectedResults\Movies.cs" />
+    <Compile Include="Unit\PrepareDownloadTests.Setup.cs" />
+    <Compile Include="Unit\GetFileDetailsTests.Setup.cs" />
+    <Compile Include="Unit\GetDirectoryTests.Setup.cs" />
+    <Compile Include="Unit\GetDirectoryTests.cs" />
+    <Compile Include="Unit\GetFileDetailsTests.cs" />
     <Compile Include="Unit\GetMoviesTests.cs" />
     <Compile Include="Unit\GetSeasonsTests.cs" />
     <Compile Include="Unit\GetTvShowsTests.cs" />
@@ -107,6 +116,7 @@
     <Compile Include="Unit\GetEpisodeDetailsTests.cs" />
     <Compile Include="Unit\GetTvShowDetailsTests.Setup.cs" />
     <Compile Include="Unit\GetMovieDetailsTests.cs" />
+    <Compile Include="Unit\PrepareDownloadTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KodiRPC\KodiRPC.csproj">
@@ -116,11 +126,32 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <TransformOnBuild>true</TransformOnBuild>
+    </None>
+    <None Include="App.Debug.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.Local-Debug.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.Release.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.VM.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App_Data\directory.darkmatter.json" />
+    <None Include="App_Data\files.1.json" />
     <None Include="App_Data\episode.1010.json" />
     <None Include="App_Data\episode.486.json" />
     <None Include="App_Data\episode.864.json" />
     <None Include="App_Data\episodes.json" />
+    <None Include="App_Data\files.darkmatter.json" />
     <None Include="App_Data\movie.100.json" />
     <None Include="App_Data\movie.12.json" />
     <None Include="App_Data\movie.77.json" />
@@ -157,13 +188,15 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets. -->
-  <UsingTask TaskName="TransformXml" AssemblyFile="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Web\Microsoft.Web.Publishing.Tasks.dll" />
-  <Target Name="BeforeBuild">
-    <Copy SourceFiles="../../demo/Base.config" DestinationFiles="App.config">
-    </Copy>
-    <TransformXml Source="../../demo/Base.config" Transform="../../demo/$(Configuration).config" Destination="App.config" />
+  <!--  <Target Name="BeforeBuild">
+  </Target>-->
+  <Import Project="..\packages\SlowCheetah.2.5.48\build\SlowCheetah.targets" Condition="Exists('..\packages\SlowCheetah.2.5.48\build\SlowCheetah.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\SlowCheetah.2.5.48\build\SlowCheetah.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SlowCheetah.2.5.48\build\SlowCheetah.targets'))" />
   </Target>
   <!-- <Target Name="AfterBuild">
-    <TransformXml Source="../../demo/Base.config" Transform="../../demo/$(Configuration).config" Destination="App.config" />
   </Target> -->
 </Project>

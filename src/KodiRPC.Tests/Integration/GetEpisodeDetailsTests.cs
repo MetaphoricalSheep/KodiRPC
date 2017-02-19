@@ -48,7 +48,7 @@ namespace KodiRPC.Tests.Integration
 
             var parameters = new GetEpisodeDetailsParams
             {
-                EpisodeId = (int)Episodes.TestSet.InvalidId,
+                EpisodeId = (int)Episodes.TestSet.InvalidId
             };
 
             Assert.That(() => service.GetEpisodeDetails(parameters, "UnitTests"), Throws.Exception.TypeOf<Exception>());

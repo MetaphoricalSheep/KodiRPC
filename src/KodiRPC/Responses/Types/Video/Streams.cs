@@ -10,6 +10,7 @@
  * http://www.gnu.org/licenses/.
  */
 
+using KodiRPC.Responses.Types.Video.Stream;
 using Newtonsoft.Json;
 
 namespace KodiRPC.Responses.Types.Video
@@ -20,9 +21,9 @@ namespace KodiRPC.Responses.Types.Video
         public Stream.Video[] Video { get; set; }
 
         [JsonProperty(PropertyName = "audio")]
-        public Stream.Audio[] Audio { get; set; }
+        public Audio[] Audio { get; set; }
 
         [JsonProperty(PropertyName = "subtitle")]
-        public Stream.Subtitle[] Subtitle { get; set; }
+        public Subtitle[] Subtitle { get; set; }
     }
 }

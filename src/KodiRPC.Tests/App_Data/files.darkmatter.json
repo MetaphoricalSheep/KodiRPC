@@ -1,0 +1,11 @@
+{
+    "id": "UnitTests",
+    "jsonrpc": "2.0",
+    "result": {
+        "details": {
+            "path": "vfs/%2Fmedia%2Fgotham%2Fseries%2FDark%20Matter%2FSeason%2001%2FDark%20Matter%20-%20S01E01%20-%20Episode%20One.mkv"
+        },
+        "mode": "redirect",
+        "protocol": "http"
+    }
+}

@@ -10,8 +10,8 @@
  * http://www.gnu.org/licenses/.
  */
 
-using Newtonsoft.Json;
 using KodiRPC.Responses.Types.Video.Details;
+using Newtonsoft.Json;
 
 namespace KodiRPC.Responses.VideoLibrary
 {

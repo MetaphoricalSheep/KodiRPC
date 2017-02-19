@@ -12,10 +12,11 @@
 
 using System.Linq;
 using System.Reflection;
+using KodiRPC.RPC.Specifications.Properties.List.Fields;
 
 namespace KodiRPC.RPC.Specifications.Properties
 {
-    public class FileProperties : List.Fields.FilesProperties
+    public class FileProperties : FilesProperties
     {
         public static string[] All()
         {

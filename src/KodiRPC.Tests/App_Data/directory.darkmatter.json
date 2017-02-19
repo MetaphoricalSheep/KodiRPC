@@ -1,0 +1,169 @@
+{
+    "id": "UnitTests",
+    "jsonrpc": "2.0",
+    "result": {
+        "files": [
+            {
+                "art": {},
+                "fanart": "",
+                "file": "/media/gotham/series/Dark Matter/Season 01/Dark Matter - S01E04 - Episode Four.mkv",
+                "filetype": "file",
+                "label": "Dark Matter - S01E04 - Episode Four.mkv",
+                "lastmodified": "2015-07-04 12:37:24",
+                "mimetype": "video/x-matroska",
+                "size": 1410543207,
+                "thumbnail": "",
+                "type": "unknown"
+            },
+            {
+                "art": {},
+                "fanart": "",
+                "file": "/media/gotham/series/Dark Matter/Season 01/Dark Matter - S01E11 - Episode Eleven.mkv",
+                "filetype": "file",
+                "label": "Dark Matter - S01E11 - Episode Eleven.mkv",
+                "lastmodified": "2015-08-22 05:12:15",
+                "mimetype": "video/x-matroska",
+                "size": 907988214,
+                "thumbnail": "",
+                "type": "unknown"
+            },
+            {
+                "art": {},
+                "fanart": "",
+                "file": "/media/gotham/series/Dark Matter/Season 01/Dark Matter - S01E13 - Episode Thirteen.mkv",
+                "filetype": "file",
+                "label": "Dark Matter - S01E13 - Episode Thirteen.mkv",
+                "lastmodified": "2015-08-29 05:02:46",
+                "mimetype": "video/x-matroska",
+                "size": 955547153,
+                "thumbnail": "",
+                "type": "unknown"
+            },
+            {
+                "art": {},
+                "fanart": "",
+                "file": "/media/gotham/series/Dark Matter/Season 01/Dark Matter - S01E01 - Episode One.mkv",
+                "filetype": "file",
+                "label": "Dark Matter - S01E01 - Episode One.mkv",
+                "lastmodified": "2015-06-14 17:30:15",
+                "mimetype": "video/x-matroska",
+                "size": 1439978796,
+                "thumbnail": "",
+                "type": "unknown"
+            },
+            {
+                "art": {},
+                "fanart": "",
+                "file": "/media/gotham/series/Dark Matter/Season 01/Dark Matter - S01E08 - Episode Eight.mkv",
+                "filetype": "file",
+                "label": "Dark Matter - S01E08 - Episode Eight.mkv",
+                "lastmodified": "2015-08-01 05:04:49",
+                "mimetype": "video/x-matroska",
+                "size": 895492511,
+                "thumbnail": "",
+                "type": "unknown"
+            },
+            {
+                "art": {},
+                "fanart": "",
+                "file": "/media/gotham/series/Dark Matter/Season 01/Dark Matter - S01E12 - Episode Twelve.mkv",
+                "filetype": "file",
+                "label": "Dark Matter - S01E12 - Episode Twelve.mkv",
+                "lastmodified": "2015-08-29 04:03:18",
+                "mimetype": "video/x-matroska",
+                "size": 990706825,
+                "thumbnail": "",
+                "type": "unknown"
+            },
+            {
+                "art": {},
+                "fanart": "",
+                "file": "/media/gotham/series/Dark Matter/Season 01/Dark Matter - S01E03 - Episode Three.mkv",
+                "filetype": "file",
+                "label": "Dark Matter - S01E03 - Episode Three.mkv",
+                "lastmodified": "2015-06-27 12:51:26",
+                "mimetype": "video/x-matroska",
+                "size": 1410542601,
+                "thumbnail": "",
+                "type": "unknown"
+            },
+            {
+                "art": {},
+                "fanart": "",
+                "file": "/media/gotham/series/Dark Matter/Season 01/Dark Matter - S01E10 - Episode Ten.mkv",
+                "filetype": "file",
+                "label": "Dark Matter - S01E10 - Episode Ten.mkv",
+                "lastmodified": "2015-08-15 05:03:23",
+                "mimetype": "video/x-matroska",
+                "size": 957523849,
+                "thumbnail": "",
+                "type": "unknown"
+            },
+            {
+                "art": {},
+                "fanart": "",
+                "file": "/media/gotham/series/Dark Matter/Season 01/Dark Matter - S01E09 - Episode Nine.mkv",
+                "filetype": "file",
+                "label": "Dark Matter - S01E09 - Episode Nine.mkv",
+                "lastmodified": "2015-08-08 05:01:31",
+                "mimetype": "video/x-matroska",
+                "size": 1001177194,
+                "thumbnail": "",
+                "type": "unknown"
+            },
+            {
+                "art": {},
+                "fanart": "",
+                "file": "/media/gotham/series/Dark Matter/Season 01/Dark Matter - S01E07 - Episode Seven.mkv",
+                "filetype": "file",
+                "label": "Dark Matter - S01E07 - Episode Seven.mkv",
+                "lastmodified": "2015-07-25 05:01:44",
+                "mimetype": "video/x-matroska",
+                "size": 986002435,
+                "thumbnail": "",
+                "type": "unknown"
+            },
+            {
+                "art": {},
+                "fanart": "",
+                "file": "/media/gotham/series/Dark Matter/Season 01/Dark Matter - S01E06 - Episode Six.mkv",
+                "filetype": "file",
+                "label": "Dark Matter - S01E06 - Episode Six.mkv",
+                "lastmodified": "2015-07-18 05:02:57",
+                "mimetype": "video/x-matroska",
+                "size": 858212167,
+                "thumbnail": "",
+                "type": "unknown"
+            },
+            {
+                "art": {},
+                "fanart": "",
+                "file": "/media/gotham/series/Dark Matter/Season 01/Dark Matter - S01E02 - Episode Two.mkv",
+                "filetype": "file",
+                "label": "Dark Matter - S01E02 - Episode Two.mkv",
+                "lastmodified": "2015-06-20 11:31:52",
+                "mimetype": "video/x-matroska",
+                "size": 1421835721,
+                "thumbnail": "",
+                "type": "unknown"
+            },
+            {
+                "art": {},
+                "fanart": "",
+                "file": "/media/gotham/series/Dark Matter/Season 01/Dark Matter - S01E05 - Episode Five.mkv",
+                "filetype": "file",
+                "label": "Dark Matter - S01E05 - Episode Five.mkv",
+                "lastmodified": "2015-07-11 16:54:24",
+                "mimetype": "video/x-matroska",
+                "size": 1426445056,
+                "thumbnail": "",
+                "type": "unknown"
+            }
+        ],
+        "limits": {
+            "end": 13,
+            "start": 0,
+            "total": 13
+        }
+    }
+}

@@ -14,8 +14,8 @@ using System.Collections.Generic;
 using System.Linq;
 using KodiRPC.Responses.Types.Media;
 using KodiRPC.Responses.Types.Video;
-using Stream = KodiRPC.Responses.Types.Video.Stream;
 using KodiRPC.Responses.Types.Video.Details;
+using KodiRPC.Responses.Types.Video.Stream;
 using KodiRPC.Responses.VideoLibrary;
 using KodiRPC.RPC.RequestResponse.Params;
 
@@ -76,7 +76,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                             Fanart =
                                 "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2f2BXd0t9JdVqCp9sKf6kzMkr7QjB.jpg/",
                             Poster =
-                                "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fhGRfWcy1HRGbsjK6jF7NILmqmFT.jpg/",
+                                "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2fhGRfWcy1HRGbsjK6jF7NILmqmFT.jpg/"
                         },
                         Fanart =
                             "image://http%3a%2f%2fimage.tmdb.org%2ft%2fp%2foriginal%2f2BXd0t9JdVqCp9sKf6kzMkr7QjB.jpg/",
@@ -114,9 +114,9 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                         Tag = new string[] {},
                         StreamDetails = new Streams
                         {
-                            Audio = new Stream.Audio[] {},
-                            Video = new Stream.Video[] {},
-                            Subtitle = new Stream.Subtitle[] {}
+                            Audio = new Audio[] {},
+                            Video = new Video[] {},
+                            Subtitle = new Subtitle[] {}
                         }
                     }
                 },
@@ -191,17 +191,17 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                         {
                             Audio = new[]
                             {
-                                new Stream.Audio
+                                new Audio
                                 {
                                     Channels = 5,
                                     Codec = "dts",
                                     Language = ""
                                 }
                             },
-                            Subtitle = new Stream.Subtitle[] {},
+                            Subtitle = new Subtitle[] {},
                             Video = new[]
                             {
-                                new Stream.Video
+                                new Video
                                 {
                                     Aspect = 2.4000000953674316,
                                     Codec = "h264",
@@ -292,19 +292,19 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                         {
                             Audio = new[]
                             {
-                                new Stream.Audio
+                                new Audio
                                 {
                                     Channels = 6,
                                     Codec = "ac3",
                                     Language = "rus"
                                 },
-                                new Stream.Audio
+                                new Audio
                                 {
                                     Channels = 2,
                                     Codec = "aac",
                                     Language = "ukr"
                                 },
-                                new Stream.Audio
+                                new Audio
                                 {
                                     Channels = 2,
                                     Codec = "aac",
@@ -313,15 +313,15 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                             },
                             Subtitle = new[]
                             {
-                                new Stream.Subtitle { Language = "rus" },
-                                new Stream.Subtitle { Language = "rus" },
-                                new Stream.Subtitle { Language = "ukr" },
-                                new Stream.Subtitle { Language = "eng" },
-                                new Stream.Subtitle { Language = "eng" }
+                                new Subtitle { Language = "rus" },
+                                new Subtitle { Language = "rus" },
+                                new Subtitle { Language = "ukr" },
+                                new Subtitle { Language = "eng" },
+                                new Subtitle { Language = "eng" }
                             },
                             Video = new[]
                             {
-                                new Stream.Video
+                                new Video
                                 {
                                     Aspect = 2.3970038890838623,
                                     Codec = "h264",

@@ -67,7 +67,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                                 Name = "April L. Hernandez",
                                 Order = 2,
                                 Role = ""
-                            },
+                            }
                         },
                         DateAdded = "2015-03-03 03:40:10",
                         Director = new[] {"Steve Shill"},
@@ -118,7 +118,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                             //Banner = "image://%2fmedia%2fgotham%2fseries%2fOrphan%20Black%2fbanner.jpg/",
                             //Fanart = "image://%2fmedia%2fgotham%2fseries%2fOrphan%20Black%2ffanart.jpg/",
                             //Poster = "image://%2fmedia%2fgotham%2fseries%2fOrphan%20Black%2fposter.jpg/"
-                            Thumb = "image://http%3a%2f%2fthetvdb.com%2fbanners%2fepisodes%2f260315%2f5147778.jpg/",
+                            Thumb = "image://http%3a%2f%2fthetvdb.com%2fbanners%2fepisodes%2f260315%2f5147778.jpg/"
                         },
                         Cast = new[]
                         {
@@ -182,7 +182,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                             Unknown = "5147778"
                         },
                         Votes = "14",
-                        Writer = new[] {"Aubrey Nealon"},
+                        Writer = new[] {"Aubrey Nealon"}
                     }
                 },
                 new GetEpisodeDetailsResponse
@@ -194,7 +194,7 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
                             //Banner = "image://%2fmedia%2fgotham%2fseries%2fContinuum%2fbanner.jpg/",
                             //Fanart = "image://%2fmedia%2fgotham%2fseries%2fContinuum%2ffanart.jpg/",
                             //Poster = "image://%2fmedia%2fgotham%2fseries%2fContinuum%2fposter.jpg/"
-                            Thumb = "image://http%3a%2f%2fthetvdb.com%2fbanners%2fepisodes%2f258171%2f4307624.jpg/",
+                            Thumb = "image://http%3a%2f%2fthetvdb.com%2fbanners%2fepisodes%2f258171%2f4307624.jpg/"
                         },
                         Cast = new[]
                         {

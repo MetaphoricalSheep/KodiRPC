@@ -20,6 +20,6 @@ namespace KodiRPC.RPC.RequestResponse.Params.Files
         public string File { get; set; }
 
         [JsonProperty("media", NullValueHandling = NullValueHandling.Ignore)]
-        public string Media { get; set; } = "files";
+        public string Media { get; set; } = Files.Media.Files;
     }
 }
