@@ -160,6 +160,7 @@
     <Compile Include="RPC\RequestResponse\Params\VideoLibrary\GetTvShowsParams.cs" />
     <Compile Include="RPC\Specifications\Properties\EpisodeProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\List\Fields\FilesProperties.cs" />
+    <Compile Include="RPC\Specifications\Properties\List\Item\Base.cs" />
     <Compile Include="RPC\Specifications\Properties\MovieProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\SeasonProperties.cs" />
     <Compile Include="RPC\Specifications\Properties\FileProperties.cs" />

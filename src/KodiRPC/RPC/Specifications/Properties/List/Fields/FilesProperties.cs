@@ -12,7 +12,7 @@
 
 namespace KodiRPC.RPC.Specifications.Properties.List.Fields
 {
-    public class FilesProperties
+    public class FilesProperties : Item.Base
     {
         public const string Size = "size";
         public const string MimeType = "mimetype";

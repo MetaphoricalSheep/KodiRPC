@@ -147,7 +147,7 @@
       <DependentUpon>App.config</DependentUpon>
       <IsTransformFile>True</IsTransformFile>
     </None>
-    <None Include="App_Data\file.1.json" />
+    <None Include="App_Data\files.1.json" />
     <None Include="App_Data\episode.1010.json" />
     <None Include="App_Data\episode.486.json" />
     <None Include="App_Data\episode.864.json" />

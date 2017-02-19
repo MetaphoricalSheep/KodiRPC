@@ -1,0 +1,17 @@
+{
+    "id": "mybash",
+    "jsonrpc": "2.0",
+    "result": {
+        "filedetails": {
+            "art": {},
+            "fanart": "",
+            "file": "/media/gotham/series/Dark Matter/Season 01/Dark Matter - S01E01 - Episode One.mkv",
+            "label": "Dark Matter - S01E01 - Episode One.mkv",
+            "lastmodified": "2015-06-14 17:30:15",
+            "mimetype": "video/x-matroska",
+            "size": 1439978796,
+            "thumbnail": "",
+            "type": "unknown"
+        }
+    }
+}

@@ -31,9 +31,12 @@ namespace KodiRPC.Tests.Unit.Common.ExpectedResults
             {
                 FileDetails = new File()
                 {
-                    FilePath = "/series/Dark Matter/Season 01/Dark Matter - S01E01 - Episode One.mkv",
+                    FilePath = "/media/gotham/series/Dark Matter/Season 01/Dark Matter - S01E01 - Episode One.mkv",
+                    Label = "Dark Matter - S01E01 - Episode One.mkv",
+                    LastModified = "2015-06-14 17:30:15",
                     MimeType = "video/x-matroska",
-                    Size = 857542653
+                    Size = 1439978796,
+                    FileType = "unknown"
                 }
             };
 

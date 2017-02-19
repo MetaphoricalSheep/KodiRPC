@@ -10,9 +10,12 @@
  * http://www.gnu.org/licenses/.
  */
 
+using KodiRPC.Responses.Files;
 using KodiRPC.RPC.RequestResponse;
 using KodiRPC.RPC.RequestResponse.Params.Files;
+using KodiRPC.RPC.Specifications.Properties;
 using KodiRPC.Tests.Unit.Common;
+using KodiRPC.Tests.Unit.Common.ExpectedResults;
 using NUnit.Framework;
 
 namespace KodiRPC.Tests.Unit
@@ -24,15 +27,16 @@ namespace KodiRPC.Tests.Unit
         {
             var parameters = new GetFileDetailsParams
             {
-                File = "/media/gotham/series/Dexter/Season 05/Dexter - S05E06 - Everything Is Illumenated.mkv"
+                File = "1",
+                Properties = FileProperties.All()
             };
 
             var mock = GetKodiServiceMock(parameters);
             var service = mock.Object;
             var actual = service.GetFileDetails(parameters, "UnitTests");
-            var expected = "{}";
+            var expected = Files.GetFileDetails();
 
-            Assert.IsInstanceOf<JsonRpcResponse<GetFileDetailsParams>>(actual);
+            Assert.IsInstanceOf<JsonRpcResponse<GetFileDetailsResponse>>(actual);
             AssertThatPropertyValuesAreEquals(actual.Result, expected);
         }
     }
