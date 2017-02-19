@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EDA6F4B3-F7BE-4D0B-A8EE-62F0C947C94C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KodiRPC.Tests</RootNamespace>
+    <AssemblyName>KodiRPC.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local-Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Moq, Version=4.2.1510.2205, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.2.1510.2205\lib\net40\Moq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.0.5813.39031, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.0.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="Integration\PrepareDownloadTests.cs" />
+    <Compile Include="Integration\GetDirectoryTests.cs" />
+    <Compile Include="Integration\GetFileDetailsTests.cs" />
+    <Compile Include="Integration\GetEpisodeDetailsTests.cs" />
+    <Compile Include="Integration\GetEpisodesTests.cs" />
+    <Compile Include="Integration\GetMovieDetailsTests.cs" />
+    <Compile Include="Integration\GetMoviesTests.cs" />
+    <Compile Include="Integration\GetRecentlyAddedMoviesTests.cs" />
+    <Compile Include="Integration\GetTvShowDetailsTests.cs" />
+    <Compile Include="Integration\GetSeasonsTests.cs" />
+    <Compile Include="Integration\GetRecentlyAddedEpisodesTests.cs" />
+    <Compile Include="Integration\CleanTests.cs" />
+    <Compile Include="Integration\ScanTests.cs" />
+    <Compile Include="Integration\PingTests.cs" />
+    <Compile Include="Integration\GetTvShowsTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unit\Common\BaseTest.cs" />
+    <Compile Include="Unit\Common\ExpectedResults\Directories.cs" />
+    <Compile Include="Unit\Common\ExpectedResults\Files.cs" />
+    <Compile Include="Unit\Common\ExpectedResults\Seasons.cs" />
+    <Compile Include="Unit\Common\ExpectedResults\TvShows.cs" />
+    <Compile Include="Unit\Common\ExpectedResults\Episodes.cs" />
+    <Compile Include="Unit\Common\ExpectedResults\Movies.cs" />
+    <Compile Include="Unit\PrepareDownloadTests.Setup.cs" />
+    <Compile Include="Unit\GetFileDetailsTests.Setup.cs" />
+    <Compile Include="Unit\GetDirectoryTests.Setup.cs" />
+    <Compile Include="Unit\GetDirectoryTests.cs" />
+    <Compile Include="Unit\GetFileDetailsTests.cs" />
+    <Compile Include="Unit\GetMoviesTests.cs" />
+    <Compile Include="Unit\GetSeasonsTests.cs" />
+    <Compile Include="Unit\GetTvShowsTests.cs" />
+    <Compile Include="Unit\GetMoviesTests.Setup.cs" />
+    <Compile Include="Unit\GetSeasonsTests.Setup.cs" />
+    <Compile Include="Unit\GetTvShowsTests.Setup.cs" />
+    <Compile Include="Unit\GetEpisodesTests.Setup.cs" />
+    <Compile Include="Unit\GetEpisodesTests.cs" />
+    <Compile Include="Unit\GetTvShowDetailsTests.cs" />
+    <Compile Include="Unit\GetEpisodeDetailsTests.cs" />
+    <Compile Include="Unit\GetTvShowDetailsTests.Setup.cs" />
+    <Compile Include="Unit\GetMovieDetailsTests.cs" />
+    <Compile Include="Unit\PrepareDownloadTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KodiRPC\KodiRPC.csproj">
+      <Project>{ed15c2bf-5dd4-47c1-91e7-6f80e7f0ad7b}</Project>
+      <Name>KodiRPC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config">
+      <TransformOnBuild>true</TransformOnBuild>
+    </None>
+    <None Include="App.Debug.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.Local-Debug.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.Release.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App.VM.config">
+      <DependentUpon>App.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App_Data\directory.darkmatter.json" />
+    <None Include="App_Data\files.1.json" />
+    <None Include="App_Data\episode.1010.json" />
+    <None Include="App_Data\episode.486.json" />
+    <None Include="App_Data\episode.864.json" />
+    <None Include="App_Data\episodes.json" />
+    <None Include="App_Data\files.darkmatter.json" />
+    <None Include="App_Data\movie.100.json" />
+    <None Include="App_Data\movie.12.json" />
+    <None Include="App_Data\movie.77.json" />
+    <None Include="App_Data\error.json" />
+    <None Include="App_Data\movies.json" />
+    <None Include="App_Data\seasons.json" />
+    <None Include="App_Data\tvshow.12.json" />
+    <None Include="App_Data\tvshow.40.json" />
+    <None Include="App_Data\tvshow.62.json" />
+    <None Include="App_Data\tvshows.json" />
+    <None Include="packages.config" />
+    <Compile Include="Unit\GetMovieDetailsTests.Setup.cs" />
+    <Compile Include="Unit\GetEpisodeDetailsTests.Setup.cs" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets. -->
+  <!--  <Target Name="BeforeBuild">
+  </Target>-->
+  <Import Project="..\packages\SlowCheetah.2.5.48\build\SlowCheetah.targets" Condition="Exists('..\packages\SlowCheetah.2.5.48\build\SlowCheetah.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\SlowCheetah.2.5.48\build\SlowCheetah.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SlowCheetah.2.5.48\build\SlowCheetah.targets'))" />
+  </Target>
+  <!-- <Target Name="AfterBuild">
+  </Target> -->
+</Project>

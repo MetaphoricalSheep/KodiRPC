@@ -1,0 +1,97 @@
+{
+  "id": "UnitTests",
+  "jsonrpc": "2.0",
+  "result": {
+    "moviedetails": {
+      "art": {
+        "fanart": "image://%2fmedia%2fgotham%2fmovies%2fWolf%20of%20Wall%20Street%2c%20The%20(2013)1080Pdtsbluray%2fThe%20Wolf%20of%20Wall%20Street-fanart.jpg/",
+        "poster": "image://%2fmedia%2fgotham%2fmovies%2fWolf%20of%20Wall%20Street%2c%20The%20(2013)1080Pdtsbluray%2fThe%20Wolf%20of%20Wall%20Street.tbn/"
+      },
+      "cast": [
+        {
+          "name": "Matthew McConaughey",
+          "order": 0,
+          "role": "Mark Hanna",
+          "thumbnail": "image://https%3a%2f%2fimage.tmdb.org%2ft%2fp%2fw185%2fjdRmHrG0TWXGhs4tO6TJNSoL25T.jpg/"
+        },
+        {
+          "name": "Leonardo DiCaprio",
+          "order": 1,
+          "role": "Jordan Belfort",
+          "thumbnail": "image://https%3a%2f%2fimage.tmdb.org%2ft%2fp%2fw185%2fmNRMgj7K5ztvkSqrcdwEYNZIS1M.jpg/"
+        },
+        {
+          "name": "Rob Reiner",
+          "order": 2,
+          "role": "Max Belfort",
+          "thumbnail": "image://https%3a%2f%2fimage.tmdb.org%2ft%2fp%2fw185%2f2zw9Iq9uo4vZiTQNQWdNFwbA1TA.jpg/"
+        }
+      ],
+      "country": [ ],
+      "dateadded": "2015-01-01 15:03:32",
+      "director": [
+        "Martin Scorsese"
+      ],
+      "fanart": "image://%2fmedia%2fgotham%2fmovies%2fWolf%20of%20Wall%20Street%2c%20The%20(2013)1080Pdtsbluray%2fThe%20Wolf%20of%20Wall%20Street-fanart.jpg/",
+      "file": "/media/gotham/movies/Wolf of Wall Street, The (2013)1080Pdtsbluray/The Wolf of Wall Street.mkv",
+      "genre": [
+        "Comedy",
+        "Crime",
+        "Drama",
+        "Biography"
+      ],
+      "imdbnumber": "tt0993846",
+      "label": "The Wolf of Wall Street",
+      "lastplayed": "",
+      "movieid": 100,
+      "mpaa": "R",
+      "originaltitle": "The Wolf of Wall Street",
+      "playcount": 0,
+      "plot": "A New York stockbroker refuses to cooperate in a large securities fraud case involving corruption on Wall Street, corporate banking world and mob infiltration. Based on Jordan Belfort's autobiography.",
+      "plotoutline": "",
+      "rating": 8.399999618530273,
+      "resume": {
+        "position": 0.0,
+        "total": 0.0
+      },
+      "runtime": 10800,
+      "set": "",
+      "setid": 0,
+      "showlink": [ ],
+      "sorttitle": "",
+      "streamdetails": {
+        "audio": [
+          {
+            "channels": 5,
+            "codec": "dts",
+            "language": ""
+          }
+        ],
+        "subtitle": [ ],
+        "video": [
+          {
+            "aspect": 2.4000000953674316,
+            "codec": "h264",
+            "duration": 0,
+            "height": 800,
+            "stereomode": "",
+            "width": 1920
+          }
+        ]
+      },
+      "studio": [ ],
+      "tag": [ ],
+      "tagline": "EARN. SPEND. PARTY.",
+      "thumbnail": "image://%2fmedia%2fgotham%2fmovies%2fWolf%20of%20Wall%20Street%2c%20The%20(2013)1080Pdtsbluray%2fThe%20Wolf%20of%20Wall%20Street.tbn/",
+      "title": "The Wolf of Wall Street",
+      "top250": 0,
+      "trailer": "",
+      "votes": "299447",
+      "writer": [
+        "Terence Winter (screenplay)",
+        "Jordan Belfort (book)"
+      ],
+      "year": 2013
+    }
+  }
+}

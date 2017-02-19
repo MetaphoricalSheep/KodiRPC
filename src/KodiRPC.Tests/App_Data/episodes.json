@@ -1,0 +1,78 @@
+{
+  "id": "UnitTests",
+  "jsonrpc": "2.0",
+  "result": {
+    "episodes": [
+      {
+        "episodeid": 683,
+        "label": "1x01. Into the Ring",
+        "title": "Into the Ring"
+      },
+      {
+        "episodeid": 684,
+        "label": "1x02. Cut Man",
+        "title": "Cut Man"
+      },
+      {
+        "episodeid": 685,
+        "label": "1x03. Rabbit in a Snow Storm",
+        "title": "Rabbit in a Snow Storm"
+      },
+      {
+        "episodeid": 686,
+        "label": "1x04. In the Blood",
+        "title": "In the Blood"
+      },
+      {
+        "episodeid": 687,
+        "label": "1x05. World on Fire",
+        "title": "World on Fire"
+      },
+      {
+        "episodeid": 688,
+        "label": "1x06. Condemned",
+        "title": "Condemned"
+      },
+      {
+        "episodeid": 689,
+        "label": "1x07. Stick",
+        "title": "Stick"
+      },
+      {
+        "episodeid": 690,
+        "label": "1x08. Shadows in the Glass",
+        "title": "Shadows in the Glass"
+      },
+      {
+        "episodeid": 691,
+        "label": "1x09. Speak of the Devil",
+        "title": "Speak of the Devil"
+      },
+      {
+        "episodeid": 692,
+        "label": "1x10. Nelson v. Murdock",
+        "title": "Nelson v. Murdock"
+      },
+      {
+        "episodeid": 693,
+        "label": "1x11. The Path of the Righteous",
+        "title": "The Path of the Righteous"
+      },
+      {
+        "episodeid": 694,
+        "label": "1x12. The Ones We Leave Behind",
+        "title": "The Ones We Leave Behind"
+      },
+      {
+        "episodeid": 695,
+        "label": "1x13. Daredevil",
+        "title": "Daredevil"
+      }
+    ],
+    "limits": {
+      "end": 13,
+      "start": 0,
+      "total": 13
+    }
+  }
+}

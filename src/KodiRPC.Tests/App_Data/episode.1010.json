@@ -1,0 +1,72 @@
+{
+  "id": "UnitTests",
+  "jsonrpc": "2.0",
+  "result": {
+    "episodedetails": {
+      "art": {
+        "thumb": "image://http%3a%2f%2fthetvdb.com%2fbanners%2fepisodes%2f258171%2f4307624.jpg/",
+        "tvshow.banner": "image://%2fmedia%2fgotham%2fseries%2fContinuum%2fbanner.jpg/",
+        "tvshow.fanart": "image://%2fmedia%2fgotham%2fseries%2fContinuum%2ffanart.jpg/",
+        "tvshow.poster": "image://%2fmedia%2fgotham%2fseries%2fContinuum%2fposter.jpg/"
+      },
+      "cast": [
+        {
+          "name": "Rachel Nichols",
+          "order": 0,
+          "role": "Kiera Cameron",
+          "thumbnail": "image://http%3a%2f%2fthetvdb.com%2fbanners%2factors%2f297610.jpg/"
+        },
+        {
+          "name": "Victor Webster",
+          "order": 1,
+          "role": "Carlos Fonnegra",
+          "thumbnail": "image://http%3a%2f%2fthetvdb.com%2fbanners%2factors%2f297612.jpg/"
+        },
+        {
+          "name": "Erik Knudsen",
+          "order": 2,
+          "role": "Alec Sadler",
+          "thumbnail": "image://http%3a%2f%2fthetvdb.com%2fbanners%2factors%2f297611.jpg/"
+        }
+      ],
+      "dateadded": "2015-03-25 10:49:32",
+      "director": [
+        "Paul Shapiro"
+      ],
+      "episode": 8,
+      "episodeid": 1010,
+      "fanart": "image://%2fmedia%2fgotham%2fseries%2fContinuum%2ffanart.jpg/",
+      "file": "/media/gotham/series/Continuum/Season 01/Continuum - S01E08 - Playtime.mkv",
+      "firstaired": "2012-07-22",
+      "label": "Playtime",
+      "lastplayed": "",
+      "originaltitle": "",
+      "playcount": 0,
+      "plot": "When Kiera and Carlos investigate two mysterious murder-suicides, they quickly realize that both may be the result of a lethal computer program turning video game programmers into killers.",
+      "productioncode": "",
+      "rating": 7.800000190734863,
+      "resume": {
+        "position": 0.0,
+        "total": 0.0
+      },
+      "runtime": 2700,
+      "season": 1,
+      "showtitle": "Continuum",
+      "streamdetails": {
+        "audio": [ ],
+        "subtitle": [ ],
+        "video": [ ]
+      },
+      "thumbnail": "image://http%3a%2f%2fthetvdb.com%2fbanners%2fepisodes%2f258171%2f4307624.jpg/",
+      "title": "Playtime",
+      "tvshowid": 35,
+      "uniqueid": {
+        "unknown": "4307624"
+      },
+      "votes": "136",
+      "writer": [
+        "Andrea Stevens"
+      ]
+    }
+  }
+}

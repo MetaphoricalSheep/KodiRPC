@@ -1,0 +1,31 @@
+{
+  "id": "UnitTests",
+  "jsonrpc": "2.0",
+  "result": {
+    "limits": {
+      "end": 48,
+      "start": 45,
+      "total": 104
+    },
+    "tvshows": [
+      {
+        "label": "Better Call Saul",
+        "title": "Better Call Saul",
+        "tvshowid": 48,
+        "year": 2014
+      },
+      {
+        "label": "Doctor Who (2005)",
+        "title": "Doctor Who (2005)",
+        "tvshowid": 49,
+        "year": 2005
+      },
+      {
+        "label": "DC's Legends of Tomorrow",
+        "title": "DC's Legends of Tomorrow",
+        "tvshowid": 50,
+        "year": 0
+      }
+    ]
+  }
+}
