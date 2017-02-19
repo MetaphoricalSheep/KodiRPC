@@ -1,8 +1,0 @@
-language: csharp
-solution: src/KodiRPC.sln
-install:
-  - nuget restore src/KodiRPC.sln
-  - nuget install NUnit.Runners -Version 3.6.0 -OutputDirectory testrunner
-script:
-  - xbuild /p:Configuration=Release src/KodiRPC.sln
-  - mono ./testrunner/NUnit.Runners.3.6.0/tools/nunit-console.exe ./KodiRPC.Tests/bin/Release/KodiRPC.Tests.dll
