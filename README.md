@@ -21,7 +21,7 @@ Specify your kodi connection settings in your *.config file
      <add key="KodiPort" value="80"/>
    </appSettings>
    ```
-Setting the debug key to true will output the request info on every request that you make. Useful for debugging, terrible in production.
+Setting the debug key to true will output the request info on every request that you make. Useful for debugging, terrible for production.
 
 ## Usage
 All the KodiRPC methods are exposed through the KodiService class. Instantiate an instance of the class to get started.
